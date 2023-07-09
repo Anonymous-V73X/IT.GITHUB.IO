@@ -1,0 +1,703 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>FinanceTrack</title>
+  <link href="https://cdn.jsdelivr.net/npm/remixicon@2.5.0/fonts/remixicon.css" rel="stylesheet" />
+  <link rel="stylesheet" href="../assets/css/page-style.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
+    integrity="sha512-...your-integrity-hash...=" crossorigin="anonymous" />
+  <link rel="icon" href="../assets/images/favicon.png" type="image/x-icon" />
+
+  <style>
+    body {
+
+      height: 100%;
+
+    }
+
+    .menu-link:hover .fas {
+      color: #f5ede6;
+      transform: translateX(-50%);
+      transition: transform 500ms ease-in-out;
+    }
+
+    img {
+      border-radius: 19% 81% 19% 81% / 63% 19% 81% 37%;
+      width: 100%;
+    }
+
+    @media(min-width: 768px) {
+      .col-lg-6 {
+        margin-top: -70px !important;
+      }
+    }
+
+    @media(max-width: 768px) {
+      .img {
+        display: none !important;
+      }
+
+      .image {
+        display: none;
+      }
+
+      .comp1 {
+        margin-top: 140px !important;
+      }
+
+      .h2 {
+        text-align: center !important;
+      }
+
+      .comp2 {
+        margin-bottom: -90px !important;
+      }
+
+      .comp3 {
+        margin-bottom: -90px !important;
+      }
+
+      .hA {
+        text-align: center !important;
+        margin-bottom: 20px !important;
+      }
+
+      .comp4 {
+        margin-bottom: -90px !important;
+
+      }
+
+      .pA {
+        text-align: center !important;
+      }
+
+      .pB {
+        padding-left: 20px;
+        padding-right: 8px
+      }
+    }
+
+    @media(min-width: 768px) and (max-width:1000px) {
+      .img {
+        display: none !important;
+      }
+
+      .image {
+        display: none;
+      }
+    }
+
+
+
+    nav {
+      position: fixed;
+      top: 0;
+      left: 0;
+      right: 0;
+      z-index: 99;
+      background-color: #f5ede6;
+      padding-right: 12px;
+      height: 88px;
+      transition: box-shadow 0.5s ease, height 0.5s ease;
+    }
+
+
+
+
+
+
+
+
+
+    .loader {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      -webkit-transform: translate(-50%, -50%);
+      transform: translate(-50%, -50%);
+      width: 50px;
+      height: 10px;
+      background: #e56707;
+      border-radius: 5px;
+      -webkit-animation: load 1.8s ease-in-out infinite;
+      animation: load 1.8s ease-in-out infinite;
+    }
+
+    .loader:before,
+    .loader:after {
+      position: absolute;
+      display: block;
+      content: "";
+      -webkit-animation: load 1.8s ease-in-out infinite;
+      animation: load 1.8s ease-in-out infinite;
+      height: 10px;
+      border-radius: 5px;
+    }
+
+    .loader:before {
+      top: -20px;
+      left: 10px;
+      width: 40px;
+      background: #c87405;
+    }
+
+    .loader:after {
+      bottom: -20px;
+      width: 35px;
+      background: #F5AB35;
+    }
+
+    @-webkit-keyframes load {
+      0% {
+        -webkit-transform: translateX(40px);
+        transform: translateX(40px);
+      }
+
+      50% {
+        -webkit-transform: translateX(-30px);
+        transform: translateX(-30px);
+      }
+
+      100% {
+        -webkit-transform: translateX(40px);
+        transform: translateX(40px);
+      }
+    }
+
+    @keyframes load {
+      0% {
+        -webkit-transform: translateX(40px);
+        transform: translateX(40px);
+      }
+
+      50% {
+        -webkit-transform: translateX(-30px);
+        transform: translateX(-30px);
+      }
+
+      100% {
+        -webkit-transform: translateX(40px);
+        transform: translateX(40px);
+      }
+    }
+
+
+
+    .get {
+      margin-top: 350px !important;
+
+    }
+  </style>
+
+  <link rel="stylesheet" href="../assets/css/bootstrap.css" />
+  <link rel="stylesheet" href="../assets/css/style.css" />
+
+</head>
+
+
+
+
+<body>
+  <nav>
+    <div class="container">
+
+      <h2 class="sem2" style="font-size: 18px;">FinanceTrack</h2>
+
+      <div class="menu">
+        <a class="menu-link" onclick="goBack()" style="color: #412f22; cursor:pointer;"><i style="font-size: 14px;"
+            class="fas fa-arrow-left"></i> Go Back</a>
+
+        <script>
+          function goBack() {
+            window.history.back();
+          }
+        </script>
+
+      </div>
+
+      <button class="hamburger" onclick="toggleHamburger()">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+
+    </div>
+
+  </nav>
+  <script>// JavaScript to add/remove the 'shadow' class and reduce navbar height based on scroll position
+    window.addEventListener("scroll", function () {
+      var nav = document.querySelector("nav");
+      var scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+      var initialHeight = 88; // Initial height of the navbar in pixels
+      var scrollThreshold = 5; // Number of pixels to scroll before reducing the height
+
+      if (scrollTop > scrollThreshold) {
+        nav.classList.add("shadow");
+        nav.style.height = initialHeight - 20 + "px"; // Reduce the height by 20 pixels
+      } else {
+        nav.classList.remove("shadow");
+        nav.style.height = initialHeight + "px"; // Reset the height to the initial value
+      }
+    });</script>
+
+
+
+
+
+
+  <h1 class="comp2" data-aos="fade-down" data-aos-delay="100"
+    style="font-size: 1.5rem; margin-top: 100px; margin-bottom:0px;   font-family: 'Signika', sans-serif;font-weight:bold; color: rgb(106, 74, 34); text-align:center; text-decoration:underline!important; cursor:pointer; padding-left:10px!important; padding-right:10px!important;">
+    FinanceTrack: Online Personal Finance Manager</h1>
+
+
+
+
+  <!----------------------- First Container ----------------------------->
+
+
+  <div class="section-padding divider">
+
+    <div class="container">
+
+      <!--------------------- Image Section ---------------------->
+
+      <div class="row gy-4 align-items-center comp3">
+        <div class="col-lg-5">
+          <img class="image"
+            style="margin-top: -50px; border-radius:79% 21% 83% 17% / 15% 66% 34% 85% ; width:450px; margin-left:-10px!important;"
+            data-aos="fade-down" data-aos-delay="200" src="../assets/images/undraw_Savings_re_eq4w.png"
+            class="img-fluid" alt="" />
+        </div>
+
+        <div class="col-lg-6" style="
+                display: flex;
+                flex-direction: column;
+                
+              ">
+          <h2 data-aos="fade-up" data-aos-delay="100" style="font-size: 1.4rem; margin-top: 0px; margin-bottom:5px;   font-family: 'Signika', sans-serif;font-weight:bold; color: rgb(106, 74, 34); text-align:center!important;
+             ">
+            Summary</h2>
+
+          <p class="pA" data-aos="fade-up" data-aos-delay="200"
+            style="text-align: center; margin-top: 10px; font-size:16px; font-weight:500;">
+            FinanceTrack is an online personal finance manager designed to help individuals efficiently manage their
+            personal
+            finances. The platform provides tools and features for budgeting, expense tracking, goal setting, and
+            financial
+            analysis. FinanceTrack aims to empower users to make informed financial decisions, achieve their financial
+            goals, and
+            gain better control over their financial well-being.
+          </p>
+
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+  <!----------------------- First Container Ends Here ----------------------------->
+
+
+
+
+
+
+
+
+
+
+  <!----------------------- Second Container ----------------------------->
+
+
+
+  <div class="container" style="margin-top: 40px; margin-bottom:60px;">
+
+    <div class="row gy-4 align-items-center">
+      <div class="col-lg-5 comp4">
+
+        <!----------------------- Title ----------------------------->
+
+        <h2 class="hA" data-aos="fade-up" data-aos-delay="100" style="font-size: 1.4rem; margin-top: 0px; margin-bottom:5px;   font-family: 'Signika', sans-serif;font-weight:bold; color: rgb(106, 74, 34); text-align:left;
+                       ">
+          Getting Started</h2>
+
+
+
+        <!----------------------- Main Content ----------------------------->
+
+
+        <p class="pB" data-aos="fade-up" data-aos-delay="200"
+          style="text-align: left; margin-top: 10px; font-size:16px; font-weight:500!important;">
+          <b>Items Needed:</b>
+          <br>
+          <br>
+          &#9632; Web development tools and frameworks
+          <br>
+          <br>
+          &#9632; Server infrastructure for hosting the online platform
+          <br>
+          <br>
+          &#9632; Database management system
+          <br>
+          <br>
+          &#9632; Security measures to protect user data
+          <br>
+          <br>
+          &#9632; Integration with financial institutions for transaction synchronization
+          <br>
+          <br>
+          &#9632; Data analytics tools for financial analysis
+          <br>
+          <br>
+          &#9632; User interface design elements
+          <br>
+          <br>
+          &#9632; Marketing and promotional materials
+        </p>
+
+
+
+
+      </div>
+
+
+
+      <!--------------------- Image Section ---------------------->
+
+      <div class="col-lg-6" style="
+                  display: flex;
+                  flex-direction: column;
+                  margin-top:50px!important;
+                  
+                ">
+
+
+        <img class="image" style="margin-top: -20px; width:550px; margin-left:-10px;" data-aos="fade-down"
+          data-aos-delay="200" src="../assets/images/undraw_printing_invoices_5r4r.png" class="img-fluid" alt="" />
+
+
+      </div>
+    </div>
+  </div>
+
+
+  <!----------------------- Second Container Ends Here ----------------------------->
+
+
+
+
+
+
+  <!----------------------- Divider Starts Here ----------------------------->
+
+
+
+  <div style="margin-top: -250px; margin-bottom:-250px" class="section-padding divider"></div>
+
+
+
+  <!----------------------- Divider Ends Here ----------------------------->
+
+
+
+
+  <!----------------------- Third Container ----------------------------->
+
+
+
+  <div class="section-padding " style=" padding-bottom:40px!important;">
+
+    <div class="container" style="height: 100%;">
+
+      <div class="row gy-4 align-items-center">
+
+        <!--------------------- Image Section ---------------------->
+
+        <div class="col-lg-5">
+          <img class="image" style="width:500px; margin-left:-80px;" data-aos="fade-down" data-aos-delay="200"
+            src="../assets/images/undraw_Online_banking_re_kwqh.png" class="img-fluid" alt="" />
+        </div>
+
+        <div class="col-lg-6 comp4" style="
+                  display: flex;
+                  flex-direction: column;
+                  
+                ">
+
+
+
+          <!----------------------- Title ----------------------------->
+
+          <h2 class="comp1 hA" data-aos="fade-up" data-aos-delay="100" style="font-size: 1.4rem; margin-top: 280px; margin-bottom:0px;   font-family: 'Signika', sans-serif;font-weight:bold; color: rgb(106, 74, 34); text-align:left;
+               ">
+            Comprehensive Steps to Do It</h2>
+
+
+          <!----------------------- Main Content ----------------------------->
+
+
+          <p class="pB" data-aos="fade-up" data-aos-delay="200"
+            style="text-align: left; margin-top: 10px; font-size:16px; font-weight:500; max-height:2500px; margin-bottom:0px;">
+            <b>Comprehensive Steps to Do It:</b>
+            <br><br>
+            <b>Step 1: Planning and Requirements Gathering</b>
+            <br><br>
+            &#9679; Define the objectives and scope of the FinanceTrack platform.
+            <br><br>
+            &#9679; Identify the specific features and functionalities required, such as budgeting tools, expense
+            tracking, goal
+            setting, and financial reporting.
+            <br><br>
+            &#9679; Conduct market research to understand user needs and preferences.
+            <br><br>
+            <b>Step 2: Platform Design and Development</b>
+            <br><br>
+            &#9679; Design the user interface and user experience (UI/UX) of the FinanceTrack platform.
+            <br><br>
+            &#9679; Develop the front-end and back-end components using appropriate web development tools and
+            frameworks.
+            <br><br>
+            &#9679; Implement features such as user registration and authentication, account linking with financial
+            institutions,
+            expense tracking mechanisms, budget creation, and goal setting functionalities.
+            <br><br>
+            <b>Step 3: Data Integration and Synchronization</b>
+            <br><br>
+            &#9679; Establish secure connections with financial institutions to enable transaction synchronization and
+            real-time
+            data updates.
+            <br><br>
+            &#9679; Implement data encryption and security measures to protect user financial information.
+            <br><br>
+            &#9679; Develop APIs or utilize existing APIs to fetch and update financial data from various sources.
+            <br><br>
+            <b>Step 4: Budgeting and Expense Tracking</b>
+            <br><br>
+            &#9679; Create a user-friendly budgeting interface that allows users to define spending categories and
+            allocate funds.
+            <br><br>
+            &#9679; Enable users to track their expenses and categorize them automatically or manually.
+            <br><br>
+            &#9679; Provide visual representations of spending patterns, alerts for overspending, and reminders for bill
+            payments.
+            <br><br>
+            <b>Step 5: Goal Setting and Financial Analysis</b>
+            <br><br>
+            &#9679; Implement goal setting functionalities, allowing users to set financial targets and track their
+            progress.
+            <br><br>
+            &#9679; Provide tools for analyzing spending habits, identifying saving opportunities, and generating
+            financial
+            reports.
+            <br><br>
+            &#9679; Utilize data analytics techniques to offer personalized recommendations for improving financial
+            health.
+            <br><br>
+            <b>Step 6: Launch and Promotion</b>
+            <br><br>
+            &#9679; Deploy the FinanceTrack platform on a reliable hosting infrastructure.
+            <br><br>
+            &#9679; Conduct promotional campaigns to raise awareness among potential users about the platform's
+            availability.
+            <br><br>
+            &#9679; Offer tutorials, webinars, and educational resources to help users maximize the platform's benefits.
+            <br><br>
+          </p>
+
+
+
+
+        </div>
+      </div>
+    </div>
+
+  </div>
+
+  <!----------------------- Third Container Ends here ----------------------------->
+
+
+
+
+
+
+
+
+
+  <div class="container" style="margin-top: 60px;">
+
+    <div class="row gy-4 align-items-center">
+      <div class="col-lg-5">
+
+
+        <!----------------------- Title ----------------------------->
+
+        <h2 class="hA" data-aos="fade-up" data-aos-delay="100" style="font-size: 1.4rem; margin-top: 0px; margin-bottom:0px;   font-family: 'Signika', sans-serif;font-weight:bold; color: rgb(106, 74, 34); text-align:left;
+                         ">
+          How the Project Will Be Helpful <p></p>
+        </h2>
+
+
+
+
+
+        <!----------------------- Main Content ----------------------------->
+
+
+        <p class="pB" data-aos="fade-up" data-aos-delay="200"
+          style="text-align: left; margin-top: 10px; font-size:16px; font-weight:500;">
+
+
+          <b>The FinanceTrack platform offers several benefits:</b>
+          <br><br>
+          &#9679; Financial organization and visibility: Users can track their income, expenses, and financial
+          transactions in one
+          centralized location, providing a clear overview of their financial situation.
+          <br><br>
+          &#9679; Budgeting and expense control: The platform enables users to create budgets, monitor spending, and
+          identify
+          areas where adjustments can be made to achieve financial goals.
+          <br><br>
+          &#9679; Goal achievement: Users can set financial goals, such as saving for a house or paying off debt, and
+          track their
+          progress toward achieving them.
+          <br><br>
+          &#9679; Financial analysis and insights: The platform provides data analysis and reports that offer insights
+          into
+          spending patterns, trends, and areas for improvement.
+          <br><br>
+          &#9679; Improved financial decision-making: With access to real-time financial information and personalized
+          recommendations, users can make informed decisions to optimize their financial well-being.
+          <br><br>
+
+
+
+
+          <!----------------------- Title ----------------------------->
+
+        <h2 class="hA" data-aos="fade-up" data-aos-delay="100" style="font-size: 1.4rem; margin-top: 0px; margin-bottom:0px;   font-family: 'Signika', sans-serif;font-weight:bold; color: rgb(106, 74, 34); text-align:left;
+                         ">
+          Conclusion</h2>
+
+        <br>
+        <!----------------------- Main Content ----------------------------->
+
+        <p class="pA" style="text-align: left; margin-top: 0px; font-size:16px; font-weight:500;">
+          FinanceTrack, the online personal finance manager, aims to empower individuals to take control of their
+          personal
+          finances. With features such as budgeting, expense tracking, goal setting, and financial analysis, the
+          platform offers
+          users the tools they need to make informed financial decisions and achieve their financial goals. By
+          centralizing
+          financial information and providing actionable insights, FinanceTrack helps users improve their financial
+          organization,
+          control expenses, and make progress toward their financial aspirations.
+        </p>
+        </p>
+
+
+
+
+
+      </div>
+
+      <!--------------------- Image Section ---------------------->
+
+
+      <div class="col-lg-6" style="
+                    display: flex;
+                    flex-direction: column;
+                    margin-top:50px!important;
+                    
+                  ">
+
+
+        <img class="image" style="margin-top: -100px;" data-aos="fade-down" data-aos-delay="200"
+          src="../assets/images/undraw_Finance_re_gnv2.png" class="img-fluid" alt="" />
+
+
+      </div>
+
+    </div>
+
+  </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  <div class="wrapper-loader">
+
+
+
+
+
+
+
+    <div class='loader'></div>
+
+
+    <p class="get" id="typing-dots">Getting Things Ready</p>
+
+    <script>
+
+      const dotsElement = document.getElementById('typing-dots');
+      const dots = '...';
+      let dotCount = 0;
+
+      function animateTypingDots() {
+        dotsElement.textContent = 'Getting Things Ready' + dots.substring(0, dotCount);
+        dotCount = (dotCount + 1) % (dots.length + 1);
+        setTimeout(animateTypingDots, 300);
+      }
+
+      animateTypingDots();
+
+    </script>
+
+
+
+
+
+
+
+
+  </div>
+
+
+
+</body>
+
+
+
+
+
+
+
+
+
+
+<script src="../assets/js/app.js"></script>
+<script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+<script>
+  AOS.init({
+    duration: 700,
+  });
+</script>
+</body>
+
+</html>

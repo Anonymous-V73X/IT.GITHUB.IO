@@ -1,0 +1,258 @@
+@import url("https://fonts.googleapis.com/css2?family=Bai+Jamjuree:wght@400;500;600;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Dancing+Script:wght@500;600;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Sacramento&display=swap");
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: "Bai Jamjuree", sans-serif;
+  color: rgba(99, 62, 36, 0.908);
+  -webkit-tap-highlight-color: transparent !important;
+
+  font-weight: 500;
+
+  user-select: none !important;
+}
+
+body {
+  height: 100vh;
+  background: linear-gradient(184deg, #f5ede6, #f8e9db);
+}
+
+.start-screen,
+.score-container {
+  position: absolute;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+button {
+  border: none;
+  outline: none;
+  cursor: pointer;
+}
+
+#start-button,
+#restart {
+  font-size: 1.3em;
+  padding: 0.5em 1.8em;
+  border-radius: 0.5em;
+  box-shadow: 4px 4px 6px #b8b9bec5, -4px -4px 6px #ffffff81 !important;
+
+  background-color: #fbdcc1;
+  border: #ffffff81 1px solid;
+}
+
+#start-button:hover,
+#restart:hover,
+#next-button:hover {
+  box-shadow: inset 2px 2px 5px #b8b9bec6, inset -3px -3px 7px #ffffffce !important;
+
+  background-color: #f6eae0;
+}
+
+.show {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+#restart {
+  margin-top: 3.9em;
+  font-size: 16px;
+  margin-bottom: 10px;
+}
+
+#display-container {
+  background-color: #f9f7f6;
+  padding: 3.1em 1.8em;
+  width: 95%;
+  max-width: 37.5em;
+  margin: 0 auto;
+  position: absolute;
+  transform: translate(-50%, -50%);
+  top: 50%;
+  left: 50%;
+  border-radius: 0.6em;
+}
+
+.header {
+  margin-bottom: 1.8em;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-bottom: 0.6em;
+  border-bottom: 0.1em solid #8b7a6a;
+}
+.timer-div {
+  background-color: #fcf6f0;
+  width: 100px;
+  border-radius: 1.8em;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  padding: 0.7em 1.8em;
+  box-shadow: inset 2px 2px 5px #b8b9be42, inset -3px -3px 7px #ffffffce !important;
+  border: 0.001em solid #8b7a6a58;
+}
+.question {
+  margin-bottom: 1.25em;
+  font-weight: 600;
+}
+.option-div {
+  font-size: 16px;
+  width: 100%;
+  padding: 1em;
+  margin: 0.3em 0;
+  text-align: left;
+  outline: none;
+  background: transparent;
+  border: 1px solid #c0bfd2;
+  border-radius: 0.3em;
+  white-space: normal;
+  word-wrap: break-word;
+}
+.option-div:disabled {
+  color: #4a4949;
+  cursor: not-allowed;
+}
+#next-button {
+  padding: 0.5em 1.8em;
+  border-radius: 0.5em;
+  box-shadow: 4px 4px 6px #b8b9bec5, -4px -4px 6px #ffffff81 !important;
+
+  background-color: #fbdcc1;
+  border: #ffffff81 1px solid;
+  font-size: 1em;
+  margin-top: 1.5em;
+
+  padding: 0.7em 1.8em;
+
+  float: right;
+}
+.hide {
+  display: none;
+}
+.incorrect {
+  background-color: #c8a586a2;
+  border: 2px solid;
+  border-color: #f57d7d;
+}
+
+.incorrect::before {
+  content: "\f057";
+  font-family: "Font Awesome 5 Free";
+  margin-right: 5px;
+  transition: transform 0.3s ease;
+  color: red;
+}
+
+.correct {
+  background-color: #fbdcc1;
+  border: 2px solid;
+
+  border-color: rgb(166, 211, 166);
+}
+
+.correct::before {
+  content: "\f058"; /* Font Awesome icon code for 'check' */
+  font-family: "Font Awesome 5 Free";
+  color: rgb(138, 213, 138);
+  margin-right: 8px;
+  transition: transform 0.3s ease;
+}
+
+@keyframes subtle-animation {
+  0% {
+    transform: scale(1); /* Initial scale */
+  }
+  50% {
+    transform: scale(1.2); /* Scale up */
+  }
+  100% {
+    transform: scale(1); /* Return to original scale */
+  }
+}
+
+.incorrect::before,
+.correct::before {
+  animation: subtle-animation 1s infinite; /* Apply animation to the icon */
+}
+
+.score-container {
+  background-color: #ffff;
+  max-width: 360px;
+
+  
+  margin-top: 50px;
+  margin-right: 10px;
+  margin-left: 10px;
+
+  border-radius: 10px;
+  max-height: 480px;
+
+  padding-left: 20px;
+   padding-right: 20px;
+   padding-bottom: 10px;
+   padding-top: 15px;
+
+  box-shadow: 4px 4px 6px #fdfdfea5, -4px -4px 6px #fafafc8d !important;
+}
+
+.circle {
+  width: 130px;
+  height: 130px;
+  border-radius: 100px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#result-heading {
+  font-size: 1.5em;
+  font-weight: bold;
+  margin-top: 0px;
+  margin-bottom: 20px;
+}
+
+.percentage {
+  font-size: 1.5em;
+  font-weight: bold;
+}
+
+#user-score {
+  font-size: 14px;
+  padding-left: 5%;
+  padding-right: 5%;
+  text-align: center;
+
+
+  font-weight: 500;
+  margin-top: 20px;
+  margin-bottom: 5px;
+  
+}
+
+#appraise-heading{
+  font-size: 18px;
+  font-style: italic;
+  font-weight: 600;
+}
+
+.circle {
+  width: 130px;
+
+  border-radius: 75px;
+
+  background-color: #fbdcc1;
+  box-shadow: 4px 4px 6px #d9d9daa5, -4px -4px 6px #c4c4c58d !important;
+
+  margin-bottom: 20px;
+}

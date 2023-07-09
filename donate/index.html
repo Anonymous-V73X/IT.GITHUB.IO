@@ -1,0 +1,802 @@
+<!DOCTYPE html>
+
+<html lang="en">
+  <!-- ======== 😎😎 Head actually starts here 😎😎 ======== -->
+
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Support Developer</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/remixicon@2.5.0/fonts/remixicon.css"
+      rel="stylesheet"
+    />
+
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
+      integrity="sha512-...your-integrity-hash...="
+      crossorigin="anonymous"
+    />
+    <link rel="icon" href="../assets/images/favicon.png" type="image/x-icon" />
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+
+    <style>
+      @import url("https://fonts.googleapis.com/css2?family=Bai+Jamjuree:wght@400;500;600;700&display=swap");
+
+      @import url("https://fonts.googleapis.com/css2?family=Dancing+Script:wght@500;600;700&display=swap");
+
+      @import url("https://fonts.googleapis.com/css2?family=Sacramento&display=swap");
+
+      body {
+        background-color: #f5ede6;
+        font-family: "Bai Jamjuree", sans-serif;
+        color: rgba(99, 62, 36, 0.908);
+      }
+
+      body {
+        -webkit-tap-highlight-color: transparent !important;
+      }
+
+      a {
+        text-decoration: none;
+      }
+
+      .bg-primary {
+        background-color: #f5eae0b5 !important;
+      }
+
+      .shadow-soft {
+        box-shadow: 4px 4px 6px #b8b9be58, -4px -4px 6px #ffffffc1 !important;
+      }
+
+      .shadow-inset {
+        box-shadow: inset 2px 2px 5px #b8b9bec6, inset -3px -3px 7px #ffffffce !important;
+      }
+
+      .border-light {
+        border-color: #e6dad1 !important;
+      }
+
+      .list-group-item {
+        position: relative;
+        display: block;
+        padding: 1rem 1rem;
+        margin-bottom: -0.0625rem;
+        background-color: transparent;
+        border: 0.0625rem solid #e2e2e2;
+        font-weight: 500;
+      }
+
+      .btn:focus {
+        outline: none !important;
+        border-color: transparent !important;
+      }
+
+      .btn {
+        display: inline-block;
+        font-weight: 400;
+        color: #44476a;
+        text-align: center;
+        vertical-align: middle;
+        -webkit-user-select: none;
+        -ms-user-select: none;
+        user-select: none;
+        background-color: transparent;
+        border: 0.0625rem solid transparent;
+        padding: 0.55rem 0.95rem;
+        font-size: 1rem;
+        line-height: 1.5;
+        border-radius: 0.55rem;
+        transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out,
+          border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+      }
+
+      .btn:hover {
+        color: #44476a;
+        text-decoration: none;
+      }
+
+      .btn:focus,
+      .btn.focus {
+        outline: 0;
+        box-shadow: inset 2px 2px 5px #b8b9be, inset -3px -3px 7px #ffffff;
+      }
+
+      .btn-primary {
+        color: #31344b;
+        background-color: #f9ddc599;
+        border-color: #e6e7ee;
+        box-shadow: inset 0 1px 0 rgba(236, 240, 243, 0.15),
+          0 1px 1px rgba(38, 40, 51, 0.075);
+        transition: all 0.3s ease-in-out;
+      }
+
+      .btn-primary:hover {
+        box-shadow: inset 2px 2px 5px #b8b9bec6, inset -2px -2px 5px #ffffffce !important;
+        background-color: #fae9db9b;
+        border-color: #c8cad9;
+        cursor: pointer;
+      }
+
+      .btn-primary:focus,
+      .btn-primary.focus {
+        box-shadow: inset 0 1px 0 rgba(236, 240, 243, 0.15),
+          0 1px 1px rgba(38, 40, 51, 0.075),
+          0 0 0 0.0625rem rgba(203, 204, 214, 0.5);
+      }
+
+      .btn-block {
+        display: block;
+        width: 100%;
+      }
+
+      .btn-block + .btn-block {
+        margin-top: 0.5rem;
+      }
+
+      .mr-2,
+      .mx-2 {
+        margin-right: 0.5rem !important;
+      }
+
+      .card-header {
+        padding: 1.25rem 1.5rem;
+        margin-bottom: 0;
+        background-color: #f3f7fa;
+        border-bottom: 0.0625rem solid rgba(243, 247, 250, 0.05);
+      }
+
+      .card-header:first-child {
+        border-radius: calc(0.55rem - 0.0625rem) calc(0.55rem - 0.0625rem) 0 0;
+      }
+
+      .card-header + .list-group .list-group-item:first-child {
+        border-top: 0;
+      }
+
+      .card-footer {
+        padding: 1.25rem 1.5rem;
+        background-color: #f3f7fa;
+        border-top: 0.0625rem solid rgba(243, 247, 250, 0.05);
+      }
+
+      .card-footer:last-child {
+        border-radius: 0 0 calc(0.55rem - 0.0625rem) calc(0.55rem - 0.0625rem);
+      }
+
+      .card-header-tabs {
+        margin-right: -0.75rem;
+        margin-bottom: -1.25rem;
+        margin-left: -0.75rem;
+        border-bottom: 0;
+      }
+
+      .card-header-pills {
+        margin-right: -0.75rem;
+        margin-left: -0.75rem;
+      }
+
+      .p-4 {
+        padding: 1.5rem !important;
+      }
+
+      .section {
+        position: relative;
+        padding-top: 3rem;
+        padding-bottom: 3rem;
+        display: flex;
+        flex-direction: row !important;
+        gap: 10px !important;
+      }
+
+      .pt-0,
+      .py-0 {
+        padding-top: 0 !important;
+      }
+
+      .row {
+        display: flex;
+        flex-wrap: wrap;
+        flex-direction: row;
+        gap: 30px;
+        justify-content: center !important;
+        align-items: center !important;
+        margin-bottom: 100px;
+      }
+
+      .card {
+        position: relative;
+        display: flex;
+        flex-direction: column;
+        max-width: 290px;
+        word-wrap: break-word;
+        background-color: #e6e7ee;
+        background-clip: border-box;
+        border: 0.0625rem solid rgba(243, 247, 250, 0.05);
+        border-radius: 0.55rem;
+      }
+
+      .text-center {
+        text-align: center !important;
+      }
+
+      .mb-5,
+      .my-5 {
+        margin-bottom: 3rem !important;
+      }
+
+      .card > hr {
+        margin-right: 0;
+        margin-left: 0;
+      }
+
+      .card > .list-group:first-child .list-group-item:first-child {
+        border-top-left-radius: 0.55rem;
+        border-top-right-radius: 0.55rem;
+      }
+
+      .card > .list-group:last-child .list-group-item:last-child {
+        border-bottom-right-radius: 0.55rem;
+        border-bottom-left-radius: 0.55rem;
+      }
+
+      .card-body {
+        flex: 0 33.33333%;
+      }
+
+      .card-title {
+        margin-bottom: 1.25rem;
+      }
+
+      .card-subtitle {
+        margin-top: -0.625rem;
+        margin-bottom: 0;
+      }
+
+      .card-text:last-child {
+        margin-bottom: 0;
+      }
+
+      .card-link:hover {
+        text-decoration: none;
+      }
+
+      .card-link + .card-link {
+        margin-left: 1.5rem;
+      }
+
+      .card-header {
+        padding: 1.25rem 1.5rem;
+        margin-bottom: 0;
+        background-color: #f3f7fa;
+        border-bottom: 0.0625rem solid rgba(243, 247, 250, 0.05);
+      }
+
+      .card-header:first-child {
+        border-radius: calc(0.55rem - 0.0625rem) calc(0.55rem - 0.0625rem) 0 0;
+      }
+
+      .card-header + .list-group .list-group-item:first-child {
+        border-top: 0;
+      }
+
+      .card-footer {
+        padding: 1.25rem 1.5rem;
+        background-color: #f3f7fa;
+        border-top: 0.0625rem solid rgba(243, 247, 250, 0.05);
+      }
+
+      .card-footer:last-child {
+        border-radius: 0 0 calc(0.55rem - 0.0625rem) calc(0.55rem - 0.0625rem);
+      }
+
+      .card-header-tabs {
+        margin-right: -0.75rem;
+        margin-bottom: -1.25rem;
+        margin-left: -0.75rem;
+        border-bottom: 0;
+      }
+
+      .card-header-pills {
+        margin-right: -0.75rem;
+        margin-left: -0.75rem;
+      }
+
+      .card-deck {
+        display: flex;
+        flex-direction: column;
+      }
+
+      .card-deck .card {
+        margin-bottom: 15px;
+      }
+
+      .card .card-header {
+        background: transparent;
+      }
+
+      .rounded {
+        border-radius: 0.55rem !important;
+      }
+
+      .mb-4,
+      .my-4 {
+        margin-bottom: 1.5rem !important;
+      }
+
+      .d-block {
+        display: block !important;
+      }
+
+      .display-1 {
+        font-size: 5rem;
+        font-weight: 600;
+        line-height: 1.3;
+      }
+
+      .font-weight-bold {
+        font-weight: 600 !important;
+      }
+
+      .align-top {
+        vertical-align: top !important;
+      }
+
+      .font-medium {
+        font-size: 1.25rem;
+        font-weight: 300;
+      }
+
+      .font-small {
+        font-size: 0.875rem;
+      }
+
+      .card-body {
+        flex: 1 1 auto;
+        padding: 1.5rem;
+      }
+
+      .list-group {
+        display: flex;
+        flex-direction: column;
+        padding-left: 0;
+        margin-bottom: 0;
+      }
+
+      p,
+      ol li,
+      ul li {
+        font-size: 1rem;
+        font-weight: 300;
+        line-height: 1.6;
+      }
+
+      article ul li,
+      article ol li {
+        font-size: 1.27rem;
+        margin-bottom: 1.5rem;
+      }
+
+      img {
+        width: 380px;
+      }
+
+      .description {
+        max-width: 450px;
+        text-align: center;
+      }
+
+      .row1 {
+        display: flex;
+        flex-wrap: wrap;
+        flex-direction: row;
+        gap: 2%;
+        justify-content: space-around !important;
+        align-items: center !important;
+      }
+
+      .menu-link:hover .fas {
+        color: #f7be8c;
+        transform: translateX(-50%);
+        transition: transform 500ms ease-in-out;
+      }
+
+      .menu-link:hover {
+        background-color: #f5ede6 !important;
+        transform: translateX(-50%) !important;
+        transition: transform 500ms ease-in-out;
+        color: #f7be8c !important;
+        box-shadow: inset 2px 2px 5px #b8b9bec6, inset -3px -3px 7px #ffffffce !important;
+      }
+
+      .menu-link:hover a .g {
+        transform: translateX(-10px) !important;
+      }
+
+      .divider {
+        width: 100%;
+        background-color: rgba(236, 215, 187, 0.447);
+        height: 0.1px;
+      }
+
+      @media (max-width: 768px) {
+        .pA {
+          padding-left: 5px !important;
+          padding-right: 5px !important;
+        }
+      }
+    </style>
+  </head>
+
+  <!-- ================ Head Ends 🗣️🗣️🪦🪦 ================== -->
+
+  <body>
+    <div class="row1" style="margin-bottom: 50px; margin-top: 50px">
+      <div class="image" data-aos="fade-down" data-aos-delay="200">
+        <img src="../assets/images/hero.png" alt="" />
+      </div>
+      <div class="description">
+        <h3
+          data-aos="fade-up"
+          data-aos-delay="200"
+          style="
+            font-size: 35px;
+            margin-top: 0;
+            font-family: 'Dancing Script', cursive;
+          "
+        >
+          Support a developer.
+        </h3>
+        <p
+          class="pA"
+          data-aos="fade-up"
+          data-aos-delay="200"
+          style="margin-bottom: 50px !important"
+        >
+          As an independent developer, I rely on the support of generous
+          individuals like you to continue creating innovative and impactful
+          projects. Your donation can make a world of difference in fueling my
+          passion and sustaining the development of future endeavors. Every
+          contribution, no matter the size, is deeply appreciated and goes a
+          long way in empowering me to pursue my creative endeavors.
+        </p>
+
+        <div
+          data-aos="fade-up"
+          data-aos-delay="200"
+          style="display: flex; align-content: center; justify-content: center"
+        >
+          <div
+            class="shadow-inset"
+            style="
+              width: 180px;
+              height: 50px;
+              padding-top: 33px;
+              border-radius: 90px;
+            "
+          >
+            <a
+              class="menu-link"
+              onclick="goBack() "
+              style="
+                color: #966a4b;
+                cursor: pointer;
+                background-color: #e6ccba;
+                padding: 15px;
+                padding-left: 25px;
+                padding-right: 25px;
+                border-radius: 25px;
+                font-size: 16px;
+                font-weight: 600;
+                box-shadow: 2px 3px 6px #b8b9be58, -2px -3px 6px #ffffff71 !important;
+              "
+            >
+              <i
+                style="font-size: 16px; margin-right: 4px"
+                class="fas fa-arrow-left"
+              ></i>
+              <b class="g">Go Back</b>
+            </a>
+          </div>
+        </div>
+
+        <script>
+          function goBack() {
+            window.history.back();
+          }
+        </script>
+      </div>
+    </div>
+
+    <div class="divider"></div>
+
+    <h3
+      data-aos="fade-up"
+      data-aos-delay="100"
+      style="
+        font-size: 34px;
+        margin-top: 40px;
+        margin-bottom: 60px;
+        text-align: center;
+        font-family: 'Dancing Script', cursive;
+      "
+    >
+      Become A Patron.
+    </h3>
+
+    <div class="row">
+      <!-- Pricing Card -->
+      <div
+        data-aos="fade-up"
+        data-aos-delay="200"
+        class="card bg-primary shadow-inset border-light p-4"
+      >
+        <!-- Header -->
+        <header
+          class="card-header shadow-soft text-center border border-light rounded mb-4"
+        >
+          <span class="d-block">
+            <h2
+              class="donator"
+              style="color: #e6892c; text-transform: uppercase; font-size: 20px"
+            >
+              Seedling Donator
+            </h2>
+            <h3 class="amount" style="color: rgb(115, 74, 74)">100 KSH</h3>
+          </span>
+        </header>
+        <!-- End Header -->
+        <!-- Content -->
+        <div
+          class="card-body shadow-soft text-center border border-light rounded"
+        >
+          <p style="font-weight: 500 !important">
+            Become a Seedling Donator and help nurture the growth of my
+            independent development work. By contributing 100 Ksh (Kenyan
+            Shillings), you'll be supporting my journey as an independent
+            developer and playing a vital role in shaping the future of my
+            projects.Together, we can sow the seeds of innovation and
+            creativity.
+          </p>
+          <ul class="list-group mb-4">
+            <li class="list-group-item">
+              <strong>
+                <img
+                  src="../assets/images/mpesa-logo.png"
+                  style="width: 60px; margin-bottom: -10px; margin-right: 8px"
+                  alt=""
+                />: </strong
+              ><b style="font-weight: 500">0745179023</b>
+            </li>
+            <li class="list-group-item">
+              <strong>Support: </strong>
+              <b style="font-weight: 500">Moderate</b>
+            </li>
+            <li class="list-group-item"><strong>Amount: </strong>100 Ksh</li>
+            <li class="list-group-item">
+              <strong
+                style="
+                  font-weight: 500;
+                  font-family: 'Sacramento', cursive;
+                  font-size: 28px;
+                  line-height: 0px;
+                "
+                >Thank you in advance for your support as a Seedling
+                Donator.</strong
+              >
+            </li>
+          </ul>
+        <a href="https://www.paypal.com/donate/?hosted_button_id=QZLE9MFJQ2DLW">
+            <button type="button" class="btn btn-primary btn-block" tabindex="0" style="
+              color: rgb(109, 80, 42);
+              font-family: Bai Jamjuree, sans-serif;
+              font-weight: 500;
+            ">
+                <span class="fab fa-paypal mr-2"></span>Paypal
+            </button>
+        </a>
+
+        </div>
+        <!-- End Content -->
+      </div>
+      <!-- End of Pricing Card -->
+
+      <!-- Pricing Card -->
+      <div
+        data-aos="fade-up"
+        data-aos-delay="200"
+        class="card bg-primary shadow-inset border-light p-4"
+      >
+        <!-- Header -->
+        <header
+          class="card-header shadow-soft text-center border border-light rounded mb-4"
+        >
+          <span class="d-block">
+            <h2
+              class="donator"
+              style="color: #487d71; text-transform: uppercase; font-size: 20px"
+            >
+              Momentum Builder
+            </h2>
+            <h3 class="amount" style="color: rgb(115, 74, 74)">500 KSH</h3>
+          </span>
+        </header>
+        <!-- End Header -->
+        <!-- Content -->
+        <div
+          class="card-body shadow-soft text-center border border-light rounded"
+        >
+          <p style="font-weight: 500 !important">
+            Join the ranks of Momentum Builders and fuel the progress of my
+            independent development endeavors. Your substantial contribution of
+            500 Ksh will empower me to expand my skills, tackle larger projects,
+            and reach new heights in my career. Together, we can cultivate a
+            thriving ecosystem of innovation and make a lasting impact.
+          </p>
+          <ul class="list-group mb-4">
+            <li class="list-group-item">
+              <strong>
+                <img
+                  src="../assets/images/mpesa-logo.png"
+                  style="width: 60px; margin-bottom: -10px; margin-right: 8px"
+                  alt=""
+                />:
+              </strong>
+              <b style="font-weight: 500"
+                ><b style="font-weight: 500">0745179023</b></b
+              >
+            </li>
+            <li class="list-group-item">
+              <strong>Support: </strong
+              ><b style="font-weight: 500">Significant</b>
+            </li>
+            <li class="list-group-item"><strong>Amount: </strong>500 Ksh</li>
+            <li class="list-group-item">
+              <strong
+                style="
+                  font-weight: 500;
+                  font-family: 'Sacramento', cursive;
+                  font-size: 26px;
+                  line-height: 0px;
+                "
+                >Thank you in advance for your support as a Momentum
+                Builder.</strong
+              >
+            </li>
+          </ul>
+
+          <a
+            href="https://www.paypal.com/donate/?hosted_button_id=QZLE9MFJQ2DLW"
+          >
+            <button
+              type="button"
+              class="btn btn-primary btn-block"
+              tabindex="0"
+              style="
+                color: rgb(109, 80, 42);
+                font-family: Bai Jamjuree, sans-serif;
+                font-weight: 500;
+              "
+            >
+              <span class="fab fa-paypal mr-2"></span>Paypal
+            </button>
+          </a>
+        </div>
+        <!-- End Content -->
+      </div>
+      <!-- End of Pricing Card -->
+
+      <!-- Pricing Card -->
+      <div
+        data-aos="fade-up"
+        data-aos-delay="200"
+        class="card bg-primary shadow-inset border-light p-4"
+      >
+        <!-- Header -->
+        <header
+          class="card-header shadow-soft text-center border border-light rounded mb-4"
+        >
+          <span class="d-block">
+            <h2
+              class="donator"
+              style="color: #6c567b; text-transform: uppercase; font-size: 20px"
+            >
+              Master Donator
+            </h2>
+            <h3 class="amount" style="color: rgb(115, 74, 74)">1000 KSH</h3>
+          </span>
+        </header>
+        <!-- End Header -->
+        <!-- Content -->
+        <div
+          class="card-body shadow-soft text-center border border-light rounded"
+        >
+          <p
+            style="
+              font-weight: 500 !important;
+              padding-top: 10px;
+              padding-bottom: 16px;
+            "
+          >
+            Become a VIP Donator and be at the forefront of my independent
+            development success story. Your generous donation of 1000 Ksh
+            showcases your unwavering belief in my abilities as an independent
+            developer. As a Champion Donator, you'll play a pivotal role in
+            accelerating my growth, enabling me to push boundaries.
+          </p>
+          <ul class="list-group mb-4">
+            <li class="list-group-item">
+              <strong>
+                <img
+                  src="../assets/images/mpesa-logo.png"
+                  style="width: 60px; margin-bottom: -10px; margin-right: 8px"
+                  alt=""
+                />: </strong
+              ><b style="font-weight: 500">0745179023</b>
+            </li>
+            <li class="list-group-item">
+              <strong>Support: </strong><b style="font-weight: 500">Extreme</b>
+            </li>
+            <li class="list-group-item"><strong>Amount: </strong>1000 Ksh</li>
+            <li class="list-group-item">
+              <strong
+                style="
+                  font-weight: 500;
+                  font-family: 'Sacramento', cursive;
+                  font-size: 28px;
+                  line-height: 0px;
+                "
+                >Thank you in advance for your support as a Master
+                Donator.</strong
+              >
+            </li>
+          </ul>
+          <a href="tel:+254745179023">
+            <button
+              type="button"
+              class="btn btn-primary btn-block"
+              tabindex="0"
+              style="
+                color: rgb(114, 83, 43);
+                font-family: Bai Jamjuree, sans-serif;
+                font-weight: 500;
+              "
+            >
+              <span class="fas fa-phone-alt mr-2"></span>Call Me
+            </button>
+          </a>
+        </div>
+        <!-- End Content -->
+      </div>
+      <!-- End of Pricing Card -->
+    </div>
+
+    <h3
+      style="
+        font-size: 24px;
+        margin-top: 40px;
+        margin-bottom: 60px;
+        text-align: center;
+        font-family: 'Dancing Script', cursive;
+        opacity: 0.6;
+      "
+    >
+      Anonymous-v73x
+    </h3>
+
+    <!-- ======== 😎😎 Script actually starts here 😎😎 ======== -->
+
+    <script src="../assets/js/app.js"></script>
+    <script src="../assets/js/semesters.js"></script>
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script>
+      AOS.init({
+        duration: 600,
+      });
+    </script>
+  </body>
+
+  <!-- ======== Script Ends 🗣️🗣️🪦🪦 ======== -->
+</html>

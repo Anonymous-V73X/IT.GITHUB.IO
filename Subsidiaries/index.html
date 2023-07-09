@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <style>
+    @import url("https://fonts.googleapis.com/css2?family=Bai+Jamjuree:wght@400;500;600;700&display=swap");
+
+    .container {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+
+      height: 100vh;
+
+      padding: 5px;
+    
+    }
+
+    body {
+      background-color: #f5ede6;
+      width: 100vw;
+      height: 100vh;
+    }
+
+    .card {
+      background-color: #f5ede6;
+      border-radius: 15px;
+      padding: 20px;
+      box-shadow: -5px -5px 9px rgba(255, 255, 255, 0.45),
+        2px 2px 6px rgba(94, 104, 121, 0.2);
+
+
+       
+
+        
+
+        
+
+
+    
+    }
+
+    .typing-text {
+      font-family: Bai Jamjuree, Arial, Helvetica, sans-serif;
+      font-size: 40px;
+      color: #e0893d;
+
+
+      
+      animation: typing 2s steps(40, end), blink-caret 0.75s step-end infinite;
+    }
+
+    @keyframes typing {
+      from {
+        width: 0;
+      }
+
+      to {
+        width: 100%;
+      }
+    }
+
+    
+
+    a {
+      text-decoration: none;
+      color: #e0893daf;
+
+      font-family: Bai Jamjuree, Arial, Helvetica, sans-serif;
+      font-size: 23px;
+    }
+
+    a:hover{
+      color:#d5e0f0;
+      
+    }
+  </style>
+</head>
+
+<body>
+  <div class="container">
+    <div class="card">
+      <h1 class="typing-text"></h1>
+
+
+      <a href="https://t.me/alekiesbot">Watch A Movie/ Series</a>
+    </div>
+
+
+  </div>
+
+
+
+  <script>
+    window.onload = function () {
+      const message =
+        "Apologies! Sir Anonymous-V73X is currently working on fixing bugs and adding requested content to the website. The site will be back up and running on Monday. We apologize for any inconvenience caused . . . Meanwhile Click on the link below to watch a movie or series";
+      const typingText = document.querySelector(".typing-text");
+
+      function typeMessage() {
+        let i = 0;
+        typingText.innerHTML = "";
+
+        function type() {
+          if (i < message.length) {
+            typingText.innerHTML += message.charAt(i);
+            i++;
+            setTimeout(type, 80);
+          } else {
+            setTimeout(typeMessage, 2000); // Delay before starting the next iteration
+          }
+        }
+
+        type();
+      }
+
+      typeMessage();
+    };
+  </script>
+
+</body>
+
+</html>

@@ -1,0 +1,1628 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+
+<!-- ========= 😎😎 Head actually starts here 😎😎 ======== -->
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Bsc. IT Kabarak University</title>
+  <link rel="stylesheet" href="./assets/css/bootstrap.css" />
+  <link href="https://cdn.jsdelivr.net/npm/remixicon@2.5.0/fonts/remixicon.css" rel="stylesheet" />
+  <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+  <link rel="stylesheet" href="./assets/css/style.css" />
+  <link rel="icon" href="./assets/images/favicon.png" type="image/x-icon">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
+    integrity="sha512-...your-integrity-hash...=" crossorigin="anonymous" />
+
+</head>
+
+
+<!-- ================= Head Ends 🗣️🗣️🪦🪦 ================ -->
+
+
+
+
+
+
+
+
+<!-- ========= 👽👽👽 Body 👽👽👽 =========== -->
+
+<body>
+
+  <!---------=========🔃🔃 PreLoader Starts Here 🔃🔃  ==========-------->
+
+
+
+  <div class="wrapper-loader">
+
+
+    <div class="loader"></div>
+
+    <div class="scene">
+      <div class="cube-wrapper">
+        <div class="cube">
+          <div class="cube-faces">
+            <div class="cube-face shadow"></div>
+            <div class="cube-face bottom"></div>
+            <div class="cube-face top"></div>
+            <div class="cube-face left"></div>
+            <div class="cube-face right"></div>
+            <div class="cube-face back"></div>
+            <div class="cube-face front"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+
+    <p class="get" id="typing-dots">Getting Things Ready</p>
+
+    <script>
+
+      const dotsElement = document.getElementById('typing-dots');
+      const dots = '...';
+      let dotCount = 0;
+
+      function animateTypingDots() {
+        dotsElement.textContent = 'Getting Things Ready' + dots.substring(0, dotCount);
+        dotCount = (dotCount + 1) % (dots.length + 1);
+        setTimeout(animateTypingDots, 300);
+      }
+
+      animateTypingDots();
+
+    </script>
+
+
+
+
+  </div>
+
+
+
+
+
+  <!---------=========🔃🔃 PreLoader Ends Here 🔃🔃  ==========-------->
+
+
+
+
+  <!-- Navbar Actually Starts Here  -->
+
+
+  <nav data-bs-spy="scroll" data-bs-target=".navbar"
+    class="navbar navbar-expand-lg py-4 fixed-top navbar-light bg-body">
+    <div class="container">
+      <a class="navbar-brand" href="https://www.paypal.com/donate/?hosted_button_id=QZLE9MFJQ2DLW">
+        <h4 class="fw-bold" style="padding-left:8px">Bsc. IT</h4>
+      </a>
+
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarColor03"
+        aria-controls="navbarColor03" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon" id="navbarTogglerIcon"> </span>
+      </button>
+
+
+      <style>
+        @media (min-width: 768px) {
+          .navbar-nav .nav-link i.fas {
+            display: none;
+          }
+        }
+      </style>
+
+
+
+      <!-- Nav Links Start here   -->
+      <div class="collapse navbar-collapse naver" id="navbarColor03">
+        <ul class="navbar-nav ms-auto">
+
+
+
+
+          <!-- Alerts Link -->
+
+          <li class="nav-item">
+            <a class="nav-link" onclick="navigateThis('./alerts')">
+              <i class="fas fa-exclamation-circle" style="margin-right: 1px; margin-left: 1px;"></i>
+              <span style="user-select: none;">Alerts</span>
+              <i class="fas fa-exclamation-circle" style="margin-left: 1px; margin-right: 1px;"></i>
+            </a>
+          </li>
+
+
+          <!-- Brainstorms/Project Ideas Link -->
+
+          <li class="nav-item">
+            <a class="nav-link" onclick="navigateTo('brainstorms')">
+              <i class="fas fa-lightbulb" style="margin-right: 1px; margin-left: 1px;"></i>
+              <span style="user-select: none;">Brainstorms</span>
+              <i class="fas fa-lightbulb" style="margin-left: 1px; margin-right: 1px;"></i>
+            </a>
+          </li>
+
+
+          <!--  Important Links -->
+
+          <li class="nav-item">
+            <a class="nav-link" onclick="navigateTo('links')">
+              <i class="fas fa-link" style="margin-right: 1px; margin-left: 1px;"></i>
+              <span style="user-select: none;">Links</span>
+              <i class="fas fa-link" style="margin-left: 1px; margin-right: 1px;"></i>
+            </a>
+          </li>
+
+
+          <!-- Contact Links  -->
+
+          <li class="nav-item">
+            <a class="nav-link" onclick="navigateTo('contact')">
+              <i class="fas fa-envelope" style="margin-right: 1px; margin-left: 1px;"></i>
+              <span style="user-select: none;">Contact</span>
+              <i class="fas fa-envelope" style="margin-left: 1px; margin-right: 1px;"></i>
+            </a>
+          </li>
+
+          <li class="nav-item">
+            <a class="nav-link" onclick="navigateThis('./donate')">
+              <i class="fas fa-donate" style="margin-right: 1px; margin-left: 1px;"></i>
+              <span style="user-select: none;">Donate</span>
+              <i class="fas fa-donate" style="margin-left: 1px; margin-right: 1px;"></i>
+            </a>
+          </li>
+
+
+
+
+          <script>
+            function navigateTo(section) {
+              document.getElementById(section).scrollIntoView({ behavior: 'smooth' });
+            }
+          </script>
+
+
+
+        </ul>
+
+      </div>
+
+
+    </div>
+  </nav>
+
+  <!-- ==== Navbar Ends ✈️✈️✈️ ==== -->
+
+
+
+
+  <!------------========== Home Section🏠🏡🏠🏡 ===========--------->
+
+  <div id="home" class="section-padding divider">
+    <div class="container">
+
+      <div class="row gy-4 align-items-center">
+        <div class="col-lg-5">
+          <img id="image" data-aos="zoom-in-down" data-aos-delay="100" class="img-fluid" alt="" />
+        </div>
+
+
+        <div class="col-lg-6" style="
+              display: flex;
+              flex-direction: column;
+              align-items: center;
+              justify-content: center;
+            ">
+          <h1 class="fw-bold display-4" data-aos="fade-up" style="text-align: center">
+            Welcome to Our IT Course Hub
+          </h1>
+
+          <p data-aos="fade-up" data-aos-delay="200" style="text-align: center; margin-top: 10px">
+            Discover a vast collection of unit notes, past papers, and valuable resources for the IT Course from Year
+            one to Year
+            four. Embark on an educational journey with us.
+          </p>
+          <div style="display: flex; justify-content: center; margin-top: 20px">
+            <a data-aos="fade-up" data-aos-delay="100" onclick="navigateTo('semesters')" class="btn me-3" style="
+            box-shadow:  5px 5px 10px rgba(202, 202, 202, 0.8),
+              -5px -5px 10px rgba(246, 246, 246, 0.8);">Semesters</a>
+
+            <a data-aos="fade-up" data-aos-delay="100" onclick="navigateTo('apps')" class="btn btn-contacts" style="
+              box-shadow:  5px 5px 10px rgba(202, 202, 202, 0.8),
+              -5px -5px 10px rgba(246, 246, 246, 0.8); font-size:16px;">
+              Web Tools
+            </a>
+
+
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+
+  <!----- 📚📚📚Semesters and Electives Start Here📚📚📚 ------>
+
+  <div id="semesters" class="section-padding divider">
+    <div class="container">
+
+      <div class="row">
+        <div class="col-12">
+          <div class="intro-section text-center mb-5">
+            <h1 class="fw-bold" style="font-size:1.6rem; margin-top:-35px;
+            margin-bottom:1.5rem" data-aos="fade-up">Course Semesters</h1>
+            <p class="mx-auto" style="font-size: 15px;" data-aos="fade-up">
+              Each semester offers a wealth of valuable resources, including
+              <span class="permanent-selection">lecture notes</span>,
+              <span class="permanent-selection"> past papers</span>,
+              <span class="permanent-selection"> executable files</span>,
+              <span class="permanent-selection"> assignments</span>,
+              and more, to enhance your understanding and skills in the field of
+              Information Technology
+            </p>
+
+          </div>
+        </div>
+      </div>
+
+      <div class="row gy-5 gx-4">
+
+        <div class="col-md-6 col-lg-4" data-aos="fade-up" data-aos-delay="100" id="semester-1-1">
+          <div class="service border-hover p-4 shadow rounded-5">
+            <div class="icon rounded-4">
+              <img class="icona" src="./assets/images/books-stack-of-three.png" />
+            </div>
+            <h5 class="mt-4 fw-bold">Semester 1.1</h5>
+            <strong>Units:</strong>
+            <p class="units"> INTE 111, INTE 112, INTE 113, BIBL 110, COMS 110, MATH 104</p>
+          </div>
+        </div>
+
+        <div class="col-md-6 col-lg-4" data-aos="fade-up" data-aos-delay="200" id="semester-1-2">
+          <div class="service border-hover p-4 shadow rounded-5">
+            <div class="icon rounded-4">
+              <img class="icona" src="./assets/images/progress.png" />
+            </div>
+            <h5 class="mt-4 fw-bold">Semester 1.2</h5>
+            <strong>Units:</strong>
+            <p class="units"> INTE 121, INTE 122, INTE 123, COMP 122, BIBL 120, COMS 120, MATH 105</p>
+          </div>
+        </div>
+
+        <div class="col-md-6 col-lg-4" data-aos="fade-up" data-aos-delay="300" id="semester-2-1">
+          <div class="service border-hover p-4 shadow rounded-5">
+            <div class="icon rounded-4">
+              <img class="icona" src="./assets/images/puzzle.png" />
+            </div>
+            <h5 class="mt-4 fw-bold">Semester 2.1</h5>
+            <strong>Units:</strong>
+            <p class="units"> INTE 211, INTE 212, INTE 213, INTE 214, INTE 215, INTE 216, BIBL 210 </p>
+          </div>
+        </div>
+
+        <div class="col-md-6 col-lg-4" data-aos="fade-up" data-aos-delay="100" id="semester-2-2">
+          <div class="service border-hover p-4 shadow rounded-5">
+            <div class="icon rounded-4">
+              <img class="icona" src="./assets/images/pc.png" />
+            </div>
+            <h5 class="mt-4 fw-bold">Semester 2.2</h5>
+            <strong>Units:</strong>
+            <p class="units"> INTE 221, INTE 223, INTE 226, COMP 326, BIBL 222 </p>
+          </div>
+        </div>
+
+        <div class="col-md-6 col-lg-4" data-aos="fade-up" data-aos-delay="200" id="semester-3-1">
+          <div class="service border-hover p-4 shadow rounded-5">
+            <div class="icon rounded-4">
+              <img class="icona" src="./assets/images/monitor.png" />
+            </div>
+            <h5 class="mt-4 fw-bold">Semester 3.1</h5>
+            <strong>Units:</strong>
+            <p class="units"> INTE 311, INTE 312, INTE 313, INTE 314, INTE 315, INTE 316, INTE 317 </p>
+          </div>
+        </div>
+
+        <div class="col-md-6 col-lg-4" data-aos="fade-up" data-aos-delay="300" id="semester-3-2">
+          <div class="service border-hover p-4 shadow rounded-5">
+            <div class="icon rounded-4">
+              <img class="icona" src="./assets/images/rocket.png" />
+            </div>
+            <h5 class="mt-4 fw-bold">Semester 3.2</h5>
+            <strong>Units:</strong>
+            <p class="units"> INTE 321, INTE 322, INTE 323, INTE 324, INTE 325, INTE 326, INTE 327, Elective I </p>
+          </div>
+        </div>
+
+        <div class="col-md-6 col-lg-4" data-aos="fade-up" data-aos-delay="200" id="semester-4-1">
+          <div class="service border-hover p-4 shadow rounded-5">
+            <div class="icon rounded-4">
+              <img class="icona" src="./assets/images/lighting.png" />
+            </div>
+            <h5 class="mt-4 fw-bold">Semester 4.1</h5>
+            <strong>Units:</strong>
+            <p class="units"> INTE 411, INTE 412, INTE 413, COMP 413, INTE 414, Elective II, Elective III </p>
+          </div>
+        </div>
+
+        <div class="col-md-6 col-lg-4" data-aos="fade-up" data-aos-delay="200" id="semester-4-2">
+          <div class="service border-hover p-4 shadow rounded-5">
+            <div class="icon rounded-4">
+              <img class="icona" src="./assets/images/graduation-hat-and-diploma.png" />
+            </div>
+            <h5 class="mt-4 fw-bold">Semester 4.2</h5>
+            <strong>Units:</strong>
+            <p class="units"> INTE 421, INTE 422, INTE 423, INTE 424, Elective IV, Elective V </p>
+          </div>
+        </div>
+
+        <div class="col-md-6 col-lg-4" data-aos="fade-up" data-aos-delay="200">
+          <div class="service border-hover p-4 shadow rounded-5">
+
+
+            <div class="electives">
+              <h5 class="mt-4 fw-bold">Elective I to V</h5>
+              <p class="units mb-0">
+                <strong>Elective 01 : </strong> INTE 331 or INTE 331
+              </p>
+              <p class="units mb-0">
+                <strong>Elective 02 : </strong> INTE 431, INTE 432 or INTE 441, INTE 442
+              </p>
+              <p class="units mb-0">
+                <strong>Elective 03 : </strong> INTE 451, INTE 452 or INTE 453, INTE 454
+              </p>
+              <p class="units mb-0">
+                <strong>Elective 04 : </strong> INTE 461, INTE 462 or INTE 463, INTE 464
+              </p>
+              <p class="units mb-0">
+                <strong>Elective 05 : </strong> INTE 471, INTE 472 or INTE 473, INTE 474
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  </div>
+  </div>
+
+  <!------ 📚📚📚Semesters and Electives End Here📚📚📚 ----->
+
+
+
+  <!----------- 🔗🔗🔗Important Links Start Here🔗🔗🔗-------->
+
+  <div id="links" class="section-padding divider">
+    <div class="container">
+      <div class="row">
+        <div class="col-12" data-aos="fade-up">
+          <div class="intro-section text-center mb-5" style="margin-top: -20px;">
+            <h1 class="fw-bold" style="font-size:1.7rem; margin-top:-35px;
+            margin-bottom:1.5rem">Students Hub</h1>
+            <p class="mx-auto" style="font-size: 14px; margin-bottom: -30px !important;">
+              Dive into the <span class="permanent-selection">Knowledge Hub</span>, where essential links await.
+              Explore <span class="permanent-selection">OpenAI, YouTube, Moodle,</span> and the <span
+                class="permanent-selection">Students portal</span> to access
+              resources that will support your educational journey.
+            </p>
+
+          </div>
+        </div>
+      </div>
+
+      <style>
+        @media (max-width: 650px) {
+          .unique-class {
+            display: flex !important;
+            justify-content: center !important;
+            align-items: center !important;
+            text-align: center !important;
+          }
+        }
+      </style>
+
+
+
+      <!-- Moodle Kabarak Link -->
+
+
+      <a href="https://moodle.kabarak.ac.ke/login/index.php" target="_blank">
+        <div class="row mt-4 gx-0 gy-4 p-5 border-hover rounded-5 shadow unique-class" data-aos="fade-up"
+          data-aos-delay="300">
+          <div class="col-md-3">
+            <img class="moodle" src="./assets/images/moodle_logo_TM.svg" alt="" />
+          </div>
+          <div class="col-md-3">
+            <h5>Moodle Pty Ltd</h5>
+            <small class="text-info">Developed in 2002</small>
+          </div>
+          <div class="col-md-6">
+            <p class="mb-0">
+              Moodle is an open-source learning management system (LMS) for online courses.
+            </p>
+          </div>
+        </div>
+      </a>
+
+
+
+
+      <!-- Kabarak University Portal Link -->
+
+      <a href="https://eserver.kabarak.ac.ke/students" target="_blank">
+        <div class="row mt-4 gx-0 gy-4 p-5 border-hover rounded-5 shadow unique-class" data-aos="fade-up"
+          data-aos-delay="200">
+          <div class="col-md-3">
+            <img class="moodle" src="./assets/images/logo2.png" alt="" />
+          </div>
+          <div class="col-md-3">
+            <h5>Students Portal</h5>
+            <small class="text-info">Kabarak University</small>
+          </div>
+          <div class="col-md-6">
+            <p class="mb-0">
+              Discover and explore the verified University Students Portal.
+            </p>
+          </div>
+        </div>
+      </a>
+
+
+      <!-- Helb Link -->
+
+      <a href="https://studentportal.helb.co.ke/auth/signin" target="_blank">
+        <div class="row mt-4 gx-0 gy-4 p-5 border-hover rounded-5 shadow unique-class" data-aos="fade-up"
+          data-aos-delay="400">
+          <div class="col-md-3">
+            <img class="helb" src="./assets/images/logo-login.png" alt="" />
+          </div>
+          <div class="col-md-3 " style="padding-left: -25px;">
+            <h5>HELB</h5>
+            <small class="text-info">Higher Education Loans Board</small>
+          </div>
+          <div class="col-md-6 hlb">
+            <p class="mb-0">
+              The portal enables students to access loan
+              applications, check
+              status, and manage accounts.
+            </p>
+          </div>
+        </div>
+      </a>
+
+
+      <!-- Openai ChatGPT Link -->
+
+      <a href="https://chat.openai.com" target="_blank">
+        <div class="row gx-0 gy-4 p-5 border-hover rounded-5 shadow unique-class" style="margin-top: 20px!important;"
+          data-aos="fade-up" data-aos-delay="200">
+          <div class="col-md-3">
+            <p class="gpt">ChatGPT</p>
+            <p></p>
+          </div>
+          <div class="col-md-3">
+            <h5>OpenAI</h5>
+            <small class="text-info">Founded in 2015</small>
+          </div>
+          <div class="col-md-6">
+            <p class="mb-0">
+              An advanced language model that uses deep learning to generate human-like
+              text.
+            </p>
+          </div>
+        </div>
+      </a>
+
+
+
+      <!-- Youtube Global Version Link -->
+      <a href="https://www.youtube.com" target="_blank">
+        <div class="row mt-4 gx-0 gy-4 p-5 border-hover rounded-5 shadow unique-class" data-aos="fade-up"
+          data-aos-delay="400">
+          <div class="col-md-3">
+            <img class="yt" src="./assets/images/new-youtube-logo-icon-update-youtube-issue-fortawesome-font-3.png"
+              alt="" />
+          </div>
+          <div class="col-md-3">
+            <h5>Google LLC.</h5>
+            <small class="text-info">Developed in February 2005</small>
+          </div>
+          <div class="col-md-6">
+            <p class="mb-0">
+              A video-sharing platform that offers educational content, practical demonstrations, and more.
+            </p>
+          </div>
+        </div>
+      </a>
+
+
+
+
+
+
+
+
+
+      <!-----=== 🔗🔗Important Links End Here🔗🔗🔗 ====----->
+
+
+
+
+
+
+      <!-----=== 🔗🔗Project Ideas Start Here🔗🔗🔗 ====----->
+
+      <div id="brainstorms" class="section-padding divider">
+        <div class="container">
+          <div class="row">
+            <div class="col-12">
+              <div class="intro-section text-center mb-5">
+                <h1 class="fw-bold" style="font-size:1.6rem; margin-top:-35px;
+            margin-bottom:1.5rem;" data-aos="fade-up">Project Ideas</h1>
+                <p class="mx-auto" style="font-size: 15px;" data-aos="fade-up">
+                  Discover a world of exciting IT project ideas in our section. Whether you're a programmer, designer,
+                  or tech enthusiast, explore a range of projects spanning <span class="permanent-selection">software
+                    development, web
+                    design, and data
+                    analysis.</span> Choose a project that resonates with you, envision the impact you want to make, and
+                  let your
+                  creativity thrive.
+                </p>
+
+              </div>
+            </div>
+          </div>
+
+
+
+
+
+
+          <!-- FinanceTrack -->
+
+          <div class="projectz">
+
+            <div class="row gy-5 gx-5">
+
+
+              <div class="col-md-6 col-lg-4" data-aos="fade-up" data-aos-delay="100">
+                <div class="p-4 border-hover shadow rounded-5">
+                  <div class="farm">
+                    <img class="money"
+                      src="./assets/images/vecteezy_businessman-under-rain-of-banknotes-businessman-with-paper_20716211_133-min.png"
+                      class="img-fluid rounded-5 mb-3" alt="" />
+
+                  </div>
+                  <a class="d-block mt-2">
+                    <h5 class="fw-bold" style="font-size: 16px;
+                                  margin-bottom:20px;">FinanceTrack: Online Personal Finance Manager</h5>
+                  </a>
+                  <a onclick="navigateThis('./FinanceTrack')">
+                    <span class="badge read-more bg-info">Read More</span>
+                  </a>
+                </div>
+              </div>
+
+
+
+
+
+              <!-- Dialectling -->
+
+              <div class="col-md-6 col-lg-4" data-aos="fade-up" data-aos-delay="100">
+                <div class="p-4 border-hover shadow rounded-5">
+
+                  <div class="farm">
+                    <img class="teacher"
+                      src="./assets/images/vecteezy_teacher-png-graphic-clipart-design_20962992_72-min.png"
+                      class="img-fluid rounded-5 mb-3" alt="" />
+
+                  </div>
+                  <a class="d-block mt-2">
+                    <h5 class="fw-bold" style="font-size: 16px;
+                                  margin-bottom:20px;">DialectLing: Interactive Local Dialect Learning App</h5>
+                  </a>
+                  <a onclick="navigateThis('./Dialectling')">
+                    <span class="badge read-more bg-info">Read More</span>
+                  </a>
+                </div>
+              </div>
+
+
+
+
+              <!-- Communisafe -->
+
+              <div class="col-md-6 col-lg-4" data-aos="fade-up" data-aos-delay="100">
+                <div class="p-4 border-hover shadow rounded-5">
+                  <div class="farm">
+                    <img class="police"
+                      src="./assets/images/vecteezy_3d-police-girl-character-png-transparent-background_22484684_938-min.png"
+                      class="img-fluid rounded-5 mb-3" alt="" />
+
+                  </div>
+                  <a class="d-block mt-2">
+                    <h5 class="fw-bold" style="font-size: 16px;
+                                  margin-bottom:20px;">CommuniSafe: Empowering Community Safety Through a Mobile App
+                    </h5>
+                  </a>
+                  <a onclick="navigateThis('./Communisafe')">
+                    <span class="badge read-more bg-info">Read More</span>
+                  </a>
+                </div>
+              </div>
+
+
+
+
+              <!-- SmartGreen -->
+
+              <div class="col-md-6 col-lg-4" data-aos="fade-up" data-aos-delay="100">
+
+                <div class="p-4 border-hover shadow rounded-5">
+                  <div class="farm">
+                    <img class="mess" src="./assets/images/smartgreen.jpg" class="img-fluid rounded-5 mb-3" alt="" />
+                  </div>
+                  <a class="d-block mt-2">
+                    <h5 class="fw-bold messy" style="font-size: 16px;
+                    margin-bottom:15px; ">SmartGreen: Intelligent Greenhouse Management System</h5>
+                  </a>
+
+                  <a onclick="navigateThis('./Smartgreen')">
+                    <span class="badge read-more bg-info">Read More</span>
+                  </a>
+
+                </div>
+
+              </div>
+
+
+
+              <!-- CareerLink -->
+
+              <div class="col-md-6 col-lg-4" data-aos="fade-up" data-aos-delay="100">
+                <div class="p-4 border-hover shadow rounded-5">
+                  <div class="farm">
+                    <img class="jobs-vacancy"
+                      src="./assets/images/vecteezy_friendly-and-approachable-3d-engineer-women-personable-and_22694986_383-min.png"
+                      class="img-fluid rounded-5 mb-3" alt="" />
+                  </div>
+                  <a class="d-block mt-2">
+                    <h5 class="fw-bold" style="font-size: 16px;
+                                    margin-bottom:10px; margin-top:20px;">CareerLink: Job Training and Placement Portal
+                      at Kabarak
+                      University</h5>
+                  </a>
+                  <a onclick="navigateThis('./CareerLink')">
+                    <span class="badge read-more bg-info">Read More</span>
+                  </a>
+                </div>
+              </div>
+
+              <!-------Mess Upgrade------->
+
+              <div class="col-md-6 col-lg-4" data-aos="fade-up" data-aos-delay="100">
+                <div class="p-4 border-hover shadow rounded-5">
+                  <div class="farm">
+                    <img class="mess" src="./assets/images/food.jpg" class="img-fluid rounded-5 mb-3" alt="" />
+                  </div>
+                  <a class="d-block mt-4">
+                    <h5 class="fw-bold messy" style="font-size: 16px; 
+                    margin-bottom:20px; ">MessMaster: Streamlining Food Orders at Kabarak University
+                    </h5>
+                    <style>
+                      @media(min-width:768px) {
+                        .messy {
+
+                          margin-top: -30px;
+                        }
+                      }
+                    </style>
+                  </a>
+                  <a onclick="navigateThis('./MessMaster')">
+                    <span class="badge read-more bg-info">Read More</span>
+                  </a>
+                </div>
+              </div>
+
+              <script>
+                function navigateThis(page) {
+                  window.location.href = page;
+                }
+              </script>
+
+
+
+
+              <div class="more-ideas">
+                <a onclick="navigateThis('./brainstorms')" data-aos="fade-up" data-aos-delay="100"
+                  class="moreIdeaz">More
+                  Project Ideas</a>
+              </div>
+
+
+
+
+
+            </div>
+          </div>
+        </div>
+      </div>
+
+
+
+
+      <!--------- 💡💡💡Project Ideas End Here💡💡💡 ------->
+
+
+
+
+
+      <!----- 🤼🤼🤼Group Project Invite Starts Here🤼🤼🤼 ---->
+
+
+
+
+      <div style="margin-top: 40px;">
+        <div class="container">
+          <div class="row">
+            <div class="col-12">
+              <div class="intro-section text-center mb-5 rounded-5">
+                <h1 data-aos="fade-up" data-aos-delay="100" style="font-size:1.6rem; 
+            margin-bottom:1.5rem" class="fw-bold">
+                  Have an Exciting Project? Let's Collaborate
+                </h1>
+                <p class="mx-auto" style="font-size: 15px;
+                margin-bottom:30px;" data-aos="fade-up" data-aos-delay="100">
+                  Unleash your creativity and let's bring your project to life! We
+                  value your ideas and contributions. Feel free to share your
+                  thoughts, insights, and innovative concepts with the group.
+                  Together, we can turn your vision into a remarkable reality.
+                </p>
+                <div class="more-ideas" style="margin-top:0%!important;">
+                  <a href="https://chat.whatsapp.com/DaLU1d75aI7BorcSSDQohs" target="_blank" data-aos="fade-up"
+                    data-aos-delay="100" class="moreIdeaz">Let's Discuss</a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!--============== 🛳️🛳️GAP🛳️🛳️ ========-->
+
+      <div class="divider-container"></div>
+
+
+
+
+
+
+
+      <!-----===== 💹💹📑Comrades Marketplace Starts Here📑💹💹  =====-->
+
+
+      <div class="section-padding" style="margin-bottom: -100px;">
+        <div class="container">
+          <div class="row">
+            <div class="col-12" data-aos="fade-up">
+              <div class="intro-section text-center mb-5">
+                <h1 class="fw-bold" style="font-size:1.4rem; margin-top:-70px!important;
+            margin-bottom:0.5rem">Comrades Marketplace</h1>
+                <div class="sad-div">
+                  <img class="sad" src="./assets/images/sad.png" loading="lazy">
+                  <p class="coming-soon" id="typing-effect" style="display: inline-block;">
+
+                  </p>
+
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!------- 💹💹📑Comrades Marketplace Ends Here📑💹💹 ====------->
+
+
+      <div class="divider-container"></div>
+
+
+
+
+      <!----- 📚📚📚Apps Start Here📚📚📚 ------>
+
+      <div id="apps" class="section-padding ">
+        <div class="container">
+
+          <div class="row">
+            <div class="col-12">
+              <div class="intro-section text-center mb-5">
+                <h1 class="fw-bold" style="font-size:1.6rem; margin-top:-35px;
+                  margin-bottom:1.5rem" data-aos="fade-up">Web Apps</h1>
+                <p class="mx-auto" style="font-size: 15px;" data-aos="fade-up">
+                  This section offers a range of specialized web apps dedicated to <span
+                    class="permanent-selection">document handling</span>. These web apps are designed to
+                  efficiently handle various document-related tasks, allowing you to convert documents to PDF format,
+                  analyze and extract
+                  information from uploaded PDF files, and perform other useful functions. .
+
+
+                </p>
+
+              </div>
+            </div>
+          </div>
+
+          <div class="row gy-5 gx-4">
+
+
+            <!-- Image to PDF -->
+
+            <div class="col-md-6 col-lg-4" data-aos="fade-up" data-aos-delay="100" id="redirect-1"
+              onclick="redirectToSmallPDF()">
+              <div class="service border-hover p-4 shadow rounded-5">
+                <div class="icon rounded-4">
+                  <i class="ri-image-edit-fill" style="font-size: 50px;"></i>
+                </div>
+                <h5 class="mt-4 fw-bold">Image to PDF</h5>
+                <strong style="display: flex;">
+                  <i class="ri-star-fill"></i>
+                  <i class="ri-star-fill"></i>
+                  <i class="ri-star-fill"></i>
+                  <i class="ri-star-fill"></i>
+                  <i class="ri-star-half-fill"></i>
+                  <p style="margin-left: 4px;">(4.5)</p>
+                </strong>
+                <p class="units">Effortlessly and conveniently convert a wide range of image formats into high-quality
+                  PDF files
+                  with ease.</p>
+              </div>
+            </div>
+
+            <script>
+              function redirectToSmallPDF() {
+                window.location.href = "https://smallpdf.com/jpg-to-pdf";
+              }
+            </script>
+
+
+
+            <!-- ChatPDF -->
+
+            <div class="col-md-6 col-lg-4" data-aos="fade-up" data-aos-delay="100" id="redirect-2"
+              onclick="redirectToChatPDF()">
+              <div class="service border-hover p-4 shadow rounded-5">
+                <div class="icon rounded-4"
+                  style="display: flex; align-content:center; justify-content:center; opacity:0.8;">
+
+                  <img style="width: 50px;" src="./assets/images/chatbot.png" alt="">
+                </div>
+                <h5 class="mt-4 fw-bold">ChatPDF</h5>
+                <strong style="display: flex;">
+                  <i class="ri-star-fill"></i>
+                  <i class="ri-star-fill"></i>
+                  <i class="ri-star-fill"></i>
+                  <i class="ri-star-fill"></i>
+                  <i class="ri-star-half-fill"></i>
+                  <p style="margin-left: 4px;">(4.6)</p>
+                </strong>
+                <p class="units">Customized ChatGPT designed exclusively for the content uploaded in the PDF you send to
+                  it.</p>
+              </div>
+            </div>
+
+            <script>
+              function redirectToChatPDF() {
+                window.location.href = "https://www.chatpdf.com";
+              }
+            </script>
+
+
+            <!-- DOCX to Pdf -->
+
+            <div class="col-md-6 col-lg-4" data-aos="fade-up" data-aos-delay="100" id="redirect-3"
+              onclick="redirectToSmallPDFWordToPDF()">
+              <div class="service border-hover p-4 shadow rounded-5">
+                <div class="icon rounded-4">
+                  <i style="font-size: 50px;" class="ri-file-word-2-line"></i>
+                </div>
+                <h5 class="mt-4 fw-bold">DOCX to PDF</h5>
+                <strong style="display: flex;">
+                  <i class="ri-star-fill"></i>
+                  <i class="ri-star-fill"></i>
+                  <i class="ri-star-fill"></i>
+                  <i class="ri-star-fill"></i>
+                  <i class="ri-star-line"></i>
+                  <p style="margin-left: 4px;">(4.0)</p>
+                </strong>
+                <p class="units">Easily convert DOCX (Word) documents to professional-looking PDF files with ease and
+                  convenience.
+                </p>
+              </div>
+            </div>
+
+            <script>
+              function redirectToSmallPDFWordToPDF() {
+                window.location.href = "https://smallpdf.com/word-to-pdf";
+              }
+            </script>
+
+
+            <!-- PPT to PDF -->
+
+            <div class="col-md-6 col-lg-4" data-aos="fade-up" data-aos-delay="100" id="redirect-4"
+              onclick="redirectToSmallPDFPPTToPDF()">
+              <div class="service border-hover p-4 shadow rounded-5">
+                <div class="icon rounded-4">
+                  <i style="font-size: 50px;" class="ri-slideshow-4-line"></i>
+                </div>
+                <h5 class="mt-4 fw-bold">PPT to PDF</h5>
+                <strong style="display: flex;">
+                  <i class="ri-star-fill"></i>
+                  <i class="ri-star-fill"></i>
+                  <i class="ri-star-fill"></i>
+                  <i class="ri-star-fill"></i>
+                  <i class="ri-star-half-fill"></i>
+                  <p style="margin-left: 4px;">(4.7)</p>
+                </strong>
+                <p class="units">Effortlessly transform PowerPoint (PPT) presentations into polished PDF documents with
+                  ease and
+                  convenience.</p>
+              </div>
+            </div>
+
+            <script>
+              function redirectToSmallPDFPPTToPDF() {
+                window.location.href = "https://smallpdf.com/ppt-to-pdf";
+              }
+            </script>
+
+
+
+
+            <!-- Online c compiler -->
+
+            <div class="col-md-6 col-lg-4" data-aos="fade-up" data-aos-delay="100" id="redirect-5"
+              onclick="redirectToProgramizCCompiler()">
+              <div class="service border-hover p-4 shadow rounded-5">
+                <div class="icon rounded-4">
+                  <i style="font-size: 50px;" class="ri-braces-fill"></i>
+                </div>
+                <h5 class="mt-4 fw-bold">Online C Compiler</h5>
+                <strong style="display: flex;">
+                  <i class="ri-star-fill"></i>
+                  <i class="ri-star-fill"></i>
+                  <i class="ri-star-fill"></i>
+                  <i class="ri-star-fill"></i>
+                  <i class="ri-star-half-fill"></i>
+                  <p style="margin-left: 4px;">(4.5)</p>
+                </strong>
+                <p class="units">Execute C programs with the convenience and efficiency provided by the application.</p>
+              </div>
+            </div>
+
+            <script>
+              function redirectToProgramizCCompiler() {
+                window.location.href = "https://www.programiz.com/c-programming/online-compiler/";
+              }
+            </script>
+
+
+
+            <!-- Online C++ Compiler -->
+
+            <div class="col-md-6 col-lg-4" data-aos="fade-up" data-aos-delay="100" id="redirect-6"
+              onclick="redirectToProgramizCPPCompiler()">
+              <div class="service border-hover p-4 shadow rounded-5">
+                <div class="icon rounded-4">
+                  <i style="font-size: 50px;" class="ri-macbook-line"></i>
+                </div>
+                <h5 class="mt-4 fw-bold">Online C++ Compiler</h5>
+                <strong style="display: flex;">
+                  <i class="ri-star-fill"></i>
+                  <i class="ri-star-fill"></i>
+                  <i class="ri-star-fill"></i>
+                  <i class="ri-star-fill"></i>
+                  <i class="ri-star-half-fill"></i>
+                  <p style="margin-left: 4px;">(4.8)</p>
+                </strong>
+                <p class="units">Run C++ programs with ease and efficiency, utilizing the comprehensive capabilities of
+                  the
+                  application.</p>
+              </div>
+            </div>
+
+            <script>
+              function redirectToProgramizCPPCompiler() {
+                window.location.href = "https://www.programiz.com/cpp-programming/online-compiler/";
+              }
+            </script>
+
+
+            <!-- Online Java Compiler -->
+
+            <div class="col-md-6 col-lg-4" data-aos="fade-up" data-aos-delay="100" id="redirect-7"
+              onclick="redirectToProgramizJavaCompiler()">
+              <div class="service border-hover p-4 shadow rounded-5">
+                <div class="icon rounded-4"
+                  style="display: flex; align-content:center; justify-content:center; opacity:0.8;">
+                  <svg xmlns="http://www.w3.org/2000/svg" height="50px" viewBox="0 0 384 512">
+                    <path
+                      d="M277.74 312.9c9.8-6.7 23.4-12.5 23.4-12.5s-38.7 7-77.2 10.2c-47.1 3.9-97.7 4.7-123.1 1.3-60.1-8 33-30.1 33-30.1s-36.1-2.4-80.6 19c-52.5 25.4 130 37 224.5 12.1zm-85.4-32.1c-19-42.7-83.1-80.2 0-145.8C296 53.2 242.84 0 242.84 0c21.5 84.5-75.6 110.1-110.7 162.6-23.9 35.9 11.7 74.4 60.2 118.2zm114.6-176.2c.1 0-175.2 43.8-91.5 140.2 24.7 28.4-6.5 54-6.5 54s62.7-32.4 33.9-72.9c-26.9-37.8-47.5-56.6 64.1-121.3zm-6.1 270.5a12.19 12.19 0 0 1-2 2.6c128.3-33.7 81.1-118.9 19.8-97.3a17.33 17.33 0 0 0-8.2 6.3 70.45 70.45 0 0 1 11-3c31-6.5 75.5 41.5-20.6 91.4zM348 437.4s14.5 11.9-15.9 21.2c-57.9 17.5-240.8 22.8-291.6.7-18.3-7.9 16-19 26.8-21.3 11.2-2.4 17.7-2 17.7-2-20.3-14.3-131.3 28.1-56.4 40.2C232.84 509.4 401 461.3 348 437.4zM124.44 396c-78.7 22 47.9 67.4 148.1 24.5a185.89 185.89 0 0 1-28.2-13.8c-44.7 8.5-65.4 9.1-106 4.5-33.5-3.8-13.9-15.2-13.9-15.2zm179.8 97.2c-78.7 14.8-175.8 13.1-233.3 3.6 0-.1 11.8 9.7 72.4 13.6 92.2 5.9 233.8-3.3 237.1-46.9 0 0-6.4 16.5-76.2 29.7zM260.64 353c-59.2 11.4-93.5 11.1-136.8 6.6-33.5-3.5-11.6-19.7-11.6-19.7-86.8 28.8 48.2 61.4 169.5 25.9a60.37 60.37 0 0 1-21.1-12.8z" />
+                  </svg>
+                </div>
+                <h5 class="mt-4 fw-bold">Online Java Compiler</h5>
+                <strong style="display: flex;">
+                  <i class="ri-star-fill"></i>
+                  <i class="ri-star-fill"></i>
+                  <i class="ri-star-fill"></i>
+                  <i class="ri-star-fill"></i>
+                  <i class="ri-star-half-fill"></i>
+                  <p style="margin-left: 4px;">(4.5)</p>
+                </strong>
+                <p class="units">Execute Java programs with convenience, utilizing the robust features of the
+                  application.
+                </p>
+              </div>
+            </div>
+
+            <script>
+              function redirectToProgramizJavaCompiler() {
+                window.location.href = "https://www.programiz.com/java-programming/online-compiler/";
+              }
+            </script>
+
+
+
+
+
+            <!-- Online HTML Compiler -->
+            <div class="col-md-6 col-lg-4" data-aos="fade-up" data-aos-delay="200" id="redirect-8"
+              onclick="redirectToProgramizHtmlCompiler()">
+              <div class="service border-hover p-4 shadow rounded-5">
+                <div class="icon rounded-4">
+                  <i style="font-size: 50px;" class="ri-code-s-slash-line"></i>
+                </div>
+                <h5 class="mt-4 fw-bold">Online HTML Compiler</h5>
+                <strong style="display: flex;">
+                  <i class="ri-star-fill"></i>
+                  <i class="ri-star-fill"></i>
+                  <i class="ri-star-fill"></i>
+                  <i class="ri-star-fill"></i>
+                  <i class="ri-star-half-fill"></i>
+                  <p style="margin-left: 4px;">(4.4)</p>
+                </strong>
+                <p class="units">Effortlessly compile HTML code into a live and interactive web page using the app.</p>
+              </div>
+            </div>
+
+            <script>
+              function redirectToProgramizHtmlCompiler() {
+                window.location.href = "https://www.programiz.com/html/online-compiler/";
+              }
+            </script>
+
+
+
+
+            <!-- Image TO pdf -->
+            <div class="col-md-6 col-lg-4" data-aos="fade-up" data-aos-delay="200" id="redirect-9"
+              onclick="redirectToOnlineConvertOcr()">
+              <div class="service border-hover p-4 shadow rounded-5">
+                <div class="icon rounded-4">
+                  <i style="font-size: 50px;" class="ri-character-recognition-line"></i>
+                </div>
+                <h5 class="mt-4 fw-bold">Image to Text</h5>
+                <strong style="display: flex;">
+                  <i class="ri-star-fill"></i>
+                  <i class="ri-star-fill"></i>
+                  <i class="ri-star-fill"></i>
+                  <i class="ri-star-fill"></i>
+                  <i class="ri-star-half-fill"></i>
+                  <p style="margin-left: 4px;">(4.7)</p>
+                </strong>
+                <p class="units">Effortlessly extract text from images using the application, making the process quick
+                  and
+                  convenient.</p>
+              </div>
+            </div>
+
+            <script>
+              function redirectToOnlineConvertOcr() {
+                window.location.href = "https://www.online-convert.com/ocr/image-to-text";
+              }
+            </script>
+
+
+
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!------ 📚📚📚Apps End Here📚📚📚 ----->
+
+
+  <!------------====== 👋👋Contacts Section Starts Here👋👋 =========------------>
+
+
+  <div id="contact" class="section-padding">
+    <div class="container">
+      <div class="row">
+        <div class="col-12" data-aos="fade-up">
+          <div class="intro-section text-center mb-5">
+            <h1 class="fw-bold" style="font-size:1.6rem; margin-top:-80px; margin-bottom:1.5rem">Contact Us</h1>
+            <p class="mx-auto" style="font-size: 15px;">
+              If you have any technical inquiries or innovative suggestions,
+              we warmly encourage you to unleash your creativity and compose
+              an email to our dedicated IT team. Your thoughts and feedback
+              are highly valued, and we are eager to hear from you! Please
+              utilize the space below to craft your message.
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <div class="row justify-content-center" data-aos="fade-up" data-aos-delay="200">
+        <div class="col-md-8">
+
+
+          <!----------  Form Section ------------>
+
+          <form action="https://formsubmit.co/4b39027887b0f0e6889a8ede5644e855" method="POST" class="row g-3">
+            <div class="form-group col-md-6">
+              <input type="text" class="form-control" name="Name" placeholder="Enter Name" required />
+            </div>
+            <div class="form-group col-md-6">
+              <input type="email" class="form-control" name="Email" placeholder="Enter Email" required />
+            </div>
+            <div class="form-group col-md-12">
+              <input type="text" class="form-control" name="Subject" placeholder="Enter Subject" required />
+            </div>
+            <div class="form-group col-md-12">
+              <textarea name="Message" class="form-control" rows="5" placeholder="Enter Message"></textarea>
+            </div>
+            <div class="form-group col-md-12">
+              <button type="submit" class="btn" onclick="delaySubmit(event)">Send Message</button>
+
+
+
+              <script>
+                function delaySubmit(event) {
+                  // Prevent the form from submitting immediately
+                  event.preventDefault();
+
+                  // Validate the form
+                  const form = document.querySelector('form');
+                  if (!form.checkValidity()) {
+                    // If the form is invalid, display an error message or handle it accordingly
+                    showPopup(11);
+                    return;
+                  }
+
+                  // Display the pop-up message
+                  showPopup(12);
+
+                  // Delay the form submission for 5 seconds
+                  setTimeout(function () {
+                    // Submit the form after the delay
+                    form.submit();
+                  }, 10);
+                }
+              </script>
+            </div>
+          </form>
+
+
+        </div>
+      </div>
+
+
+
+    </div>
+
+
+  </div>
+
+  <!---------- 👋👋👋Contacts Section Ends Here👋👋👋 ------->
+
+
+
+  <div class="scroll-to-top" onclick="scrollToTop()"></div>
+
+
+
+
+  <div class="divider-container"></div>
+
+
+
+
+
+  <!-------------========= 📑📑 Pop UP Styling Starts Here 📑📑 =======----------------------->
+
+
+
+
+
+  <style>
+    .popup-card {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background-color: rgba(28, 28, 28, 0.447);
+      display: none;
+      justify-content: center;
+      align-items: center;
+      z-index: 2000;
+    }
+
+    .close-btn {
+      position: absolute;
+      bottom: 10%;
+      left: 45%;
+      opacity: 0.7;
+      cursor: pointer;
+    }
+
+    @keyframes rotate {
+      0% {
+        transform: rotate(0deg);
+      }
+
+      100% {
+        transform: rotate(1turn);
+      }
+    }
+
+    .rotate-animation {
+      animation: rotate 0.3s linear;
+    }
+
+    .blob {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .box {
+      background: url(./assets/images/no.jpg);
+      -webkit-background-size: cover;
+      background-size: cover;
+      background-position: center center;
+      width: 200px;
+      height: 200px;
+      box-shadow: 2px 4px 4px rgba(144, 142, 142, 0.2);
+      animation: animate 5s ease-in-out infinite;
+      transition: all 1s ease-in-out;
+    }
+
+    @keyframes animate {
+      0% {
+
+        border-radius: 30% 60% 70% 40%/50% 60% 30% 60%;
+      }
+
+      50% {
+        border-radius: 60% 40% 30% 70%/60% 30% 70% 40%;
+      }
+
+      100% {
+        border-radius: 30% 60% 70% 40%/50% 60% 30% 60%;
+      }
+    }
+  </style>
+
+
+
+  <script>
+
+    function rotateAndHidePopup(index) {
+      var closeBtn = document.querySelector(`#popupCard${index} .close-btn`);
+      closeBtn.classList.add("rotate-animation");
+
+      setTimeout(function () {
+        hidePopup(index);
+        closeBtn.classList.remove("rotate-animation");
+      }, 300);
+    }
+
+    function hidePopup(index) {
+      document.getElementById(`popupCard${index}`).style.display = "none";
+    }
+
+    function showPopup(index) {
+      const popupCard = document.getElementById(`popupCard${index}`);
+      if (popupCard) {
+        popupCard.style.display = "flex";
+      }
+    }
+
+    function hidePopup(index) {
+      const popupCard = document.getElementById(`popupCard${index}`);
+      if (popupCard) {
+        popupCard.style.display = "none";
+      }
+    }
+  </script>
+
+
+
+
+
+  <!-------------========= ⚠️⚠️ Warning Fill in all the required details Pop card ⚠️⚠️ =======----------------------->
+
+
+
+  <div class="popup-card" id="popupCard11">
+
+    <div data-aos="fade-up" data-aos-delay="200" class="card"
+      style="border: rgba(246, 245, 243, 0.957) 3px solid; background-color: #f5ede6;">
+
+      <div class="card-body" style="margin-top: -10%; margin-left:-4%; display:flex; flex-direction:column;
+                                  align-items:center;">
+
+        <h3 class="h5 card-title mt-3" style="margin-top:40px !important;
+                                      margin-bottom: 40px; opacity:0.8;text-align:center;
+                                      color:#4a2e02 !important; font-weight:bold;">Hang On!</h3>
+
+
+
+
+
+        <div class="blob">
+          <div class="box">
+
+          </div>
+        </div>
+
+
+
+
+
+
+
+        <p data-aos="fade-up" data-aos-delay="200" class="notes-intro"
+          style="text-align: center; margin-bottom: 80px !important;
+                              margin-top:30px !important; color: #4a4845; font-weight:500;opacity:0.8; max-width:300px;">
+
+          Please fill in all the details and correctly before hitting send message.
+
+        </p>
+
+
+
+
+
+
+
+
+        <span data-aos="fade-up" data-aos-delay="200" class="close-btn" onclick="rotateAndHidePopup(11)
+                              " style="bottom: 8% ;">
+          <i class="fa fa-times-circle" style="font-size: 30px; color: rgb(92, 64, 51);
+                                  "></i>
+        </span>
+
+
+
+      </div>
+
+    </div>
+
+  </div>
+
+
+
+
+
+
+
+
+
+
+  <!-------------========= 🤖🤖 To Captcha 🤖🤖 =======----------------------->
+
+
+
+  <div class="popup-card" id="popupCard12">
+
+    <div data-aos="fade-up" data-aos-delay="200" class="card"
+      style="border: rgba(246, 245, 243, 0.957) 3px solid; background-color: #f5ede6;">
+
+      <div class="card-body" style="margin-top: -10%; margin-left:-4%; display:flex; flex-direction:column;
+                                    align-items:center;">
+
+        <h3 class="h5 card-title mt-3" style="margin-top:20px !important;
+                                        margin-bottom: 20px; opacity:0.8;text-align:center;
+                                        color:#4a2e02 !important; font-weight:bold;">Bot Check!</h3>
+
+
+
+
+
+        <div class="blob">
+          <div class="box" style="background: url(./assets/images/captcha.jpg); -webkit-background-size: cover;
+      background-size: cover;
+      background-position: center center;
+      width: 200px;
+      height: 200px;
+      box-shadow: 2px 4px 4px rgba(144, 142, 142, 0.2);
+      animation: animate 5s ease-in-out infinite;
+      transition: all 1s ease-in-out;">
+
+          </div>
+        </div>
+
+
+
+
+
+        <p data-aos="fade-up" data-aos-delay="200" class="notes-int" style="text-align: center; margin-bottom: 60px !important;
+            margin-top:30px !important; color: #4a4845; font-weight:500; opacity:0.8; max-width:300px;">Thank you for
+          your message.
+          Redirecting to captcha...
+        </p>
+
+        <span data-aos="fade-up" data-aos-delay="200" class="close-btn"
+          onclick="rotateAndHidePopup(12); stopFormSubmission(event);" style="bottom: 6%;">
+          <i class="fa fa-times-circle" style="font-size: 30px; color: rgb(92, 64, 51);"></i>
+        </span>
+
+        <script>
+          function stopFormSubmission(event) {
+            event.stopPropagation();
+          }
+        </script>
+
+
+
+      </div>
+
+    </div>
+
+  </div>
+
+
+
+
+
+
+
+
+
+
+
+  <!-------------========= 😁😁 Footer Starts Here😁😁 =======----------------------->
+
+  <footer class="foot">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-4 text-center">
+          <h4 style="font-weight: bold; text-align: start;
+              margin-bottom: 20px; 
+              font-size:16px;">Credits</h4>
+
+
+
+
+          <div class="credit-links">
+            <p><a href="https://www.vecteezy.com" class="credits">- Vecteezy</a></p>
+            <p><a href="https://www.vecteezy.com" class="credits">- Brandify</a></p>
+            <p><a href="https://www.kabarak.ac.ke" class="credits">- Kabarak University</a></p>
+            <p><a href="https://www.pngtree.com" class="credits">- pngTree</a></p>
+            <p><a class="credits">- Others</a></p>
+          </div>
+
+
+
+
+
+        </div>
+        <div class="col-md-4 text-center con">
+          <h4 style="font-weight: bold;
+              text-align: start; margin-bottom: 20px;  font-size:15px;">Contacts</h4>
+
+
+          <div class="contact-links">
+
+            <p><a href="https://t.me/Kabarak_University_bot" class="credits" target="_blank">- Telegram Bot</a></p>
+            <p><a
+                href="https://www.bing.com/ck/a?!&&p=e8fc103d80d5b15eJmltdHM9MTY4NDg4NjQwMCZpZ3VpZD0yYmJlMTA5YS1jZTJjLTY5MTMtMDFkMi0wMzgyY2ZhZTY4NWQmaW5zaWQ9NTE3OQ&ptn=3&hsh=3&fclid=2bbe109a-ce2c-6913-01d2-0382cfae685d&psq=kabarak+university+twitter&u=a1aHR0cHM6Ly90d2l0dGVyLmNvbS9LYWJhcmFrVW5pdg&ntb=1"
+                class="credits" target="_blank">- Twitter</a></p>
+
+            <p><a href="https://wa.me//254773602480" class="credits" target="_blank">- Whatsapp</a></p>
+            <p><a href="https://t.me//Anonymous_V73X_MVP" class="credits" target="_blank">- Telegram</a></p>
+          </div>
+
+
+
+        </div>
+
+
+        <div class="col-md-4 text-center">
+          <h4 style="font-weight: bold; text-align: start; margin-bottom: 20px;
+               font-size:16px; ">Links</h4>
+
+
+          <div class="linkz">
+
+            <p><a onclick="navigateTo('semesters')" class="lin">- Semesters</a></p>
+            <p><a onclick="navigateTo('contact')" class="lin">- Contact Us</a></p>
+            <p><a href="https://moodle.kabarak.ac.ke/login/index.php" class="lin">- Moodle</a></p>
+            <p><a href="https://www.kabarak.ac.ke" class="lin">- Kabarak University</a></p>
+            <p><a href="https://chat.openai.com" class="lin">- ChatGPT</a></p>
+            <p><a href="https://www.youtube.com" class="lin">- YouTube</a></p>
+          </div>
+
+
+        </div>
+
+
+      </div>
+    </div>
+
+    <div style="display: flex; justify-content:center; text-align:center;margin-top: 100px; ">
+      <p class="mb-0" style="opacity: 0.6; font-size:13px;"> <b>© 2023 IT Course Hub. All rights reserved.</b></p>
+    </div>
+
+    <div style="margin-top: 3px; display: flex; justify-content: center;">
+      <p style="font-weight: bold; font-size: 12px; opacity: 0.8;">Developed by: <a href="https://wa.me//254773602480"
+          style="color: rgb(150, 90, 5);">Sir Anonymous-V73X</a></p>
+
+
+    </div>
+
+    <div style="margin-top: 3px; display: flex; justify-content: center;">
+      <p style="font-weight: bold; font-size: 12px; opacity: 0.8;">Version: <a style="color: rgb(150, 90, 5);">Beta
+          2.0</a></p>
+
+
+    </div>
+
+
+
+
+  </footer>
+
+
+
+
+
+  <!---------========= 😁😁😁Footer Ends Here😁😁😁 ==========-------->
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  <!---- 📑Linking JS Files📑 ----->
+
+  <script src="./assets/js/bootstrap.bundle.min.js"></script>
+  <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+  <script src="./assets/js/app.js"></script>
+
+  <!------------ 🔗🔗🔗Linking Ends Here🔗🔗🔗 ------------>
+
+
+</body>
+
+<!-------- 🗣️🗣️Body Ends Here🗣️🗣️ -------->
+
+</html>

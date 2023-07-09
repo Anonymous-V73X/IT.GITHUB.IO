@@ -1,0 +1,1528 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<!-- ======== 😎😎 Head actually starts here 😎😎 ======== -->
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Semester 1.1</title>
+  <link href="https://cdn.jsdelivr.net/npm/remixicon@2.5.0/fonts/remixicon.css" rel="stylesheet" />
+  <link rel="stylesheet" href="../assets/css/page-style.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
+    integrity="sha512-...your-integrity-hash...=" crossorigin="anonymous" />
+  <link rel="icon" href="../assets/images/favicon.png" type="image/x-icon" />
+  <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+</head>
+
+
+<!-- ================ Head Ends 🗣️🗣️🪦🪦 ================== -->
+
+<body>
+
+
+  <div class="wrapper-loader">
+    <div class="loader">
+
+
+
+
+
+
+      <div class="book">
+        <div class="book__pg-shadow"></div>
+        <div class="book__pg"></div>
+        <div class="book__pg book__pg--2"></div>
+        <div class="book__pg book__pg--3"></div>
+        <div class="book__pg book__pg--4"></div>
+        <div class="book__pg book__pg--5"></div>
+      </div>
+
+
+
+      <p class="get" id="typing-dots">Getting Things Ready</p>
+
+      <script>
+
+        const dotsElement = document.getElementById('typing-dots');
+        const dots = '...';
+        let dotCount = 0;
+
+        function animateTypingDots() {
+          dotsElement.textContent = 'Getting Things Ready' + dots.substring(0, dotCount);
+          dotCount = (dotCount + 1) % (dots.length + 1);
+          setTimeout(animateTypingDots, 300);
+        }
+
+        animateTypingDots();
+
+      </script>
+
+
+
+
+
+
+
+    </div>
+  </div>
+
+
+  <!-- 🔻🔴🔴🔴🔴 START: Navbar Starts Here 🔴🔴🔴🔴🔻 -->
+
+
+  <nav class="navbar">
+
+    <div class="container">
+
+      <h2 class="sem2">Semester 1.1</h2>
+
+      <div class="menu">
+
+
+        <a class="menu-link" onclick="navigateTo('tutorials')" style="color: #6B5840; cursor: pointer;">Tutorials</a>
+
+        <a class="menu-link" onclick="navigateTo('past-papers')" style="color: #6B5840; cursor: pointer;">Past
+          Papers</a>
+
+        <a class="menu-link" onclick="navigateToSection('apps')" style="color: #6B5840; cursor: pointer;">Web Apps</a>
+
+        <script>
+          function navigateToSection(sectionId) {
+            var url = 'https://ithub.surge.sh#' + sectionId;
+            window.location.href = url;
+          }
+        </script>
+
+
+
+
+
+
+
+
+        <script>
+          function navigateThis(page) {
+            window.location.href = page;
+          }
+
+          function navigateTo(section) {
+            document.getElementById(section).scrollIntoView({ behavior: 'smooth' });
+          }
+        </script>
+
+
+      </div>
+
+
+
+
+
+
+      <button class="hamburger" onclick="toggleHamburger()">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+
+    </div>
+
+  </nav>
+
+
+
+  <!--------------------------- ⬆️ Navbar Ends Here ⬆️ --------------------->
+
+
+
+
+
+
+
+  <!------------------- ⬇️ Units Summary Start Here 😄 --------------------->
+
+
+
+  <div class="intro">
+
+    <div class=" text-center">
+
+      <h1 data-aos="fade-down" data-aos-delay="300"
+        style="font-size: 1.6rem; margin-top: 0px; margin-bottom:40px;   font-family: 'Signika', sans-serif;font-weight:bold; color: rgb(95, 83, 68); ">
+        Semester Units</h1>
+
+
+      <ul data-aos="fade-up" data-aos-delay="300" class="border border-light shadow-soft ul-units"
+        style="margin-bottom: 100px;" onclick="showPopup(12)">
+
+        <li style="display: flex; padding-top:0px">
+          <p class="" style="font-weight: bold;">BIBL 110</p>
+          <p style="margin-left: 10%;font-size: 12px; font-weight:450;">OLD TESTAMENT SURVEY</p>
+        </li>
+
+        <li style="display: flex;">
+          <p class="" style="font-weight: bold;">COMS 110</p>
+          <p style="margin-left: 8%;font-size: 12px; font-weight:450;">COMMUNICATION SKILS 1
+          </p>
+        </li>
+
+        <li style="display: flex;">
+          <p class="" style="font-weight: bold;">INTE 111</p>
+          <p style="margin-left: 11%; font-size: 12px; font-weight:450;"> INTRODUCTION TO INFORMATION TECHNOLOGY</p>
+        </li>
+
+        <li style="display: flex;">
+          <p class="" style="font-weight: bold;">INTE 112</p>
+          <p style="margin-left: 10%;font-size: 12px; font-weight:450;">INTRODUCTION TO APPLICATION SOFTWARE</p>
+        </li>
+
+        <li style="display: flex;">
+          <p class="" style="font-weight: bold;">INTE 113</p>
+          <p style="margin-left: 10%; font-size: 12px; font-weight:450;">FUNDAMENTALS OF PROGRAMMING</p>
+        </li>
+
+        <li style="display: flex;">
+          <p class="" style="font-weight: bold;">MATH 104</p>
+          <p style="margin-left: 7.2%;margin-bottom:3%; font-size: 12px; font-weight:450;">MATHEMATICS FOR SCIENTISTS 1
+          </p>
+        </li>
+
+      </ul>
+
+    </div>
+
+  </div>
+
+
+
+  <!---------------------- 📲👥 WhatsApp Group Link 📲👥 -------------------------->
+
+
+  <div style="display: flex; justify-content: center; margin-top:-65px; " data-aos="fade-up" data-aos-delay="100">
+    <a href="https://chat.whatsapp.com/DaLU1d75aI7BorcSSDQohs" target="_blank">
+      <button class="btn btn-primary neumorphic shadow-soft border border-light">
+        <span class="mr-1" style="font-weight: 500!important;"><span class="fab fa-whatsapp"></span>
+          Whatsapp Group
+        </span>
+      </button>
+
+    </a>
+
+  </div>
+
+
+  <!----------------------- 📎 Whatsapp Group Link Ends Here 📎 ---------------------->
+
+
+
+
+  <!------------------------ 📚 End Of Units Summary 📚 ------------------------------>
+
+
+
+
+
+  <!-----------------------------------=======  ⏸️ Break ⏸️ =============--------------->
+
+
+  <div style="border-top: 0.5px solid #a1a09f; margin-top: 10px; margin-bottom: 100px; opacity: 0.2;"></div>
+
+
+  <!-----------------------------------=======  ⏸️ Break ⏸️ =============--------------->
+
+
+
+
+
+
+  <!-----------------------------  📝📚 Notes Section Starts Here  ------------------------->
+
+
+  <!--  🌟 Title 🌟  -->
+
+
+
+  <div class="text-center" data-aos="fade-up" data-aos-delay="100">
+
+
+    <h1
+      style="font-size: 1.6rem; margin-top: -50px; margin-bottom:10px; font-weight:bold; font-family: 'Signika', sans-serif;font-weight:bold; color: rgb(95, 83, 68);">
+      Unit Notes </h1>
+
+    <div class="introX">
+      <p class="notes-intro" style="max-width: 380px; text-align:center;">
+        Dive into the comprehensive collection of notes
+        curated specifically for each unit,
+        empowering you
+        with the
+        knowledge
+        and insights necessary to excel in your IT journey.
+      </p>
+
+    </div>
+
+  </div>
+
+
+  <!------------------------  📝📚 Scroll To Top Icon 📝📚 ---------------->
+
+
+  <div data-aos="fade-left" data-aos-delay="200" class="scroll-to-top" onclick="scrollToTop()"></div>
+
+
+  <!------------------------  📝📚 Scroll To Top Icon 📝📚 ---------------->
+
+
+
+  <!------------------    📝 Notes Download links 📥   ---------------------->
+
+
+
+  <div class="row mt-6">
+
+    <div data-aos="fade-up" data-aos-delay="200" class="col-md-4">
+
+
+      <!-- 📚 Icon Box For BIBL 110 -->
+
+      <div class="icon-box text-center mb-5">
+
+
+        <div class="icon icon-shape icon-shape-sm shadow-soft border border-light rounded-circle">
+          <span class="fas fa-cross"></span>
+        </div>
+
+
+        <h2 class="h5" style="margin-top: 30px;
+                margin-bottom: 30px;
+                ">BIBL 110</h2>
+
+
+        <a href=" https://drive.google.com/uc?export=download&id=15caAJpTdm0J17w8_4hpgKGsvXKrTew_t">
+
+          <button class="btn btn-primary neumorphic shadow-soft border border-light" type="button"
+            onclick="showPopup(11)">
+
+            <span class="mr-1">
+              <span class="fas fa-arrow-circle-down"></span>
+            </span>
+            Download Notes
+
+          </button>
+
+        </a>
+
+      </div>
+
+
+      <!-- 🛑 End of Icon box -->
+
+    </div>
+
+
+
+
+
+
+
+
+
+
+    <div data-aos="fade-up" data-aos-delay="100" class="col-md-4">
+
+      <!-- Icon Box For COMS 110 -->
+
+
+      <div class="icon-box text-center mb-5">
+        <div class="icon icon-shape icon-shape-sm shadow-soft border border-light rounded-circle">
+          <span class="fas fa-comments"></span>
+        </div>
+        <h2 class="h5 " style="margin-top: 30px;
+                margin-bottom: 30px;
+                ">COMS 110</h2>
+        <a href="https://drive.google.com/uc?export=download&id=1BUgwhhT-daVA0Da-gqAFZVw4vtl5Sxu3 ">
+          <button class="btn btn-primary neumorphic shadow-soft border border-light" type="button"
+            onclick="showPopup(11)">
+            <span class="mr-1"><span class="fas fa-file-download"></span></span>
+            Download Notes
+          </button>
+        </a>
+
+      </div>
+
+
+      <!-- 🛑 End of Icon box -->
+
+
+    </div>
+
+
+
+
+    <div data-aos="fade-up" data-aos-delay="100" class="col-md-4">
+
+      <!-------- 🌟 Icon Box INTE 111 🌟 ---------->
+
+
+      <div class="icon-box text-center mb-5">
+
+        <div class="icon icon-shape icon-shape-sm shadow-soft border border-light rounded-circle">
+          <span class="fas fa-laptop"></span>
+        </div>
+        <h2 class="h5 " style="margin-top: 30px;
+                margin-bottom: 30px;
+                ">INTE 111</h2>
+
+        <a href="https://drive.google.com/uc?export=download&id=1jEZU7cBfmIrphu7qYGHWX0Xd7f-z_nHn">
+
+          <button class="btn btn-primary neumorphic shadow-soft border border-light" type="button"
+            onclick="showPopup(11)">
+            <span class="mr-1"><span class="fas fa-cloud-download-alt"></span></span>
+            Download Notes
+          </button>
+        </a>
+
+      </div>
+
+      <!-- 🛑 End of Icon box -->
+
+
+
+    </div>
+
+
+
+
+
+
+    <div data-aos="fade-up" data-aos-delay="100" class="col-md-4">
+
+      <!------- 🎓 Icon Box INTE 112 🎓 ------->
+
+
+      <div class="icon-box text-center mb-5">
+
+        <div class="icon icon-shape icon-shape-sm shadow-soft border border-light rounded-circle">
+          <span class="fas fa-mobile-alt"></span>
+        </div>
+
+        <h2 class="h5" style="margin-top: 30px;
+                margin-bottom: 30px;
+                ">INTE 112</h2>
+
+        <a href="https://drive.google.com/uc?export=download&id=1tbLKdT-qBp6jpIJb6GVmdNTuGqCba2sO">
+
+          <button class="btn btn-primary neumorphic shadow-soft border border-light" type="button"
+            onclick="showPopup(11)">
+
+            <span class="mr-1"><span class="far fa-arrow-alt-circle-down"></span></span>
+            Download Notes
+
+          </button>
+
+        </a>
+
+      </div>
+
+      <!-- 🛑 End of Icon box -->
+
+
+    </div>
+
+
+
+
+
+    <div data-aos="fade-up" data-aos-delay="100" class="col-md-4">
+
+      <!-- 📊 Icon Box INTE 113 -->
+
+
+      <div class="icon-box text-center mb-5">
+
+        <div class="icon icon-shape icon-shape-sm shadow-soft border border-light rounded-circle">
+          <span class="fab fa-cuttlefish" style="color: #503716;"></span>
+        </div>
+
+        <h2 class="h5" style="margin-top: 30px;
+                margin-bottom: 30px;
+                ">INTE 113</h2>
+
+        <a href="https://drive.google.com/uc?export=download&id=1SI0zaiudPdlRKnMBSWycIMrJn8nxL15c">
+          <button class="btn btn-primary neumorphic shadow-soft border border-light" type="button"
+            onclick="showPopup(11)">
+
+            <span class="mr-1"><i class="fas fa-download"></i></span>
+
+            Download Notes
+
+
+          </button>
+        </a>
+
+
+      </div>
+
+      <!-- 🛑 End of Icon box -->
+
+    </div>
+
+
+
+
+
+
+    <div data-aos="fade-up" data-aos-delay="100" class="col-md-4">
+
+      <!------- 🎓 Icon Box MATH 104 🎓 ------->
+
+
+      <div class="icon-box text-center mb-5">
+
+        <div class="icon icon-shape icon-shape-sm shadow-soft border border-light rounded-circle">
+          <span class="fas fa-calculator"></span>
+        </div>
+
+        <h2 class="h5" style="margin-top: 30px;
+                      margin-bottom: 30px;
+                      ">MATH 104</h2>
+
+        <a href="https://drive.google.com/uc?export=download&id=1fxwNLzYHzaPaMAt0i1rYmWzkDQZsJpdK">
+
+          <button class="btn btn-primary neumorphic shadow-soft border border-light" type="button"
+            onclick="showPopup(11)">
+
+            <span class="mr-1"><span class="far fa-arrow-alt-circle-down"></span></span>
+            Download Notes
+
+          </button>
+
+        </a>
+
+      </div>
+
+      <!-- 🛑 End of Icon box -->
+
+
+    </div>
+
+  </div>
+
+
+
+
+
+  <!----------------🔚 End of the notes section 🔚---------------->
+
+
+
+
+
+
+  <!-------- ⏸️ Break ⏸️ ------------>
+
+  <div style="border-top: 0.5px solid #a1a09f; margin-top: 40px; opacity: 0.2;"></div>
+
+  <!-------- ⏸️ Break ⏸️ ------------>
+
+
+
+
+
+
+
+  <!-------- 📚 Key Resources Section Starts Here--------->
+
+
+
+  <!--------🔖====== Title ======🔖-------->
+
+
+  <div id="past-papers" data-aos="fade-up" data-aos-delay="100" class="row">
+
+    <div class="col text-center">
+      <div class="mb-5" style="margin-top: 40px;
+        margin-bottom: 5px!important; font-weight:bold; font-family: 'Signika', sans-serif !important;
+        font-weight:bold; color: rgb(95, 83, 68);">
+        <span class=" text-center key-resources-intro h1">Key Resources</span>
+      </div>
+    </div>
+
+
+  </div>
+
+
+
+  <!--------👋 Introduction 👋------------>
+
+
+  <div class="introX">
+    <p data-aos="fade-up" data-aos-delay="200" class="notes-intro"
+      style="text-align: center; margin-bottom:50px; max-width:380px;" id="panel-0">
+      Introducing the trifecta of resources: a treasure trove of past papers,
+      invaluable exam tips, and powerful study aids, all poised to propel you
+      towards academic excellence.
+    </p>
+  </div>
+
+
+
+
+  <!--------📜 Main Contents Start Here 📜------------>
+
+
+
+
+
+
+
+  <div class="row justify-content-center">
+    <div class="col-12 col-md-10 col-lg-8">
+
+
+
+
+      <!--🔽========= Accordion Starts Here =========🔽-->
+
+
+
+
+
+      <div data-aos="fade-up" data-aos-delay="100" class="accordion shadow-soft rounded" id="accordionExample1">
+
+
+        <div class="card card-sm card-body bg-primary border-light mb-0">
+
+          <a href="#panel-1" data-target="#panel-1" class="accordion-panel-header" data-toggle="collapse" role="button"
+            aria-expanded="false" aria-controls="panel-1">
+            <span class="h6 mb-0 font-weight-bold">Past Papers</span>
+            <span class="icon"><span class="fas fa-plus"></span></span>
+          </a>
+
+
+          <div class="collapse" id="panel-1">
+
+
+
+
+
+            <!--------📚 Past Papers 📚------------>
+
+
+            <style>
+              .download-link {
+                padding: 0 4%;
+              }
+            </style>
+
+            <div class="pt-3">
+              <p class="download-link" style="text-align: center; font-weight: bold; margin-left: -8%;">
+                INTE 111:
+                <a style="margin-left: 15%; color: rgb(88, 132, 132);"
+                  href="https://drive.google.com/uc?export=download&id=1_mH5VUwtPsm9-8zFFC-Q9d0bDpiuZStp"
+                  onclick="showPopup(11)">Download</a>
+              </p>
+
+
+
+
+
+
+            </div>
+
+
+
+          </div>
+
+        </div>
+
+
+
+
+
+        <!--------💻 Executable Files 💻------------>
+
+
+        <div class="card card-sm card-body bg-primary border-light mb-0">
+
+          <a href="#panel-2" data-target="#panel-2" class="accordion-panel-header" data-toggle="collapse" role="button"
+            aria-expanded="false" aria-controls="panel-2">
+
+            <span class="h6 mb-0 font-weight-bold">Exe Files</span>
+            <span class="icon">
+              <span class="fas fa-plus"></span>
+            </span>
+
+          </a>
+
+
+          <div class="collapse" id="panel-2">
+            <div class="pt-3"
+              style="display: flex; flex-direction: column; justify-content: center; align-items: center;">
+              <a href="https://www.zoom.us/download" target="_blank">
+                <button class="btn btn-primary neumorphic shadow-soft border border-light"
+                  style="margin-top: 40px; max-width: 200px">
+                  <span class="mr-1"><i class="fas fa-video" style="height: 20px!important;"></i></span>
+                  <strong>Zoom</strong>
+                </button>
+
+              </a>
+
+
+
+
+              <a href="https://www.bing.com/ck/a?!&&p=854ed2eebce70227JmltdHM9MTY4Njk2MDAwMCZpZ3VpZD0yYmJlMTA5YS1jZTJjLTY5MTMtMDFkMi0wMzgyY2ZhZTY4NWQmaW5zaWQ9NTQ4NQ&ptn=3&hsh=3&fclid=2bbe109a-ce2c-6913-01d2-0382cfae685d&psq=dev+c%2b%2b+download+windows+10&u=a1aHR0cHM6Ly9zb3VyY2Vmb3JnZS5uZXQvcHJvamVjdHMvb3J3ZWxsZGV2Y3BwL2ZpbGVzL2xhdGVzdC9kb3dubG9hZA&ntb=1"
+                target="_blank">
+
+                <button class="btn btn-primary neumorphic shadow-soft border border-light" type="button"
+                  style="max-width: 200px;">
+                  <span class="mr-1"><i class="fas fa-laptop-code"></i></span>
+                  <strong>Dev C++</strong>
+                </button>
+              </a>
+
+
+
+              <a href="https://appsonwindows.com/apk/2262717/" target="_blank">
+                <button class="btn btn-primary neumorphic shadow-soft border border-light" type="button"
+                  style="max-width: 200px;">
+                  <span class="mr-1"><i class="fas fa-book"></i></span>
+                  <strong>Bible Software</strong>
+                </button>
+              </a>
+
+
+
+
+
+              <a href="https://support.microsoft.com/en-us/office/download-and-install-or-reinstall-microsoft-365-or-office-2021-on-a-pc-or-mac-4414eaaf-0478-48be-9c42-23adc4716658"
+                target="_blank">
+                <button class="btn btn-primary neumorphic shadow-soft border border-light" type="button"
+                  style="max-width: 200px;">
+                  <span class="mr-1"><i class="fas fa-file-alt"></i></span>
+                  <strong>MS Office Suite</strong>
+                </button>
+              </a>
+
+
+            </div>
+
+          </div>
+
+        </div>
+
+
+
+
+
+
+        <!--------🎓 Study Tips 🎓------------>
+
+
+        <div class="card card-sm card-body bg-primary border-light">
+
+          <a href="#panel-3" data-target="#panel-3" class="accordion-panel-header" data-toggle="collapse" role="button"
+            aria-expanded="false" aria-controls="panel-3">
+            <span class="h6 mb-0 font-weight-bold">Study Hacks</span>
+            <span class="icon"><span class="fas fa-plus"></span></span>
+          </a>
+
+
+          <div class="collapse" id="panel-3">
+            <div class="pt-3">
+              <p><strong style="font-weight: bold;"> Old Testament Survey:</strong><br> Engage in regular reading and
+                study
+                of the Old Testament to gain a comprehensive understanding of its themes, historical context, and
+                significance.</p>
+
+              <p><strong style="font-weight: bold;">Communication Skills 1:</strong><br> Practice active listening and
+                effective speaking to improve your communication skills. Engage in group discussions and presentations
+                to enhance your
+                ability to convey ideas clearly.</p>
+
+              <p><strong style="font-weight: bold;">Introduction to Information Technology:</strong><br> Stay updated
+                with
+                the latest advancements in the field of information technology. Explore various IT resources and engage
+                in practical
+                hands-on exercises to gain a solid foundation in IT concepts.</p>
+
+              <p><strong style="font-weight: bold;">Introduction to Application Software:</strong><br> Familiarize
+                yourself
+                with popular application software tools and their functionalities. Practice using different software
+                applications to
+                develop your skills in creating, managing, and manipulating digital content.</p>
+
+              <p><strong style="font-weight: bold;">Fundamentals of Programming:</strong><br> Master the fundamental
+                concepts of programming by practicing problem-solving and coding exercises. Build a strong foundation in
+                programming
+                logic and algorithms to become proficient in writing efficient and reliable code.</p>
+
+              <p><strong style="font-weight: bold;"> Mathematics for Scientists 1:</strong><br> Dedicate regular time to
+                practice solving mathematical problems. Focus on understanding the underlying concepts and principles to
+                build a solid
+                mathematical foundation for scientific applications.</p>
+
+            </div>
+
+          </div>
+
+        </div>
+
+
+
+
+
+
+        <!--------🔚 End Of the Main Content🔚------------>
+
+
+
+      </div>
+
+      <!---------------------- 🔼End of Accordion🔼 ------------------------>
+
+
+    </div>
+
+
+  </div>
+
+
+
+  <div data-aos="fade-up" data-aos-delay="200" style="display: flex; justify-content: center; margin-top:20px;">
+
+    <a href="https://wa.me//254773602480">
+      <button class="btn btn-primary neumorphic shadow-soft border border-light">
+        <span class="mr-1" style="font-weight: 500!important;">
+          <i class="fas fa-comments"></i>
+          Request File
+        </span>
+      </button>
+    </a>
+
+  </div>
+
+
+
+  <!-------- ⏸️ Break ⏸️ ------------>
+
+
+  <div style="border-top: 0.5px solid #a1a09f; margin-top: 60px; opacity: 0.2;"></div>
+
+  <!-------- ⏸️ Break ⏸️ ------------>
+
+
+
+
+
+
+
+
+
+  <!---------🎥 Video Tutorials Start Here 🎥--------->
+
+
+
+
+
+
+  <!--------🌟 Title 🌟------------>
+
+
+  <div id="tutorials" data-aos="fade-up" data-aos-delay="100" class="row">
+
+
+    <div class="col text-center">
+      <div class="mb-5"
+        style="margin-top: 40px; margin-bottom: -1%!important; font-weight: bold; font-family: 'Signika', sans-serif !important; color: rgb(95, 83, 68);">
+        <span class="h5 text-center key-resources-intro">YouTube Tutorials</span>
+      </div>
+    </div>
+
+
+  </div>
+
+
+
+  <!--------👋 Introduction 👋------------>
+
+
+  <div class="introX">
+    <p data-aos="fade-up" data-aos-delay="200" class="paragraph-1 notes-intro nt" style="text-align: center;   display:flex; justify-content:center; align-items:center; font-size:14px;
+      max-width:380px;">
+
+      These comprehensive video tutorials will provide you with the necessary knowledge and skills to excel in units
+      like INTE
+      113 (Fundamentals of Programming) and COMS 110 (Communication Skills 1).
+
+    </p>
+  </div>
+
+
+
+
+
+
+  <!-------------💡 Quick Tip 💡------------>
+
+
+  <div data-aos="fade-up" data-aos-delay="100" class="centered-container" id="container" style="margin-bottom: 5%;">
+    <i class="fas fa-exclamation-circle mr-2" id="icon" data-aos="fade-up" data-aos-delay="100"></i>
+    <p class="hidden" id="instruction" style="text-align: center; padding-right:4%;">tap image to watch online or
+      click download to save to gallery.</p>
+  </div>
+
+
+
+
+
+  <!--------📜 Main Contents Start Here 📜------------>
+
+
+
+  <div class="video-tutorials">
+
+
+
+    <!------------📺 First Video 📺--------------->
+
+
+    <div data-aos="fade-up" data-aos-delay="200" class="card video-card bg-primary border-light shadow-soft">
+      <a href="https://youtu.be/zOjov-2OZ0E" target="_blank">
+        <img class="thumbnail" src="../assets/images/intro-programming.jpg" class="card-img-top rounded-top">
+
+      </a>
+
+      <div class="card-body" style="margin-top: -10%; margin-left:-4%">
+
+        <h3 class="h5 card-title mt-3">Introduction to Programming and Computer Science - Full Course</h3>
+        <span class="h6 icon-tertiary small">
+          <i class="fas fa-user-circle mr-2"></i> <span class="channel-name">freeCodeCamp</span>
+        </span>
+
+        <a href="https://youtu.be/zOjov-2OZ0E" target="_blank">
+          <button class="btn btn-primary neumorphic shadow-soft border border-light"
+            style="display: block; margin: 10% auto 0;" onclick="showPopup(1)">
+            <span class="mr-1">
+              <i class="fas fa-video"></i>
+            </span>
+            Watch Now
+          </button>
+        </a>
+
+      </div>
+    </div>
+
+
+
+
+
+
+
+
+
+    <!------------🎥 Second Video 🎥--------------->
+
+
+
+    <div data-aos="fade-up" data-aos-delay="200" class="card video-card bg-primary border-light shadow-soft">
+      <a href="https://youtu.be/Itz9Vrm_4xI" target="_blank">
+        <img class="thumbnail" src="../assets/images/programming.jpg" class="card-img-top rounded-top">
+      </a>
+      <div class="card-body" style="margin-top: -10%; margin-left:-4%">
+
+        <h3 class="h5 card-title mt-3">CIT2103: INTRODUCTION TO PROGRAMMING</h3>
+        <span class="h6 icon-tertiary small">
+          <i class="fas fa-user-circle mr-2"></i> <span class="channel-name">TV47 Kenya</span>
+        </span>
+
+        <a href="https://youtu.be/Itz9Vrm_4xI" target="_blank">
+          <button class="btn btn-primary neumorphic shadow-soft border border-light"
+            style="display: block; margin: 10% auto 0;" onclick="showPopup(2)">
+            <span class="mr-1">
+              <i class="fas fa-video"></i>
+            </span>
+            Watch Now
+          </button>
+        </a>
+
+      </div>
+
+    </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <!------------📹 Third Video 📹--------------->
+
+
+    <div data-aos="fade-up" data-aos-delay="200" class="card video-card bg-primary border-light shadow-soft">
+      <a href="https://youtu.be/0KEjPcGKRFQ" target="_blank">
+        <img class="thumbnail" src="../assets/images/comp-soft.jpg" class="card-img-top rounded-top">
+      </a>
+      <div class="card-body" style="margin-top: -10%; margin-left:-4%">
+
+        <h3 class="h5 card-title mt-3">Computer Software</h3>
+        <span class="h6 icon-tertiary small">
+          <i class="fas fa-user-circle mr-2"></i> <span class="channel-name">Muchiri Nyaga</span>
+        </span>
+
+        <a href="https://youtu.be/0KEjPcGKRFQ" target="_blank">
+          <button class="btn btn-primary neumorphic shadow-soft border border-light"
+            style="display: block; margin: 10% auto 0;" onclick="showPopup(3)">
+            <span class="mr-1">
+              <i class="fas fa-video"></i>
+            </span>
+            Watch Now
+          </button>
+        </a>
+
+      </div>
+    </div>
+
+
+
+
+
+
+
+
+
+
+
+    <!------------📹 Forth Video 📹--------------->
+
+
+    <div data-aos="fade-up" data-aos-delay="200" class="card video-card bg-primary border-light shadow-soft">
+      <a href="https://youtu.be/7QhwauUYSWk" target="_blank">
+        <img class="thumbnail" src="../assets/images/intro2st.jpg" class="card-img-top rounded-top">
+      </a>
+      <div class="card-body" style="margin-top: -10%; margin-left:-4%">
+
+        <h3 class="h5 card-title mt-3">DIT1302: INTRODUCTION TO STRUCTURED PROGRAMMING</h3>
+        <span class="h6 icon-tertiary small">
+          <i class="fas fa-user-circle mr-2"></i> <span class="channel-name">TV47 Kenya</span>
+        </span>
+
+        <a href="https://youtu.be/7QhwauUYSWk" target="_blank">
+          <button class="btn btn-primary neumorphic shadow-soft border border-light"
+            style="display: block; margin: 10% auto 0;" onclick="showPopup(3)">
+            <span class="mr-1">
+              <i class="fas fa-video"></i>
+            </span>
+            Watch Now
+          </button>
+
+        </a>
+
+      </div>
+    </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <!------------📽️ Fifth Video 📽️--------------->
+
+
+    <div data-aos="fade-up" data-aos-delay="200" class="card video-card bg-primary border-light shadow-soft">
+      <a href="https://youtu.be/I3YH4E1yHG0" target="_blank">
+        <img class="thumbnail" src="../assets/images/lec 1.jpg" class="card-img-top rounded-top">
+      </a>
+      <div class="card-body" style="margin-top: -10%; margin-left:-4%">
+
+        <h3 class="h5 card-title mt-3">DUCU001: COMMUNICATION SKILLS</h3>
+        <span class="h6 icon-tertiary small">
+          <i class="fas fa-user-circle mr-2"></i> <span class="channel-name">TV47 Kenya</span>
+        </span>
+
+        <a href="https://youtu.be/I3YH4E1yHG0" target="_blank">
+          <button class="btn btn-primary neumorphic shadow-soft border border-light"
+            style="display: block; margin: 10% auto 0;" onclick="showPopup(4)">
+            <span class="mr-1">
+              <i class="fas fa-video"></i>
+            </span>
+            Watch Now
+          </button>
+        </a>
+
+
+      </div>
+    </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  </div>
+
+
+
+
+
+  <!-------------🎬 Videos End Here 🎬---------------->
+
+
+
+
+
+
+
+
+
+
+
+  <!------------📚 More Tutorials 📚--------------->
+
+
+  <div data-aos="fade-up" data-aos-delay="200" style="display: flex; justify-content: center;">
+
+    <a href="http://youtube.com">
+      <button class="btn btn-primary neumorphic shadow-soft border border-light">
+        <span class="mr-1" style="font-weight: 500!important;">
+          <i class="fab fa-youtube"></i>
+          More Tutorials
+        </span>
+      </button>
+    </a>
+
+  </div>
+
+
+
+
+
+
+
+
+
+
+
+
+  <!-------------🗒️ Notes Download Pop Up Card 🗒️---------------->
+
+
+
+  <div class="popup-card" id="popupCard11">
+
+    <div data-aos="fade-up" data-aos-delay="200" class="card video-card bg-primary "
+      style="border: rgba(246, 245, 243, 0.957) 3px solid;">
+
+      <div class="card-body" style="margin-top: -10%; margin-left:-4%; display:flex; flex-direction:column;
+                                align-items:center;">
+
+        <h3 class="h5 card-title mt-3" style="margin-top:20px !important;
+                                    margin-bottom: 15px; opacity:0.5;text-align:center;">Please Wait!</h3>
+
+
+
+
+
+        <div class="blob">
+          <div class="box">
+
+          </div>
+        </div>
+
+
+
+
+
+
+
+        <p data-aos="fade-up" data-aos-delay="200" class="notes-intro" style="text-align: center; margin-bottom: 60px !important;
+                            margin-top:30px !important; color: #735c3d; font-weight:500;opacity:0.8;">
+          Your download should start any moment now... If it hasn't started yet, please wait for a few
+          seconds.
+        </p>
+
+
+
+
+
+
+
+
+        <span data-aos="fade-up" data-aos-delay="200" class="close-btn" onclick="rotateAndHidePopup(11)
+                            " style="bottom: 6% ;">
+          <i class="fa fa-times-circle" style="font-size: 30px; color: rgb(92, 64, 51);
+                                "></i>
+        </span>
+
+
+
+      </div>
+
+    </div>
+
+  </div>
+
+
+
+
+
+  <!---------⏸️ Break ⏸️------------------>
+
+
+  <div style="border-top: 0.5px solid #a1a09f; margin-top: 0px; opacity: 0.2;"></div>
+
+
+  <!---------⏸️ Break ⏸️------------------>
+
+
+  <!-----------------🚀 Progress Starts Here 🚀------------------>
+
+
+  <div data-aos="fade-up" data-aos-delay="200" class="container-1">
+    <h2 class="title-1"
+      style="font-size: 1.5rem; margin-top: -15%!important; margin-bottom:0px; font-weight:bold; font-family: 'Signika', sans-serif;font-weight:bold; color: rgb(95, 83, 68);"">Progress Update</h2>
+        <p class=" paragraph-1" style="font-size: 14px; text-align: center; ">
+      If you're about to start this semester, it marks the beginning of your academic journey. Congratulations on
+      embarking
+      on this new chapter of your education! With dedication and hard work, you have the opportunity to make significant
+      progress throughout the upcoming semester. Stay focused, set clear goals, and make the most out of the learning
+      opportunities that lie ahead. Embrace this fresh start with enthusiasm and determination, and remember that every
+      step
+      you take brings you closer to achieving your academic aspirations. Good luck as you begin this exciting semester!
+      </p>
+
+      <style>
+        @media(min-width: 768px) {
+          .paragraph-1 {
+
+            padding: 0 10%;
+          }
+
+          .nt {
+            margin-bottom: 80px;
+          }
+        }
+      </style>
+
+
+      <div class="progress">
+        <div class="progress__fill"></div>
+      </div>
+  </div>
+
+
+
+  <style>
+    .progress {
+      max-width: 400px;
+      width: 100%;
+      height: 24px;
+      grid-column-start: 1;
+      grid-column-end: 5;
+      grid-row-start: 7;
+      grid-row-end: 7;
+      position: relative;
+      margin-top: 16px;
+      border-radius: 12px;
+      box-shadow: 6px 6px 12px #c2c2c2c8, -6px -6px 12px #ffffff98 !important;
+      background-color: #ebecf0;
+    }
+
+    .progress__fill {
+      width: 12.5%;
+      height: 100%;
+      position: absolute;
+      border-radius: inherit;
+      background-image: linear-gradient(to right, #cf9972, #fff8dc);
+    }
+
+    .progress__fill:before {
+      font-weight: bold;
+      font-size: 16px;
+      line-height: 18px;
+      color: #6c7587;
+      content: "12.5%";
+      padding: 11px 15px;
+      margin-top: -16px;
+      position: absolute;
+      top: 0;
+      right: 0;
+      transform: translate(50%, -100%);
+      border-radius: 8px;
+      box-shadow: 8px 8px 12px -2px rgba(72, 79, 96, 0.4), -6px -6px 12px -1px white;
+      background-color: #ebecf0;
+    }
+
+    .progress__fill:after {
+      content: "";
+      width: 0;
+      height: 0;
+      position: absolute;
+      right: 0;
+      bottom: 24px;
+      transform: translate(50%, -100%);
+      border-top: 9px solid #ebecf0;
+      border-left: 8px solid transparent;
+      border-right: 8px solid transparent;
+    }
+  </style>
+
+
+  <!-------------🏁 Progress Ends Here 🏁----------------->
+
+
+
+
+  <div class="popup-card" id="popupCard12">
+
+    <div data-aos="fade-up" data-aos-delay="200" class="card video-card bg-primary "
+      style="border: rgba(246, 245, 243, 0.957) 3px solid;">
+
+      <div class="card-body" style="margin-top: -10%; margin-left:-4%; display:flex; flex-direction:column;
+                                      align-items:center;">
+
+        <h3 class="h5 card-title mt-3" style="margin-top:20px !important;
+                                          margin-bottom: 15px; opacity:0.5;text-align:center;">Scroll Down!</h3>
+
+
+
+
+
+        <div class="blob">
+          <div class="box">
+
+          </div>
+        </div>
+
+
+
+
+
+
+
+        <p data-aos="fade-up" data-aos-delay="200" class="notes-intro" style="text-align: center; margin-bottom: 60px !important;
+                                  margin-top:30px !important; color: #735c3d; font-weight:500;opacity:0.8;">
+          Please scroll down to download this semester's resources
+        </p>
+
+
+
+
+
+
+
+
+        <span data-aos="fade-up" data-aos-delay="200" class="close-btn" onclick="rotateAndHidePopup(12)
+                                  " style="bottom: 6% ;">
+          <i class="fa fa-times-circle" style="font-size: 30px; color: rgb(92, 64, 51);
+                                      "></i>
+        </span>
+
+
+
+      </div>
+
+    </div>
+
+  </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+  <!------------------------   ⏸️ Break ⏸️ -------------------------->
+
+
+  <div style="border-top: 0.5px solid #a1a09f; margin-top: -20px; opacity: 0.2;"></div>
+
+
+  <!------------------------   ⏸️ Break ⏸️ -------------------------->
+
+
+
+
+
+
+
+
+
+
+
+
+  <!-------------========= 😁😁 Footer Starts Here 😁😁 =======----------------------->
+
+
+  <footer data-aos="fade-up" data-aos-delay="300" class="foot">
+
+    <!------------------------ 📜 Credits 📜 ------------------------>
+
+
+    <div class="foot-links" style="display: flex; flex-wrap: wrap; padding: 10px; ">
+      <div class="col-md-4 text-center">
+        <h4 style="font-weight: bold; text-align: start;
+              margin-bottom: 20px; ">Credits</h4>
+
+
+
+
+
+        <div class="credit-links " style="margin-bottom: 30px;">
+          <p><a href="https://www.vecteezy.com" class="credits">- Vecteezy</a></p>
+          <p><a href="https://www.vecteezy.com" class="credits">- Brandify</a></p>
+          <p><a href="https://www.kabarak.ac.ke" class="credits">- Kabarak University</a></p>
+          <p><a href="https://www.pngtree.com" class="credits">- pngTree</a></p>
+          <p style="opacity: 1 !important;color: rgb(118, 116, 116) !important;"><a class="credits">-
+              Others</a></p>
+        </div>
+
+
+
+      </div>
+
+
+      <!------------------------ 📞 Contacts 📞 ------------------------>
+
+
+
+
+      <div class="col-md-4 text-center con">
+        <h4 style="font-weight: bold;
+              text-align: start; margin-bottom: 20px; ">Contacts</h4>
+
+
+        <div class="contact-links" style="margin-bottom: 30px;">
+
+          <p><a href="https://t.me/Kabarak_University_bot" class="credits" target="_blank">- Telegram
+              Bot</a>
+          </p>
+          <p><a
+              href="https://www.bing.com/ck/a?!&&p=e8fc103d80d5b15eJmltdHM9MTY4NDg4NjQwMCZpZ3VpZD0yYmJlMTA5YS1jZTJjLTY5MTMtMDFkMi0wMzgyY2ZhZTY4NWQmaW5zaWQ9NTE3OQ&ptn=3&hsh=3&fclid=2bbe109a-ce2c-6913-01d2-0382cfae685d&psq=kabarak+university+twitter&u=a1aHR0cHM6Ly90d2l0dGVyLmNvbS9LYWJhcmFrVW5pdg&ntb=1"
+              class="credits" target="_blank">- Twitter</a></p>
+
+          <p><a href="https://wa.me//254773602480" class="credits" target="_blank">- Whatsapp</a></p>
+          <p><a href="https://t.me//Anonymous_V73X_MVP" class="credits" target="_blank">- Telegram</a></p>
+        </div>
+
+
+
+      </div>
+
+      <!------------------------ 🔗 Links 🔗 ------------------------>
+
+
+
+      <div class="col-md-4 text-center">
+        <h4 style="font-weight: bold; text-align: start; margin-bottom: 20px; ">Links</h4>
+
+
+        <div class="linkz">
+          <p><a href="https://ithub.surge.sh" class="lin">- Home</a></p>
+          <p><a href="https://ithub.surge.sh#semesters" class="lin">- Semesters</a></p>
+          <p><a href="https://ithub.surge.sh#contact" class="lin">- Contact Us</a></p>
+          <p><a href="https://moodle.kabarak.ac.ke/login/index.php" class="lin">- Moodle</a></p>
+          <p><a href="https://www.kabarak.ac.ke" class="lin">- Kabarak University</a></p>
+          <p><a href="https://chat.openai.com" class="lin">- ChatGPT</a></p>
+          <p><a href="https://www.youtube.com" class="lin">- YouTube</a></p>
+        </div>
+
+
+      </div>
+
+
+    </div>
+
+
+    <!------------------------ ©️ Copyright ©️ ------------------------>
+
+
+
+    <div style="display: flex; justify-content:center; text-align:center;margin-top: 90px;  ">
+      <p class="mb-0" style="opacity: 0.4; font-weight:bold !important; font-size:small"> © 2023 IT Course Hub.
+        All rights reserved.</p>
+    </div>
+
+
+    <!------------------------ 😁😁 Sir Alex 😁😁 -------------------------->
+
+
+    <div style="margin: 10px 0; margin-top:-10px!important; display: flex; justify-content: center; font-size:10px">
+      <p style="font-weight: bold; opacity:0.8;
+      font-size:13px;">Developed by: <a href="https://wa.me//254773602480"
+          style="font-weight: bold; font-size:12px; color: rgb(150, 90, 5);">
+          Sir Anonymous-V73X</a></p>
+    </div>
+
+
+
+  </footer>
+
+
+
+
+
+  <!---------========= 😁😁😁Footer Ends Here😁😁😁 ==========-------->
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  <!-- ======== 😎😎 Script actually starts here 😎😎 ======== -->
+
+  <script src="../assets/js/app.js"></script>
+  <script src="../assets/js/semesters.js"></script>
+  <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+  <script>
+    AOS.init({
+      duration: 600,
+    });
+  </script>
+
+</body>
+
+<!-- ======== Script Ends 🗣️🗣️🪦🪦 ======== -->
+
+</html>

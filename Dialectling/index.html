@@ -1,0 +1,711 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Dialectling</title>
+  <link href="https://cdn.jsdelivr.net/npm/remixicon@2.5.0/fonts/remixicon.css" rel="stylesheet" />
+  <link rel="stylesheet" href="
+  ../assets/css/page-style.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
+    integrity="sha512-...your-integrity-hash...=" crossorigin="anonymous" />
+  <link rel="icon" href="
+  ../assets/images/favicon.png" type="image/x-icon" />
+
+  <style>
+    body {
+
+      height: 100%;
+
+    }
+
+    .menu-link:hover .fas {
+      color: #f5ede6;
+      transform: translateX(-50%);
+      transition: transform 500ms ease-in-out;
+    }
+
+    img {
+      border-radius: 19% 81% 19% 81% / 63% 19% 81% 37%;
+      width: 100%;
+    }
+
+    @media(min-width: 768px) {
+      .col-lg-6 {
+        margin-top: -70px !important;
+      }
+    }
+
+    @media(max-width: 768px) {
+      .img {
+        display: none !important;
+      }
+
+      .image {
+        display: none;
+      }
+
+      .comp1 {
+        margin-top: 140px !important;
+      }
+
+      .h2 {
+        text-align: center !important;
+      }
+
+      .comp2 {
+        margin-bottom: -90px !important;
+      }
+
+      .comp3 {
+        margin-bottom: -90px !important;
+      }
+
+      .hA {
+        text-align: center !important;
+        margin-bottom: 20px !important;
+      }
+
+      .comp4 {
+        margin-bottom: -90px !important;
+
+      }
+
+      .pA {
+        text-align: center !important;
+      }
+
+      .pB {
+        padding-left: 20px;
+        padding-right: 8px
+      }
+    }
+
+    @media(min-width: 768px) and (max-width:1000px) {
+      .img {
+        display: none !important;
+      }
+
+      .image {
+        display: none;
+      }
+    }
+
+
+
+     nav {
+      position: fixed;
+      top: 0;
+      left: 0;
+      right: 0;
+      z-index: 99;
+      background-color: #f5ede6;
+      padding-right: 12px;
+      height: 88px;
+      transition: box-shadow 0.5s ease, height 0.5s ease;
+    }
+
+
+
+
+
+
+
+
+
+    .loader {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      -webkit-transform: translate(-50%, -50%);
+      transform: translate(-50%, -50%);
+      width: 50px;
+      height: 10px;
+      background: #e56707;
+      border-radius: 5px;
+      -webkit-animation: load 1.8s ease-in-out infinite;
+      animation: load 1.8s ease-in-out infinite;
+    }
+
+    .loader:before,
+    .loader:after {
+      position: absolute;
+      display: block;
+      content: "";
+      -webkit-animation: load 1.8s ease-in-out infinite;
+      animation: load 1.8s ease-in-out infinite;
+      height: 10px;
+      border-radius: 5px;
+    }
+
+    .loader:before {
+      top: -20px;
+      left: 10px;
+      width: 40px;
+      background: #c87405;
+    }
+
+    .loader:after {
+      bottom: -20px;
+      width: 35px;
+      background: #F5AB35;
+    }
+
+    @-webkit-keyframes load {
+      0% {
+        -webkit-transform: translateX(40px);
+        transform: translateX(40px);
+      }
+
+      50% {
+        -webkit-transform: translateX(-30px);
+        transform: translateX(-30px);
+      }
+
+      100% {
+        -webkit-transform: translateX(40px);
+        transform: translateX(40px);
+      }
+    }
+
+    @keyframes load {
+      0% {
+        -webkit-transform: translateX(40px);
+        transform: translateX(40px);
+      }
+
+      50% {
+        -webkit-transform: translateX(-30px);
+        transform: translateX(-30px);
+      }
+
+      100% {
+        -webkit-transform: translateX(40px);
+        transform: translateX(40px);
+      }
+    }
+
+
+
+    .get {
+      margin-top: 350px !important;
+
+    }
+  </style>
+
+  <link rel="stylesheet" href="
+  ../assets/css/bootstrap.css" />
+  <link rel="stylesheet" href="
+  ../assets/css/style.css" />
+
+  
+
+</head>
+
+
+
+
+<body>
+  <nav>
+    <div class="container">
+
+      <h2 class="sem2" style="font-size: 18px;">Dialectling</h2>
+
+      <div class="menu">
+        <a class="menu-link" onclick="goBack()" style="color: #412f22; cursor:pointer;"><i style="font-size: 14px;"
+            class="fas fa-arrow-left"></i> Go Back</a>
+        
+        <script>
+          function goBack() {
+            window.history.back();
+          }
+        </script>
+
+
+          
+
+      </div>
+
+      <button class="hamburger" onclick="toggleHamburger()">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+
+    </div>
+
+  </nav>
+  <script>// JavaScript to add/remove the 'shadow' class and reduce navbar height based on scroll position
+    window.addEventListener("scroll", function () {
+      var nav = document.querySelector("nav");
+      var scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+      var initialHeight = 88; // Initial height of the navbar in pixels
+      var scrollThreshold = 5; // Number of pixels to scroll before reducing the height
+
+      if (scrollTop > scrollThreshold) {
+        nav.classList.add("shadow");
+        nav.style.height = initialHeight - 20 + "px"; // Reduce the height by 20 pixels
+      } else {
+        nav.classList.remove("shadow");
+        nav.style.height = initialHeight + "px"; // Reset the height to the initial value
+      }
+    });</script>
+
+
+
+
+
+
+  <h1 class="comp2" data-aos="fade-down" data-aos-delay="100"
+    style="font-size: 1.5rem; margin-top: 100px; margin-bottom:0px;   font-family: 'Signika', sans-serif;font-weight:bold; color: rgb(106, 74, 34); text-align:center; text-decoration:underline!important; cursor:pointer; padding-left:10px!important; padding-right:10px!important;">
+    DialectLing: Interactive Local Dialect Learning App
+  </h1>
+
+
+
+
+  <!----------------------- First Container ----------------------------->
+
+
+  <div class="section-padding divider">
+
+    <div class="container">
+
+      <!--------------------- Image Section ---------------------->
+
+      <div class="row gy-4 align-items-center comp3">
+        <div class="col-lg-5">
+          <img class="image"
+            style="margin-top: -50px; border-radius:79% 21% 83% 17% / 15% 66% 34% 85% ; width:450px; margin-left:-10px!important;"
+            data-aos="fade-down" data-aos-delay="200" src="
+            ../assets/images/undraw_Educator_re_ju47.png"
+            class="img-fluid" alt="" />
+        </div>
+
+        <div class="col-lg-6" style="
+                display: flex;
+                flex-direction: column;
+                
+              ">
+          <h2 data-aos="fade-up" data-aos-delay="100" style="font-size: 1.4rem; margin-top: 0px; margin-bottom:5px;   font-family: 'Signika', sans-serif;font-weight:bold; color: rgb(106, 74, 34); text-align:center!important;
+             ">
+            Summary</h2>
+
+          <p class="pA" data-aos="fade-up" data-aos-delay="200"
+            style="text-align: center; margin-top: 10px; font-size:16px; font-weight:500;">
+            DialectLing is an interactive mobile app designed to facilitate the learning of local dialects or regional
+            languages.
+            The app aims to provide an engaging and immersive learning experience through a combination of interactive
+            lessons,
+            pronunciation exercises, cultural insights, and quizzes. DialectLing is intended to cater to individuals who
+            want to
+            learn and communicate in specific local dialects, fostering cultural understanding and enhancing language
+            skills.
+          </p>
+
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+  <!----------------------- First Container Ends Here ----------------------------->
+
+
+
+
+
+
+
+
+
+
+  <!----------------------- Second Container ----------------------------->
+
+
+
+  <div class="container" style="margin-top: 40px; margin-bottom:60px;">
+
+    <div class="row gy-4 align-items-center">
+      <div class="col-lg-5 comp4">
+
+        <!----------------------- Title ----------------------------->
+
+        <h2 class="hA" data-aos="fade-up" data-aos-delay="100" style="font-size: 1.4rem; margin-top: 0px; margin-bottom:5px;   font-family: 'Signika', sans-serif;font-weight:bold; color: rgb(106, 74, 34); text-align:left;
+                       ">
+          Getting Started</h2>
+
+
+
+        <!----------------------- Main Content ----------------------------->
+
+
+        <p class="pB" data-aos="fade-up" data-aos-delay="200"
+          style="text-align: left; margin-top: 10px; font-size:16px; font-weight:500; max-height:1500px; margin-bottom:0px;">
+          <b>Items Needed:</b>
+          <br><br>
+          &#9632; Mobile app development platform (iOS or Android)
+          <br><br>
+          &#9632; Software development tools
+          <br><br>
+          &#9632; Database or content management system
+          <br><br>
+          &#9632; Audio recording equipment
+          <br><br>
+          &#9632; User interface design elements
+          <br><br>
+          &#9632; Language resources and materials for dialect lessons
+          <br><br>
+          &#9632; Networking infrastructure for online features
+          <br><br>
+          &#9632; Marketing and promotional materials
+          <br><br>
+        </p>
+
+
+
+
+
+      </div>
+
+
+
+      <!--------------------- Image Section ---------------------->
+
+      <div class="col-lg-6" style="
+                  display: flex;
+                  flex-direction: column;
+                  margin-top:50px!important;
+                  
+                ">
+
+
+        <img class="image" style="margin-top: -20px; width:550px; margin-left:-10px;" data-aos="fade-down"
+          data-aos-delay="200" src="
+          ../assets/images/undraw_Online_learning_re_qw08.png" class="img-fluid" alt="" />
+
+
+      </div>
+    </div>
+  </div>
+
+
+  <!----------------------- Second Container Ends Here ----------------------------->
+
+
+
+
+
+
+  <!----------------------- Divider Starts Here ----------------------------->
+
+
+
+  <div style="margin-top: -250px; margin-bottom:-250px" class="section-padding divider"></div>
+
+
+
+  <!----------------------- Divider Ends Here ----------------------------->
+
+
+
+
+  <!----------------------- Third Container ----------------------------->
+
+
+
+  <div class="section-padding " style=" padding-bottom:40px!important;">
+
+    <div class="container" style="height: 100%;">
+
+      <div class="row gy-4 align-items-center">
+
+        <!--------------------- Image Section ---------------------->
+
+        <div class="col-lg-5">
+          <img class="image" style="width:500px; margin-left:-80px;" data-aos="fade-down" data-aos-delay="200"
+            src="
+            ../assets/images/undraw_Conversation_re_c26v.png" class="img-fluid" alt="" />
+        </div>
+
+        <div class="col-lg-6 comp4" style="
+                  display: flex;
+                  flex-direction: column;
+                  
+                ">
+
+
+
+          <!----------------------- Title ----------------------------->
+
+          <h2 class="comp1 hA" data-aos="fade-up" data-aos-delay="100" style="font-size: 1.4rem; margin-top: 280px; margin-bottom:0px;   font-family: 'Signika', sans-serif;font-weight:bold; color: rgb(106, 74, 34); text-align:left;
+               ">
+            Comprehensive Steps to Do It</h2>
+
+
+          <!----------------------- Main Content ----------------------------->
+
+
+          <p class="pB" data-aos="fade-up" data-aos-delay="200"
+            style="text-align: left; margin-top: 10px; font-size:16px; font-weight:500; max-height:2800px; margin-bottom:0px;">
+            <b>Comprehensive Steps to Do It:</b>
+            <br><br>
+            <b>Step 1: Planning and Research</b>
+            <br><br>
+            &#9679; Define the target dialects or regional languages to be included in the app.
+            <br><br>
+            &#9679; Conduct research on language resources and cultural insights for each dialect.
+            <br><br>
+            &#9679; Determine the app's objectives, scope, and target audience.
+            <br><br>
+            <b>Step 2: App Design and Development</b>
+            <br><br>
+            &#9679; Design the user interface and user experience (UI/UX) of the DialectLing app.
+            <br><br>
+            &#9679; Develop the front-end and back-end components using the chosen mobile app development platform.
+            <br><br>
+            &#9679; Implement interactive lessons, pronunciation exercises, cultural insights, and quizzes within the
+            app.
+            <br><br>
+            &#9679; Create a user-friendly interface that supports easy navigation and engagement.
+            <br><br>
+            <b>Step 3: Content Creation and Management</b>
+            <br><br>
+            &#9679; Develop lesson content for each dialect, including vocabulary, phrases, and grammar.
+            <br><br>
+            &#9679; Record audio samples for pronunciation exercises and native speaker demonstrations.
+            <br><br>
+            &#9679; Organize and manage the content using a database or content management system.
+            <br><br>
+            &#9679; Continuously update and expand the content to provide a comprehensive learning experience.
+            <br><br>
+            <b>Step 4: Gamification and Progress Tracking</b>
+            <br><br>
+            &#9679; Implement gamification elements such as badges, rewards, and achievements to motivate learners.
+            <br><br>
+            &#9679; Integrate a progress tracking system that allows users to monitor their learning journey and
+            achievements.
+            <br><br>
+            &#9679; Provide personalized recommendations and suggestions for further learning based on user progress.
+            <br><br>
+            <b>Step 5: Online Community and Practice</b>
+            <br><br>
+            &#9679; Implement online features that allow users to connect with fellow learners or native speakers of the
+            dialects.
+            <br><br>
+            &#9679; Provide discussion forums, chat features, or voice/video calling options for language practice and
+            cultural
+            exchange.
+            <br><br>
+            &#9679; Foster a supportive and interactive learning community within the app.
+            <br><br>
+            <b>Step 6: Testing, Feedback, and Iteration</b>
+            <br><br>
+            &#9679; Conduct thorough testing of the app's functionalities, usability, and performance.
+            <br><br>
+            &#9679; Gather user feedback and make improvements based on user suggestions and needs.
+            <br><br>
+            &#9679; Continuously iterate and enhance the app based on user feedback and emerging language resources.
+            <br><br>
+          </p>
+
+
+
+
+
+
+        </div>
+      </div>
+    </div>
+
+  </div>
+
+  <!----------------------- Third Container Ends here ----------------------------->
+
+
+
+
+
+
+
+
+
+  <div class="container" style="margin-top: 60px;">
+
+    <div class="row gy-4 align-items-center">
+      <div class="col-lg-5">
+
+
+        <!----------------------- Title ----------------------------->
+
+        <h2 class="hA" data-aos="fade-up" data-aos-delay="100" style="font-size: 1.4rem; margin-top: 0px; margin-bottom:0px;   font-family: 'Signika', sans-serif;font-weight:bold; color: rgb(106, 74, 34); text-align:left;
+                         ">
+          How the Project Will Be Helpful <p></p>
+        </h2>
+
+
+
+
+
+        <!----------------------- Main Content ----------------------------->
+
+
+        <p class="pB" data-aos="fade-up" data-aos-delay="200"
+          style="text-align: left; margin-top: 10px; font-size:16px; font-weight:500; max-height:1500px; margin-bottom:0px;">
+          <b>The DialectLing app offers several benefits:</b>
+          <br><br>
+          &#9679; Cultural understanding: Users can immerse themselves in the local dialects and gain insights into the
+          associated cultures and traditions.
+          <br><br>
+          &#9679; Language skills development: The interactive lessons and pronunciation exercises enable users to
+          improve their
+          language skills and effectively communicate in the specific dialects.
+          <br><br>
+          &#9679; Community engagement: The app facilitates connections with other learners and native speakers,
+          fostering a
+          supportive learning community.
+          <br><br>
+          &#9679; Preserving linguistic heritage: DialectLing contributes to the preservation and appreciation of local
+          dialects
+          by promoting their learning and usage.
+          <br><br>
+          &#9679; Enhanced communication: Learning local dialects allows users to communicate more effectively and
+          authentically
+          with native speakers in specific regions.
+          <br><br>
+        </p>
+
+
+
+
+
+
+        <!----------------------- Title ----------------------------->
+
+        <h2 class="hA" data-aos="fade-up" data-aos-delay="100" style="font-size: 1.4rem; margin-top: 0px; margin-bottom:0px;   font-family: 'Signika', sans-serif;font-weight:bold; color: rgb(106, 74, 34); text-align:left;
+                         ">
+          Conclusion</h2>
+
+        <br>
+        <!----------------------- Main Content ----------------------------->
+
+        <p class="pA" style="text-align: left; margin-top: 0px; font-size:16px; font-weight:500;">
+          DialectLing, the interactive local dialect learning app, provides users with an immersive and engaging
+          platform to learn
+          and communicate in specific regional dialects. With interactive lessons, pronunciation exercises, cultural
+          insights, and
+          online community features, the app facilitates language skill development and cultural understanding.
+          DialectLing aims
+          to contribute to the preservation of linguistic heritage while enhancing communication abilities and fostering
+          connections among learners and native speakers.
+        </p>
+
+        </p>
+
+
+
+
+
+      </div>
+
+      <!--------------------- Image Section ---------------------->
+
+
+      <div class="col-lg-6" style="
+                    display: flex;
+                    flex-direction: column;
+                    margin-top:50px!important;
+                    
+                  ">
+
+
+        <img class="image" style="margin-top: -100px;" data-aos="fade-down" data-aos-delay="200"
+          src="
+          ../assets/images/undraw_Random_thoughts_re_cob6.png" class="img-fluid" alt="" />
+
+
+      </div>
+
+    </div>
+
+  </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  <div class="wrapper-loader">
+
+
+
+
+
+
+
+    <div class='loader'></div>
+
+
+    <p class="get" id="typing-dots">Getting Things Ready</p>
+
+    <script>
+
+      const dotsElement = document.getElementById('typing-dots');
+      const dots = '...';
+      let dotCount = 0;
+
+      function animateTypingDots() {
+        dotsElement.textContent = 'Getting Things Ready' + dots.substring(0, dotCount);
+        dotCount = (dotCount + 1) % (dots.length + 1);
+        setTimeout(animateTypingDots, 300);
+      }
+
+      animateTypingDots();
+
+    </script>
+
+
+
+
+
+
+
+
+  </div>
+
+
+
+</body>
+
+
+
+
+
+
+
+
+
+
+<script src="
+../assets/js/app.js"></script>
+<script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+<script>
+  AOS.init({
+    duration: 700,
+  });
+</script>
+</body>
+
+</html>

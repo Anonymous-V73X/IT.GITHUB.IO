@@ -1,0 +1,696 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<!-- ======== 😎😎 Head actually starts here 😎😎 ======== -->
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Notifications</title>
+  <link href="https://cdn.jsdelivr.net/npm/remixicon@2.5.0/fonts/remixicon.css" rel="stylesheet" />
+
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
+    integrity="sha512-...your-integrity-hash...=" crossorigin="anonymous" />
+  <link rel="icon" href="../../assets/images/favicon.png" type="image/x-icon" />
+  <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+
+  <style>
+    @import url("https://fonts.googleapis.com/css2?family=Bai+Jamjuree:wght@400;500;600;700&display=swap");
+    @import url("https://fonts.googleapis.com/css2?family=Dancing+Script:wght@500;600;700&display=swap");
+    @import url("https://fonts.googleapis.com/css2?family=Sacramento&display=swap");
+
+
+    body {
+      background-color: #f5ede6;
+      font-family: "Bai Jamjuree", sans-serif;
+      color: rgba(99, 62, 36, 0.908);
+      -webkit-tap-highlight-color: transparent !important;
+    }
+
+    a {
+      text-decoration: none;
+      color: #ed781f;
+    }
+
+    .bg-primary {
+      background-color: #f5eae0b5 !important;
+    }
+
+    .shadow-soft {
+      box-shadow: 4px 4px 6px #b8b9be58, -4px -4px 6px #ffffffc1 !important;
+    }
+
+    .shadow-inset {
+      box-shadow: inset 2px 2px 5px #b8b9bec6, inset -3px -3px 7px #ffffffce !important;
+    }
+
+    .border-light {
+      border-color: #e6dad1 !important;
+    }
+
+    .row {
+      display: flex;
+      flex-wrap: wrap;
+      flex-direction: row;
+      gap: 20px;
+      justify-content: center !important;
+      align-items: start !important;
+      margin-bottom: 100px;
+      padding: 0.8%;
+    }
+
+    .c1 {
+      max-width: 300px;
+    }
+
+    @media (max-width: 768px) {
+      .c1 {
+        max-width: 400px;
+        margin-left: 10px;
+        margin-right: 10px;
+      }
+    }
+
+    @media (min-width: 768px) {
+      .row {
+        justify-content: left !important;
+      }
+
+
+    }
+
+    .row1 {
+      display: flex;
+      flex-wrap: wrap;
+      flex-direction: row;
+      gap: 2%;
+      justify-content: space-around !important;
+      align-items: center !important;
+    }
+
+    .menu-link:hover {
+      background-color: #f5ede6 !important;
+      transform: translateX(-3px) !important;
+      transition: transform 500ms ease-in-out;
+      color: #f7be8c !important;
+      box-shadow: inset 2px 2px 5px #b8b9bec6, inset -3px -3px 7px #ffffffce !important;
+    }
+
+    .menu-link:hover .fas {
+      color: #f7be8c;
+      transform: translateX(-50%);
+      transition: transform 500ms ease-in-out;
+    }
+
+    .date {
+      font-size: 13px;
+      font-weight: 600;
+      color: #ab8479;
+    }
+
+    .hide-button {
+      display: none;
+    }
+
+    .hidden {
+      display: none;
+    }
+
+    .button:hover,
+    .button:focus {
+      background-color: #754d42 !important;
+      color: #f5ede6 !important;
+    }
+
+
+
+    .c1 {
+      background-color: #f5ede6;
+      padding: 1.5rem;
+      padding-top: 0.8em;
+      border-radius: 16px;
+      box-shadow: 4px 4px 6px #b8b9be58, -4px -4px 6px #ffffffc1 !important;
+      border: #754d425f 1px solid;
+    }
+
+    .tag {
+      display: inline-block;
+      background-color: #f5ede6;
+      color: #754D42;
+      font-weight: 600;
+      font-size: 0.875rem;
+      padding: 0.5em 0.75em;
+      line-height: 1;
+      border-radius: 6px;
+      box-shadow: inset 1px 1px 4px rgba(80, 60, 51, 0.175), inset -2px -2px 8px rgba(232, 231, 231, 0.8) !important;
+      border: #754d4234 0.01px solid;
+      margin-top: 1rem;
+    }
+
+    .title {
+      font-size: 1.2rem;
+      line-height: 1.25;
+    }
+
+    .info {
+      height: 3em;
+      line-height: 1.5em;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      margin-bottom: 15px;
+      font-weight: 500;
+      font-size: 15px;
+      color: rgb(103, 107, 114);
+      display: -webkit-box;
+      -webkit-line-clamp: 2;
+      -webkit-box-orient: vertical;
+    }
+
+    .show-full {
+      height: auto !important;
+      margin-bottom: 15px !important;
+      overflow: visible !important;
+      display: block;
+      -webkit-line-clamp: initial;
+    }
+
+    .button {
+      font: inherit;
+      line-height: 1;
+      background-color: #f5ede6;
+      border: 2px solid #754D42;
+      color: #754D42;
+      padding: 0.5em 1em;
+      border-radius: 6px;
+      font-weight: 500;
+      display: inline-flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 0.5rem;
+      cursor: pointer;
+    }
+
+    .fade-up-heading {
+      display: flex;
+      align-content: center;
+      justify-content: center;
+    }
+
+    .shadow-inset {
+      width: 160px;
+      height: 50px;
+      display: flex;
+      border-radius: 90px;
+      align-items: center;
+      justify-content: center;
+      padding: 10px;
+      padding-top: 20px;
+      padding-bottom: 20px;
+      padding-right: 9.5px;
+    }
+
+    .menu-link {
+      color: #966a4b;
+      cursor: pointer;
+      background-color: #e6ccba;
+      padding: 15px;
+      padding-left: 25px;
+      padding-right: 25px;
+      border-radius: 25px;
+      font-size: 16px;
+      font-weight: 600;
+      box-shadow: 2px 3px 6px #b8b9be58, -2px -3px 6px #ffffff71 !important;
+    }
+
+    .anonymous-heading {
+      font-size: 24px;
+      margin-top: 40px;
+      margin-bottom: 60px;
+      text-align: center;
+      font-family: 'Dancing Script', cursive;
+      opacity: 0.6;
+    }
+
+    .fade-up-heading {
+      font-size: 34px;
+      margin-top: 40px;
+      margin-bottom: 60px;
+      text-align: center;
+      font-family: 'Dancing Script', cursive;
+    }
+
+    .loader {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      -webkit-transform: translate(-50%, -50%);
+      transform: translate(-50%, -50%);
+      width: 50px;
+      height: 10px;
+      background: #e56707;
+      border-radius: 5px;
+      -webkit-animation: load 1.8s ease-in-out infinite;
+      animation: load 1.8s ease-in-out infinite;
+    }
+
+    .loader:before,
+    .loader:after {
+      position: absolute;
+      display: block;
+      content: "";
+      -webkit-animation: load 1.8s ease-in-out infinite;
+      animation: load 1.8s ease-in-out infinite;
+      height: 10px;
+      border-radius: 5px;
+    }
+
+    .loader:before {
+      top: -20px;
+      left: 10px;
+      width: 40px;
+      background: #c87405;
+    }
+
+    .loader:after {
+      bottom: -20px;
+      width: 35px;
+      background: #F5AB35;
+    }
+
+    @-webkit-keyframes load {
+      0% {
+        -webkit-transform: translateX(40px);
+        transform: translateX(40px);
+      }
+
+      50% {
+        -webkit-transform: translateX(-30px);
+        transform: translateX(-30px);
+      }
+
+      100% {
+        -webkit-transform: translateX(40px);
+        transform: translateX(40px);
+      }
+    }
+
+    @keyframes load {
+      0% {
+        -webkit-transform: translateX(40px);
+        transform: translateX(40px);
+      }
+
+      50% {
+        -webkit-transform: translateX(-30px);
+        transform: translateX(-30px);
+      }
+
+      100% {
+        -webkit-transform: translateX(40px);
+        transform: translateX(40px);
+      }
+    }
+
+    .get {
+      margin-top: 350px !important;
+    }
+
+    .wrapper-loader {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background-color: #f5ede6 !important;
+      z-index: 9999;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      transition: opacity 0.5s ease;
+    }
+
+    .wrapper-loader.fade {
+      opacity: 0;
+      pointer-events: none;
+    }
+  </style>
+
+
+
+
+</head>
+
+<!-- ================ Head Ends 🗣️🗣️🪦🪦 ================== -->
+
+<body>
+
+
+
+  <div class="wrapper-loader">
+
+
+
+    <div class='loader'></div>
+
+
+
+  </div>
+
+
+
+
+  <div class="row1" style="margin-bottom: 50px; margin-top: 50px">
+
+
+    <div>
+      <div class="shadow-inset">
+        <a class="menu-link" href="javascript:void(0)" onclick="goBack()">
+          <i class="fas fa-arrow-left"></i>
+          <b class="g">Go Back</b>
+        </a>
+      </div>
+    </div>
+
+    <script>
+
+      function goBack(url) {
+        window.history.back();
+
+      }
+
+    </script>
+
+  </div>
+  </div>
+
+
+
+
+  <h3 class="fade-up-heading">
+    Notifications.
+  </h3>
+
+  <div class="row">
+
+
+    <!-- Card -->
+
+
+
+
+    <div class="c1">
+      <span class="tag">Sir Anonymous-V73X</span>
+      <h2 class="title">Upcoming Continuous Assessment Tests</h2>
+      <p class="date">4th July 2023</p>
+      
+      <p class="info">
+        <strong>Subject: Upcoming Continuous Assessment Tests on 10th and 11th July 2023</strong>
+        <br><br>
+        Dear Students,
+        <br><br>
+        We are pleased to inform you about the upcoming Continuous Assessment Tests (CATs) scheduled for the 10th and 11th of
+        July 2023. The purpose of these tests is to evaluate your understanding and progress in the respective subjects.
+        Please take note of the following details:
+        <br><br>
+        <strong>Assembly Language Programming (INTE 223):</strong> CAT scheduled on [insert date here]
+        <br>
+        <strong>Christian Ethics (BIBL 222):</strong> CAT scheduled on [insert date here]
+        <br><br>
+        We kindly request all students enrolled in the above-mentioned courses to make necessary preparations for the upcoming
+        CATs. These tests will serve as an essential opportunity for you to demonstrate your knowledge and skills acquired
+        throughout the course.
+        <br><br>
+        To excel in the CATs, we recommend the following:
+        <br><br>
+        &#8226; Review your course material thoroughly, including lecture notes, textbooks, and any supplementary resources
+        provided by the instructors.
+        <br>
+        &#8226; Engage in active learning by participating in group discussions, seeking clarification from your instructors,
+        and solving practice problems.
+        <br>
+        &#8226; Allocate sufficient time for revision and practice, ensuring that you cover all the relevant topics and
+        concepts.
+        <br><br>
+        By adequately preparing for the CATs, you will not only strengthen your understanding of the subject matter but also
+        enhance your overall academic performance. We encourage you to approach your instructors or academic advisors if you
+        require any additional guidance or support during your preparations.
+        <br><br>
+        Wishing you all the best for the upcoming Continuous Assessment Tests.
+        <br><br>
+        <strong>Sincerely,</strong>
+        <br>
+        <strong>Sir Anonymous-V73X</strong>
+      
+
+      </p>
+
+      <button class="button">
+        <span>Read More</span>
+        <i class="icon fas fa-eye"></i>
+      </button>
+    </div>
+
+
+
+
+
+
+
+
+
+
+
+
+    <div class="c1">
+      <span class="tag">Sir Anonymous-V73X</span>
+      <h2 class="title">Change Log - IT Hub 2.0: A Comprehensive Upgrade</h2>
+      <p class="date">2nd July 2023</p>
+      <p class="info">
+        <strong>Change Log - IT Hub 2.0</strong>
+        <br><br>
+        <strong>Beta 2.0 (Release Date: 2023-07-02)</strong>
+        <br><br>
+        <strong>URL Refinement:</strong>
+        <br>
+        Conducted a comprehensive review of all URLs across the platform.
+        <br>
+        Modified URLs to ensure a more professional and user-friendly appearance.
+        <br><br>
+        <strong>Semester Units Card Alignment:</strong>
+        <br>
+        Resolved an issue causing misalignment of the semester units card.
+        <br>
+        Implemented necessary adjustments to ensure proper rendering and alignment.
+        <br><br>
+        <strong>Flexing Overflow-X Bug Fix:</strong>
+        <br>
+        Addressed a specific bug related to the flexing overflow in the operamini browser.
+        <br>
+        Applied necessary fixes to prevent content overflow and ensure optimal browsing experience.
+        <br><br>
+        <strong>Section Redirect URL Cleanup:</strong>
+        <br>
+        Conducted a thorough clean-up of section redirect URLs.
+        <br>
+        Removed any outdated or irrelevant URLs, resulting in a more streamlined navigation process.
+        <br><br>
+        <strong>Updates to BIBL 222(Christian Ethics) and INTE 223(Assembly Language Programming) notes:</strong>
+        <br>
+        Updated the Christian Ethics and Assembly Language Programming notes to the latest versions (2.2).
+        <br>
+        Incorporated the most recent content and information to provide up-to-date learning resources.
+        <br><br>
+        <strong>Footer Link Optimization:</strong>
+        <br>
+        Conducted an audit of footer links throughout the platform.
+        <br>
+        Streamlined and organized footer links to improve overall navigation and accessibility.
+        <br><br>
+        <strong>Chrome Browser Compatibility Enhancement:</strong>
+        <br>
+        Improved compatibility for the homepage's sensitive menu with the Chrome browser.
+        <br>
+        Removed the user-select property, ensuring a smoother user experience and consistent functionality.
+        <br><br>
+        We are committed to continually enhancing your experience on IT Hub 2.0. Please feel free to reach out to our
+        support
+        team with any feedback or issues you may encounter.
+        <br><br>
+        <strong>Click here to donate:</strong>
+        <br>
+        <a href="https://www.paypal.com/donate/?hosted_button_id=QZLE9MFJQ2DLW">Paypal Support</a>
+        <br><br>
+        <strong>Sincerely,</strong>
+        <br>
+        <strong>Sir Anonymous-V73X</strong>
+      </p>
+      <button class="button">
+        <span>Read More</span>
+        <i class="icon fas fa-eye"></i>
+      </button>
+    </div>
+
+
+
+
+    <div class="c1">
+      <span class="tag">Sir Anonymous-V73X</span>
+      <h2 class="title">Microsoft Azure Static Website Deployment Step by Step</h2>
+      <p class="date">26th June 2023</p>
+      <p class="info">
+        <strong>Step-by-Step Deployment Procedure for a Static Website on Azure:</strong><br><br>
+
+        <strong>Project Setup:</strong><br><br>
+
+        - Create the project for your static website.<br>
+        - Build your website with all the necessary files, such as home.html, CSS files, and JavaScript files.<br><br>
+
+        <strong>Repository Creation:</strong><br><br>
+
+        - Go to GitHub and create a new repository for your website.<br>
+        - Choose the option to upload files, as it is an easier way to add your website files.<br>
+        - Upload all the required files (.html, .css, .js) to the repository.<br>
+        - Once the files are uploaded, your repository is ready for deployment.<br><br>
+
+        <strong>Azure Account Creation:</strong><br><br>
+
+        - Visit the Microsoft Azure website, preferably through the Azure for Students program.<br>
+        - Click on the provided link to create an account with Azure.<br>
+        - Sign up using your personal email address, not your school's email address (e.g., kipruto@gmail.com).<br><br>
+
+        <strong>Account Activation:</strong><br><br>
+
+        - After creating the Azure account, follow the instructions to activate your student benefits, which include
+        $100 in
+        credit.<br>
+        - Scroll down on the Azure portal and look for the option to connect with your school's email account.<br>
+        - Click on the link and provide the necessary details.<br>
+        - You will be directed to the Microsoft 365 landing page, where you need to create an account.<br>
+        - Once the account is created, return to the Azure portal to access your $100 credit.<br><br>
+
+        <strong>Website Deployment:</strong><br><br>
+
+        - Sign in to the Azure portal.<br>
+        - On the landing page, click on "Create a resource."<br>
+        - Select "Web App" and click on "Create."<br>
+        - Fill in the required details for the web app and choose the "Static Web App" option.<br>
+        - Click on "Create" to proceed.<br>
+        - Provide the necessary details again, and select the GitHub radio button as the deployment source.<br>
+        - Connect your GitHub account to Azure.<br>
+        - Select your organization (usually your name) and choose the repository you created earlier.<br>
+        - Set the branch to "Main."<br>
+        - Click on "Review + Create" and confirm the details.<br>
+        - Azure may take a few minutes to deploy the website using a CDN (Content Delivery Network).<br>
+        - Once deployed, copy the URL of your website and share it wherever needed, such as on Moodle.<br>
+      </p>
+
+      <button class="button">
+        <span>Read More</span>
+        <i class="icon fas fa-eye"></i>
+      </button>
+    </div>
+
+
+
+
+
+
+
+    <div class="c1">
+      <span class="tag">Sir Anonymous-V73X</span>
+      <h2 class="title">Support My Cause with a Generous Contribution</h2>
+      <p class="date">08th June 2023</p>
+      <p class="info">
+        Dear User,
+        <br><br>
+        I hope this message finds you well. As an independent developer, I have been tirelessly working on creating
+        innovative and useful software solutions that can make a positive impact in people's lives. However, developing
+        high-quality software requires significant time, effort, and resources. That's why I am reaching out to you
+        today to
+        kindly request your support and donation.
+        <br><br>
+        With your generous contribution, I will be able to continue dedicating my time and energy to develop and improve
+        these software projects. Your donation will directly contribute to the advancement of new features, bug fixes,
+        and
+        overall enhancement of the user experience. By supporting independent developers like me, you are not only
+        helping
+        me pursue my passion but also empowering the creation of valuable tools for individuals and businesses alike.
+        <br><br>
+        Every contribution matters, no matter the amount. Your donation will be used judiciously to further the
+        development
+        of these projects and bring them to a wider audience. If you believe in the importance of supporting independent
+        developers and the impact that innovative software can have on society, I kindly request you to consider making
+        a
+        donation today.
+        <br><br>
+        Thank you for your time and consideration. Your support means the world to me, and I am truly grateful for any
+        contribution you can make. Together, we can make a difference and shape the future of technology.
+        <br><br>
+
+        <b>Click here to donate:</b> <a href="https://www.paypal.com/donate/?hosted_button_id=QZLE9MFJQ2DLW"> Paypal
+          Support</a>
+        <br><br>
+        <b>Sincerely,</b>
+        <br>
+        <b>Sir Anonymous-V73X</b>
+      </p>
+      <button class="button">
+        <span>Read More</span>
+        <i class="icon fas fa-eye"></i>
+      </button>
+    </div>
+
+
+
+
+
+
+
+
+
+  </div>
+
+  <h3 class="anonymous-heading">Anonymous-v73x</h3>
+
+
+
+
+
+
+
+
+
+  <script>
+
+    document.addEventListener('DOMContentLoaded', function () {
+      var buttons = document.querySelectorAll('.button');
+      buttons.forEach(function (button) {
+        button.addEventListener('click', function () {
+          var info = this.previousElementSibling;
+          info.classList.toggle('show-full');
+          var buttonText = this.querySelector('span');
+          buttonText.textContent = buttonText.textContent === 'Read More' ? 'Hide' : 'Read More';
+
+          var icon = this.querySelector('.icon');
+          icon.classList.toggle('fa-eye-slash');
+
+          this.classList.toggle('hide-button');
+        });
+      });
+    });
+
+
+  </script>
+
+  <!-- ======== 😎😎 Script actually starts here 😎😎 ======== -->
+
+  <script src="../../assets/js/app.js"></script>
+  <script src="../../assets/js/semesters.js"></script>
+
+</body>
+
+<!-- ======== Script Ends 🗣️🗣️🪦🪦 ======== -->
+
+</html>

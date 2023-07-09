@@ -1,0 +1,2350 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<!-- ======== 😎😎 Head actually starts here 😎😎 ======== -->
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Semester 2.2</title>
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@2.5.0/fonts/remixicon.css" rel="stylesheet" />
+    <link rel="stylesheet" href="../assets/css/page-style.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
+        integrity="sha512-...your-integrity-hash...=" crossorigin="anonymous" />
+    <link rel="icon" href="../assets/images/favicon.png" type="image/x-icon" />
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+
+
+
+
+    <style>
+        .fabell:hover i {
+            color: #ad7412;
+            animation: rotationAnimation 0.5s infinite;
+
+        }
+
+        @keyframes rotationAnimation {
+            0% {
+                transform: rotate(0deg);
+            }
+
+            50% {
+                transform: rotate(-60deg);
+            }
+
+            100% {
+                transform: rotate(0deg);
+            }
+        }
+
+        @media(max-width:728px) {
+
+            .fabell {
+                margin-left: 50px;
+                margin-right: 10px;
+            }
+
+        }
+
+
+
+        .time {
+            position: absolute;
+            top: 150px;
+            right: 5px;
+            padding: 5px;
+            background-color: #6c7587;
+            color: #fff8dc;
+            border-radius: 5px;
+            padding-top: 2px;
+            padding-bottom: 2px;
+            font-size: smaller;
+            opacity: 0.8
+        }
+    </style>
+
+
+</head>
+
+
+<!-- ================ Head Ends 🗣️🗣️🪦🪦 ================== -->
+
+<body>
+
+
+    <div class="wrapper-loader">
+        <div class="loader">
+
+
+
+
+
+
+            <div class="book">
+                <div class="book__pg-shadow"></div>
+                <div class="book__pg"></div>
+                <div class="book__pg book__pg--2"></div>
+                <div class="book__pg book__pg--3"></div>
+                <div class="book__pg book__pg--4"></div>
+                <div class="book__pg book__pg--5"></div>
+            </div>
+
+
+
+            <p class="get" id="typing-dots">Getting Things Ready</p>
+
+            <script>
+
+                const dotsElement = document.getElementById('typing-dots');
+                const dots = '...';
+                let dotCount = 0;
+
+                function animateTypingDots() {
+                    dotsElement.textContent = 'Getting Things Ready' + dots.substring(0, dotCount);
+                    dotCount = (dotCount + 1) % (dots.length + 1);
+                    setTimeout(animateTypingDots, 300);
+                }
+
+                animateTypingDots();
+
+            </script>
+
+
+
+
+
+
+
+        </div>
+    </div>
+
+
+    <!-- 🔻🔴🔴🔴🔴 START: Navbar Starts Here 🔴🔴🔴🔴🔻 -->
+
+
+    <nav class="navbar">
+
+        <div class="container">
+
+            <h2 class="sem2">Semester 2.2</h2>
+
+
+            <a class="fabell" onclick="navigateThis('./notifications')" style="color: #6B5840; cursor: pointer;  rotate:30deg;
+                display:flex;
+                justify-content:center;
+                align-content:center;">
+
+                <i class="fas fa-bell"></i>
+
+            </a>
+
+            <div class="menu">
+
+
+                <a class="menu-link" onclick="navigateTo('tutorials')"
+                    style="color: #6B5840; cursor: pointer;">Tutorials</a>
+
+                <a class="menu-link" onclick="navigateTo('past-papers')" style="color: #6B5840; cursor: pointer;">Past
+                    Papers</a>
+
+                <a class="menu-link" onclick="navigateToSection('apps')" style="color: #6B5840; cursor: pointer;">Web
+                    Apps</a>
+
+                <script>
+                    function navigateToSection(sectionId) {
+                        var url = 'https://ithub.surge.sh#' + sectionId;
+                        window.location.href = url;
+                    }
+                </script>
+
+                <script>
+                    function navigateThis(page) {
+                        window.location.href = page;
+                    }
+
+                    function navigateTo(section) {
+                        document.getElementById(section).scrollIntoView({ behavior: 'smooth' });
+                    }
+                </script>
+
+
+            </div>
+
+            <button class="hamburger" onclick="toggleHamburger()">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+
+        </div>
+
+
+
+
+
+    </nav>
+
+
+
+    <!--------------------------- ⬆️ Navbar Ends Here ⬆️ --------------------->
+
+
+
+
+
+
+
+    <!------------------- ⬇️ Units Summary Start Here 😄 --------------------->
+
+
+
+    <div class="intro">
+
+        <div class=" text-center">
+
+            <h1 data-aos="fade-down" data-aos-delay="300"
+                style="font-size: 1.6rem; margin-top: 0px; margin-bottom:40px;   font-family: 'Signika', sans-serif;font-weight:bold; color: rgb(95, 83, 68); ">
+                Semester Units</h1>
+
+
+            <ul data-aos="fade-up" data-aos-delay="300" class="border border-light shadow-soft ul-units"
+                style="margin-bottom: 100px;">
+
+                <li style="display: flex;padding-top:0px">
+                    <p class="" style="font-weight: bold;">BIBL 222</p>
+                    <p style="margin-left: 10%;font-size: 12px; font-weight:450;">CHRISTIAN ETHICS</p>
+                </li>
+
+                <li style="display: flex;">
+                    <p class="" style="font-weight: bold;">COMP 326</p>
+                    <p style="margin-left: 8%;font-size: 12px; font-weight:450;">OBJECT ORIENTED PROGRAMMING WITH JAVA
+                    </p>
+                </li>
+
+                <li style="display: flex;">
+                    <p class="" style="font-weight: bold;">INTE 221</p>
+                    <p style="margin-left: 11%; font-size: 12px; font-weight:450;"> WEB APPLICATIONS PROGRAMMING</p>
+                </li>
+
+                <li style="display: flex;">
+                    <p class="" style="font-weight: bold;">INTE 223</p>
+                    <p style="margin-left: 10%;font-size: 12px; font-weight:450;">ASSEMBLY LANGUAGE PROGRAMMING</p>
+                </li>
+
+                <li style="display: flex;">
+                    <p class="" style="font-weight: bold;">INTE 226</p>
+                    <p style="margin-left: 10%;margin-bottom:5%; font-size: 12px; font-weight:450;">SYSTEM ANALYSIS AND
+                        DESIGN</p>
+                </li>
+
+            </ul>
+
+        </div>
+
+    </div>
+
+
+
+    <!---------------------- 📲👥 Timetable 📲👥 -------------------------->
+
+
+    <div style="display: flex; justify-content: center; margin-top:-60px;  ">
+
+        <button class="btn btn-primary neumorphic shadow-soft border border-light" id="timetableButton"
+            data-aos="fade-up" data-aos-delay="100" onclick="redirectToTimetable()">
+            <span class="mr-1" style="font-weight: 500!important;">
+                <span class="far fa-calendar-alt"></span>
+                Timetable
+            </span>
+        </button>
+
+        <script>
+            function redirectToTimetable() {
+                window.location.href = './timetable';
+            }
+        </script>
+
+
+
+    </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <div style="display: flex; justify-content: center; margin-top:-10px;  " data-aos="fade-up" data-aos-delay="10">
+        <a href="https://chat.whatsapp.com/DaLU1d75aI7BorcSSDQohs" target="_blank">
+            <button class="btn btn-primary neumorphic shadow-soft border border-light">
+                <span class="mr-1" style="font-weight: 500!important;"><span class="fab fa-whatsapp"></span>
+                    Whatsapp Group
+                </span>
+            </button>
+
+        </a>
+
+    </div>
+
+
+
+    <!----------------------- 📎 Whatsapp Group Link Ends Here 📎 ---------------------->
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <!------------------------ 📚 End Of Units Summary 📚 ------------------------------>
+
+
+
+
+
+    <!-----------------------------------=======  ⏸️ Break ⏸️ =============--------------->
+
+
+    <div style="border-top: 0.5px solid #a1a09f; margin-top: 10px; margin-bottom: 100px; opacity: 0.2;"></div>
+
+
+    <!-----------------------------------=======  ⏸️ Break ⏸️ =============--------------->
+
+
+
+
+
+
+    <!-----------------------------  📝📚 Notes Section Starts Here  ------------------------->
+
+
+    <!--  🌟 Title 🌟  -->
+
+
+
+    <div class="text-center">
+
+
+        <h1 data-aos="fade-up" data-aos-delay="100"
+            style="font-size: 1.6rem; margin-top: -50px; margin-bottom:10px; font-weight:bold; font-family: 'Signika', sans-serif;font-weight:bold; color: rgb(95, 83, 68);">
+            Unit Notes </h1>
+
+        <div class="introX" data-aos="fade-up" data-aos-delay="100">
+            <p class="notes-intro" style="max-width: 380px; text-align:center;">
+                Dive into the comprehensive collection of notes
+                curated specifically for each unit,
+                empowering you
+                with the
+                knowledge
+                and insights necessary to excel in your IT journey.
+            </p>
+
+        </div>
+
+
+
+    </div>
+
+
+
+    <!------------------------  📝📚 Scroll To Top Icon 📝📚 ---------------->
+
+
+    <div class="scroll-to-top" onclick="scrollToTop()"></div>
+
+
+    <!------------------------  📝📚 Scroll To Top Icon 📝📚 ---------------->
+
+
+
+    <!------------------    📝 Notes Download links 📥   ---------------------->
+
+
+
+    <div class="row mt-6">
+
+        <div class="col-md-4">
+
+
+            <!-- 📚 Icon box BIBL 222 -->
+
+            <div class="icon-box text-center mb-5" data-aos="fade-up" data-aos-delay="100">
+
+
+                <div class="icon icon-shape icon-shape-sm shadow-soft border border-light rounded-circle">
+                    <span class="fas fa-cross"></span>
+                </div>
+
+
+                <h2 class="h5" style="margin-top: 30px;
+                margin-bottom: 30px;
+                ">BIBL 222</h2>
+
+
+                <a href="https://drive.google.com/uc?export=download&id=10iCHbvFg8YPeDvgX85uUAcNmrVQVbXAz">
+
+                    <button class="btn btn-primary neumorphic shadow-soft border border-light" type="button"
+                        onclick="showPopup(11)">
+
+                        <span class="mr-1">
+                            <span class="fas fa-arrow-circle-down"></span>
+                        </span>
+                        Download Notes
+
+                    </button>
+
+                </a>
+
+            </div>
+
+
+            <!-- 🛑 End of Icon box -->
+
+        </div>
+
+
+
+
+
+
+
+
+
+
+        <div class="col-md-4">
+
+            <!-- 💻 Icon box COMP 326 -->
+
+
+            <div class="icon-box text-center mb-5" data-aos="fade-up" data-aos-delay="100">
+                <div class="icon icon-shape icon-shape-sm shadow-soft border border-light rounded-circle">
+                    <span class="fas fa-code"></span>
+                </div>
+                <h2 class="h5 " style="margin-top: 30px;
+                margin-bottom: 30px;
+                ">COMP 326</h2>
+                <a href="https://drive.google.com/uc?export=download&id=166IG8ZOfTGUKwlG657PQrKNwMZyawoC_">
+                    <button class="btn btn-primary neumorphic shadow-soft border border-light" type="button"
+                        onclick="showPopup(11)">
+                        <span class="mr-1"><span class="fas fa-file-download"></span></span>
+                        Download Notes
+                    </button>
+                </a>
+
+            </div>
+
+
+            <!-- 🛑 End of Icon box -->
+
+
+        </div>
+
+
+
+
+        <div data-aos="fade-up" data-aos-delay="100" class="col-md-4">
+
+            <!-------- 🌟 Icon Box INTE 221 🌟 ---------->
+
+
+            <div class="icon-box text-center mb-5">
+
+                <div class="icon icon-shape icon-shape-sm shadow-soft border border-light rounded-circle">
+                    <span class="fas fa-globe"></span>
+                </div>
+                <h2 class="h5 " style="margin-top: 30px;
+                margin-bottom: 30px;
+                ">INTE 221</h2>
+
+                <a href="https://drive.google.com/uc?export=download&id=1ozS0FY6RTKr7eiMFvZfaARyDGb4raPlP">
+
+                    <button class="btn btn-primary neumorphic shadow-soft border border-light" type="button"
+                        onclick="showPopup(11)">
+                        <span class="mr-1"><span class="fas fa-cloud-download-alt"></span></span>
+                        Download Notes
+                    </button>
+                </a>
+
+            </div>
+
+            <!-- 🛑 End of Icon box -->
+
+
+
+        </div>
+
+
+
+
+
+
+        <div data-aos="fade-up" data-aos-delay="100" class="col-md-4">
+
+            <!------- 🎓 Icon Box INTE 222 🎓 ------->
+
+
+            <div class="icon-box text-center mb-5">
+
+                <div class="icon icon-shape icon-shape-sm shadow-soft border border-light rounded-circle">
+                    <span class="fas fa-microchip"></span>
+                </div>
+
+                <h2 class="h5" style="margin-top: 30px;
+                margin-bottom: 30px;
+                ">INTE 223</h2>
+
+                <a href="https://drive.google.com/uc?export=download&id=1LHt6JIsNIVKMjdJsECZIt7V-AMQZu5zj">
+
+                    <button class="btn btn-primary neumorphic shadow-soft border border-light" type="button"
+                        onclick="showPopup(11)">
+
+                        <span class="mr-1"><span class="far fa-arrow-alt-circle-down"></span></span>
+                        Download Notes
+
+                    </button>
+
+                </a>
+
+            </div>
+
+            <!-- 🛑 End of Icon box -->
+
+
+        </div>
+
+
+
+
+
+        <div data-aos="fade-up" data-aos-delay="100" class="col-md-4">
+
+            <!-- 📊 Icon Box INTE 226 -->
+
+
+            <div class="icon-box text-center mb-5">
+
+                <div class="icon icon-shape icon-shape-sm shadow-soft border border-light rounded-circle">
+                    <span class="fas fa-cogs"></span>
+                </div>
+
+                <h2 class="h5" style="margin-top: 30px;
+                margin-bottom: 30px;
+                ">INTE 226</h2>
+
+                <a href="https://drive.google.com/uc?export=download&id=1qtOjC0xuYpFLctSjwQSIbF-jt6Hztk5E">
+                    <button class="btn btn-primary neumorphic shadow-soft border border-light" type="button"
+                        onclick="showPopup(11)">
+
+                        <span class="mr-1"><i class="fas fa-download"></i></span>
+
+                        Download Notes
+
+
+                    </button>
+                </a>
+
+
+            </div>
+
+            <!-- 🛑 End of Icon box -->
+
+        </div>
+
+    </div>
+
+
+
+
+
+    <!----------------🔚 End of the notes section 🔚---------------->
+
+
+
+
+
+
+    <!-------- ⏸️ Break ⏸️ ------------>
+
+    <div style="border-top: 0.5px solid #a1a09f; margin-top: 0px; opacity: 0.2;"></div>
+
+    <!-------- ⏸️ Break ⏸️ ------------>
+
+
+
+
+
+
+
+    <!-------- 📚 Key Resources Section Starts Here--------->
+
+
+
+    <!--------🔖====== Title ======🔖-------->
+
+
+    <div id="past-papers" data-aos="fade-up" data-aos-delay="100" class="row">
+
+        <div class="col text-center">
+            <div class="mb-5" style="margin-top: 40px;
+                margin-bottom: 5px!important; font-weight:bold; font-family: 'Signika', sans-serif !important;
+                font-weight:bold; color: rgb(95, 83, 68);">
+                <span class="h5 text-center key-resources-intro">Key Resources</span>
+            </div>
+        </div>
+    </div>
+
+
+    <!--------👋 Introduction 👋------------>
+
+
+
+    <div class="introX">
+        <p data-aos="fade-up" data-aos-delay="100" class="notes-intro" style="max-width: 380px; text-align:center;">
+            Dive into the comprehensive collection of notes
+            curated specifically for each unit,
+            empowering you
+            with the
+            knowledge
+            and insights necessary to excel in your IT journey.
+        </p>
+
+    </div>
+
+
+    <!--------📜 Main Contents Start Here 📜------------>
+
+
+
+
+
+
+
+    <div class="row justify-content-center">
+        <div class="col-12 col-md-10 col-lg-8">
+
+
+
+
+            <!--🔽========= Accordion Starts Here =========🔽-->
+
+
+
+
+
+            <div data-aos="fade-up" data-aos-delay="100" class="accordion shadow-soft rounded" id="accordionExample1">
+
+
+                <div class="card card-sm card-body bg-primary border-light mb-0">
+
+                    <a href="#panel-1" data-target="#panel-1" class="accordion-panel-header" data-toggle="collapse"
+                        role="button" aria-expanded="false" aria-controls="panel-1">
+                        <span class="h6 mb-0 font-weight-bold">Past Papers</span>
+                        <span class="icon"><span class="fas fa-plus"></span></span>
+                    </a>
+
+
+                    <div class="collapse" id="panel-1">
+
+
+
+
+
+                        <!--------📚 Past Papers 📚------------>
+
+
+                        <style>
+                            .download-link {
+                                padding: 0 4%;
+                            }
+                        </style>
+
+                        <div class="pt-3">
+                            <p class="download-link" style="text-align: center; font-weight: bold; margin-left: -8%;">
+                                BIBL 222:
+                                <a style="margin-left: 15%; color: rgb(88, 132, 132);"
+                                    href="https://drive.google.com/uc?export=download&id=1irmL6P3fAlc9yTXP4WGdoUET5LJQCTUF"
+                                    onclick="showPopup(11)">Download</a>
+                            </p>
+
+                            <p class="download-link comp"
+                                style="text-align: center; font-weight: bold; margin-left: -8%;">
+                                COMP 326:
+                                <a class="comp-a" style="margin-left: 12%; color: rgb(88, 132, 132);"
+                                    href="https://drive.google.com/uc?export=download&id=1VbIV0i2HBeIhUpBBhvC9BZq7PYBGEsS-"
+                                    onclick="showPopup(11)">Download</a>
+                            </p>
+
+                            <p class="download-link" style="text-align: center; font-weight: bold; margin-left: -8%;">
+                                INTE 221:
+                                <a style="margin-left: 15.5%; color: rgb(88, 132, 132);"
+                                    href="https://drive.google.com/uc?export=download&id=1EW1bOPap5VN0m6islxoUJq9XV8L2ybG2"
+                                    onclick="showPopup(11)">Download</a>
+                            </p>
+
+                            <p class="download-link" style="text-align: center; font-weight: bold; margin-left: -8%;">
+                                INTE 223:
+                                <a style="margin-left: 15%; color: rgb(88, 132, 132);"
+                                    href="https://drive.google.com/uc?export=download&id=1aUap0ZBeBESvlK8M5RJ4hGZCoTsy0o5K"
+                                    onclick="showPopup(11)">Download</a>
+                            </p>
+
+                            <p class="download-link" style="text-align: center; font-weight: bold; margin-left: -8%;">
+                                INTE 226:
+                                <a style="margin-left: 15%; color: rgb(88, 132, 132);"
+                                    href="https://drive.google.com/uc?export=download&id=1LgGmRFQbWHwY3JtpXaUOfdcezvM5fMNc"
+                                    onclick="showPopup(11)">Download</a>
+                            </p>
+                        </div>
+
+
+
+                    </div>
+
+                </div>
+
+
+
+
+
+                <!--------💻 Executable Files 💻------------>
+
+
+                <div class="card card-sm card-body bg-primary border-light mb-0">
+
+                    <a href="#panel-2" data-target="#panel-2" class="accordion-panel-header" data-toggle="collapse"
+                        role="button" aria-expanded="false" aria-controls="panel-2">
+
+                        <span class="h6 mb-0 font-weight-bold">Exe Files</span>
+                        <span class="icon">
+                            <span class="fas fa-plus"></span>
+                        </span>
+
+                    </a>
+
+
+                    <div class="collapse" id="panel-2">
+                        <div class="pt-3"
+                            style="display: flex; flex-direction: column; justify-content: center; align-items: center;">
+                            <a href="https://download.oracle.com/java/20/latest/jdk-20_windows-x64_bin.exe" <button
+                                class="btn btn-primary neumorphic shadow-soft border border-light"
+                                style="margin-top: 40px; max-width: 200px">
+                                <span class="mr-1"><i class="fab fa-java" style="height: 20px!important;"></i></span>
+                                <strong>Java JDK</strong>
+                                <span class="mr-1"><i class="fab fa-java" style="height: 20px!important;"></i></span>
+                                </button>
+                            </a>
+
+
+
+
+                            <a href="https://netbeans.apache.org/download/nb15/" target="_blank">
+
+                                <button class="btn btn-primary neumorphic shadow-soft border border-light" type="button"
+                                    style="max-width: 200px;">
+                                    <span class="mr-1"><i class="fas fa-code"></i></span>
+                                    NetBeans
+                                </button>
+                            </a>
+
+
+
+                            <a href="https://code.visualstudio.com/" target="_blank">
+                                <button class="btn btn-primary neumorphic shadow-soft border border-light" type="button"
+                                    style="max-width: 200px;">
+                                    <span class="mr-1"><i class="fab fa-windows"></i></span>
+                                    VS Code
+                                </button>
+                            </a>
+
+
+
+
+
+                            <a href="https://ccm.net/downloads/programming/4871-nasm/" target="_blank">
+                                <button class="btn btn-primary neumorphic shadow-soft border border-light" type="button"
+                                    style="max-width: 200px;">
+                                    <span class="mr-1"><i class="fas fa-file-code"></i></span>
+                                    NASM
+                                </button>
+                            </a>
+
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+
+
+
+
+
+                <!--------💻 Pop Quiz 💻------------>
+
+
+                <div class="card card-sm card-body bg-primary border-light mb-0">
+
+                    <a href="#panel-4" data-target="#panel-4" class="accordion-panel-header" data-toggle="collapse"
+                        role="button" aria-expanded="false" aria-controls="panel-4">
+
+                        <span class="h6 mb-0 font-weight-bold">Quiz</span>
+                        <span class="icon">
+                            <span class="fas fa-plus"></span>
+                        </span>
+
+                    </a>
+
+
+                    <div class="collapse" id="panel-4">
+                        <div class="pt-3"
+                            style="display: flex; flex-direction: column; justify-content: center; align-items: center;">
+
+                            <a href="./html-quiz/">
+                                <button class="btn btn-primary neumorphic shadow-soft border border-light"
+                                    style="margin-top: 40px; max-width: 200px">
+                                    <span class="mr-1"><i class="fas fa-code"
+                                            style="height: 20px!important;"></i></span>
+                                    <strong>HTML Quiz 01</strong>
+
+                                </button>
+                            </a>
+
+
+                            <a href="./html-quiz-2/">
+                                <button class="btn btn-primary neumorphic shadow-soft border border-light"
+                                    style="margin-top: 0px; max-width: 200px">
+                                    <span class="mr-1"><i class="fab fa-html5"
+                                            style="height: 20px!important;"></i></span>
+                                    <strong>HTML Quiz 02</strong>
+
+
+                                </button>
+                            </a>
+
+
+                            <a href="./css-quiz/">
+                                <button class="btn btn-primary neumorphic shadow-soft border border-light"
+                                    style="margin-top: 0px; max-width: 200px">
+                                    <span class="mr-1"><i class="fab fa-css3-alt"
+                                            style="height: 20px!important;"></i></span>
+                                    <strong>CSS Quiz</strong>
+
+
+                                </button>
+                            </a>
+
+
+                            <a href="./javascript-quiz/">
+                                <button class="btn btn-primary neumorphic shadow-soft border border-light"
+                                    style="margin-top: 0px; max-width: 200px">
+                                    <span class="mr-1"><i class="fab fa-js-square"
+                                            style="height: 20px!important;"></i></span>
+                                    <strong>JavaScript Quiz</strong>
+
+
+                                </button>
+                            </a>
+
+
+                            <a href="./java-quiz/">
+                                <button class="btn btn-primary neumorphic shadow-soft border border-light"
+                                    style="margin-top: 0px; max-width: 200px">
+                                    <span class="mr-1"><i class="fab fa-java"
+                                            style="height: 20px!important;"></i></span>
+                                    <strong>Java Quiz </strong>
+
+
+                                </button>
+                            </a>
+
+                            <a href="./assemby-language-quiz/">
+                                <button class="btn btn-primary neumorphic shadow-soft border border-light"
+                                    style="margin-top: 0px; max-width: 500px">
+                                    <span class="mr-1"><i class="fas fa-rocket" style="font-size: 20px;"></i></span>
+                                    <strong>Assembly Language Quiz</strong>
+
+                            
+                                </button>
+                            </a>
+
+
+                            <a href="./assemby-language-quiz-2/">
+                                <button class="btn btn-primary neumorphic shadow-soft border border-light"
+                                    style="margin-top: 0px; max-width: 500px">
+                                    <span class="mr-1"><i class="fas fa-question-circle" style="font-size: 20px;"></i></span>
+                                    <strong>Assembly Language Quiz 02</strong>
+                            
+                                </button>
+                            </a>
+
+
+
+
+
+
+
+
+
+
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+
+
+
+
+
+
+                <!--------🎓 Study Tips 🎓------------>
+
+
+                <div class="card card-sm card-body bg-primary border-light">
+
+                    <a href="#panel-3" data-target="#panel-3" class="accordion-panel-header" data-toggle="collapse"
+                        role="button" aria-expanded="false" aria-controls="panel-3">
+                        <span class="h6 mb-0 font-weight-bold">Study Hacks</span>
+                        <span class="icon"><span class="fas fa-plus"></span></span>
+                    </a>
+
+
+                    <div class="collapse" id="panel-3">
+                        <div class="pt-3">
+                            <p><strong style="font-weight: bold;">Web Programming:</strong><br> Practice hands-on coding
+                                and build real-world web
+                                applications to strengthen
+                                your skills and gain practical experience.</p>
+
+                            <p><strong style="font-weight: bold;">OOP with Java:</strong><br> Master the principles of
+                                object-oriented programming
+                                (OOP) to
+                                write efficient and
+                                maintainable code.</p>
+
+                            <p><strong style="font-weight: bold;">Assembly Language Programming:</strong><br> Gain a
+                                deep understanding of the
+                                specific
+                                assembly language
+                                you're studying to write optimized and efficient code.</p>
+
+                            <p><strong style="font-weight: bold;">Christian Ethics:</strong><br> Engage in active
+                                participation during class
+                                discussions to
+                                deepen your
+                                understanding of Christian ethical principles.</p>
+
+                            <p><strong style="font-weight: bold;">System Analysis and Design:</strong><br> Apply
+                                structured methodologies and tools
+                                to
+                                analyze, design, and
+                                develop efficient and effective information systems.</p>
+                        </div>
+
+                    </div>
+
+                </div>
+
+
+
+
+
+
+                <!--------🔚 End Of the Main Content🔚------------>
+
+
+
+            </div>
+
+            <!---------------------- 🔼End of Accordion🔼 ------------------------>
+
+
+        </div>
+
+
+    </div>
+
+
+
+    <div data-aos="fade-up" data-aos-delay="200" style="display: flex; justify-content: center; margin-top:20px;">
+
+        <a href="https://wa.me//254773602480">
+            <button class="btn btn-primary neumorphic shadow-soft border border-light">
+                <span class="mr-1" style="font-weight: 500!important;">
+                    <i class="fas fa-comments"></i>
+                    Request File
+                </span>
+            </button>
+        </a>
+
+    </div>
+
+
+
+
+
+
+    <!-------- ⏸️ Break ⏸️ ------------>
+
+
+    <div style="border-top: 0.5px solid #a1a09f; margin-top: 10px; opacity: 0.2;"></div>
+
+    <!-------- ⏸️ Break ⏸️ ------------>
+
+
+
+
+
+
+
+
+
+    <!---------🎥 Video Tutorials Start Here 🎥--------->
+
+
+
+
+
+
+    <!--------🌟 Title 🌟------------>
+
+
+    <div id="tutorials" data-aos="fade-up" data-aos-delay="100" class="row">
+
+
+        <div class="col text-center">
+            <div class="mb-5"
+                style="margin-top: 40px; margin-bottom: 0px!important; font-weight: bold; font-family: 'Signika', sans-serif !important; color: rgb(95, 83, 68);">
+                <span class="h5 text-center key-resources-intro">YouTube Tutorials</span>
+            </div>
+        </div>
+
+
+    </div>
+
+
+
+    <!--------👋 Introduction 👋------------>
+
+    <div class="introX">
+        <p data-aos="fade-up" data-aos-delay="200" class="notes-intro" style="text-align: center;max-width: 380px;">
+
+            Master the essentials of Java, JavaScript, HTML, CSS, and Assembly language with our comprehensively
+            curated
+
+            collection
+            of best programming video tutorials.
+
+        </p>
+
+    </div>
+
+
+
+
+    <!-------------💡 Quick Tip 💡------------>
+
+
+    <div data-aos="fade-up" data-aos-delay="100" class="centered-container" id="container" style="margin-bottom: 30px;">
+        <i class="fas fa-exclamation-circle mr-2" id="icon"></i>
+        <p class="hidden" id="instruction" style="text-align: center; padding-right:4%;">tap image to watch online or
+            click download to save to gallery.</p>
+    </div>
+
+
+
+
+
+    <!--------📜 Main Contents Start Here 📜------------>
+
+
+
+    <div class="video-tutorials">
+
+
+
+        <!------------📺 First Video 📺--------------->
+
+
+        <div data-aos="fade-up" data-aos-delay="200" class="card video-card bg-primary border-light shadow-soft">
+            <a href="https://youtu.be/qz0aGYrrlhU" target="_blank">
+
+                <img class="thumbnail" style="position: relative;" src="../assets/images/Learn HTML IN 1hr.jpg"
+                    class="card-img-top rounded-top">
+                <div class="time">1:06:33</div>
+
+            </a>
+
+            <div class="card-body" style="margin-top: -10%; margin-left:-4%">
+
+                <h3 class="h5 card-title mt-3">HTML Tutorial for Beginners: HTML Crash Course</h3>
+                <span class="h6 icon-tertiary small">
+                    <i class="fas fa-user-circle mr-2"></i> <span class="channel-name">Programming with Mosh</span>
+                </span>
+
+                <button class="btn btn-primary neumorphic shadow-soft border border-light"
+                    style="display: block; margin: 10% auto 0;" onclick="showPopup(1)">
+                    <span class="mr-1">
+                        <i class="fas fa-download"></i>
+                    </span>
+                    Download Video
+                </button>
+            </div>
+        </div>
+
+
+
+        <!-------------⚙️ Select Quality For Video 1 ⚙️---------------->
+
+
+
+        <div class="popup-card" id="popupCard1">
+
+            <div data-aos="fade-up" data-aos-delay="200" class="card video-card bg-primary "
+                style="border: rgba(246, 245, 243, 0.957) 3px solid;">
+
+                <div class="card-body" style="margin-top: -10%; margin-left:-4%; display:flex; flex-direction:column;
+                align-items:center;">
+
+                    <h3 class="h5 card-title mt-3" style="margin-top:40px !important;
+                    margin-bottom: 40px; opacity:0.5;text-align:center;">Select Video Quality</h3>
+
+
+                    <a href="https://drive.google.com/uc?export=download&id=1kbcsrHwCqoVhoPQMLqs-gEIfr6C3bpx9"
+                        target="_blank">
+                        <button class="btn btn-primary neumorphic shadow-soft border border-light">
+                            <span class="mr-1">
+                                <i class="fas fa-video"></i>
+                            </span>
+                            1080p
+                        </button>
+
+                    </a>
+
+
+
+
+                    <a href="https://drive.google.com/uc?export=download&id=1u661f4HcVb44LZgalDKO1iec5jhy2x_Z"
+                        target="_blank">
+                        <button class="btn btn-primary neumorphic shadow-soft border border-light"
+                            style="margin-bottom: 100px !important;">
+                            <span class="mr-1">
+                                <i class="fas fa-video"></i>
+                            </span>
+                            720p
+                        </button>
+                    </a>
+
+
+
+                    <span class="close-btn" onclick="rotateAndHidePopup(1)">
+                        <i class="fa fa-times-circle" style="font-size: 30px; color: rgb(92, 64, 51);"></i>
+                    </span>
+
+
+
+                </div>
+
+            </div>
+
+        </div>
+
+
+
+
+
+        <!------------🎥 Second Video 🎥--------------->
+
+
+
+        <div data-aos="fade-up" data-aos-delay="200" class="card video-card bg-primary border-light shadow-soft">
+            <a href="https://youtu.be/G3e-cpL7ofc" target="_blank">
+                <img class="thumbnail" src="../assets/images/Full HTML Course.jpg" class="card-img-top rounded-top"
+                    alt="Themesberg office">
+
+                <div class="time">6:31:23</div>
+            </a>
+            <div class="card-body" style="margin-top: -10%; margin-left:-4%">
+
+                <h3 class="h5 card-title mt-3">HTML & CSS Full Course - Beginner to Pro</h3>
+                <span class="h6 icon-tertiary small">
+                    <i class="fas fa-user-circle mr-2"></i> <span class="channel-name">SuperSimpleDev</span>
+                </span>
+
+                <button class="btn btn-primary neumorphic shadow-soft border border-light"
+                    style="display: block; margin: 10% auto 0;" onclick="showPopup(2)">
+                    <span class="mr-1">
+                        <i class="fas fa-download"></i>
+                    </span>
+                    Download Video
+                </button>
+
+            </div>
+
+        </div>
+
+
+
+
+
+        <!-------------⚙️ Select Quality For Video 2 ⚙️---------------->
+
+
+
+        <div class="popup-card" id="popupCard2">
+
+            <div data-aos="fade-up" data-aos-delay="200" class="card video-card bg-primary "
+                style="border: rgba(246, 245, 243, 0.957) 3px solid;">
+
+                <div class="card-body" style="margin-top: -10%; margin-left:-4%; display:flex; flex-direction:column;
+                        align-items:center;">
+
+                    <h3 class="h5 card-title mt-3" style="margin-top:40px !important;
+                            margin-bottom: 40px; opacity:0.5;text-align:center;">Select Video Quality</h3>
+
+
+
+
+                    <a href="https://drive.google.com/uc?export=download&id=1tIOe31WFatBJ12rIHhSscMxBceDQ7oLI"
+                        target="_blank">
+                        <button class="btn btn-primary neumorphic shadow-soft border border-light"
+                            onclick="downloadVideo('1080p')">
+
+                            <span class="mr-1">
+                                <i class="fas fa-video"></i>
+                            </span>
+                            1080p
+
+
+                        </button>
+                    </a>
+
+
+
+
+                    <a href="https://drive.google.com/uc?export=download&id=140Z5dSKlzhf-Uz2blgsCsKy6uRu53vrW"
+                        target="_blank">
+                        <button class="btn btn-primary neumorphic shadow-soft border border-light"
+                            onclick="downloadVideo('720p')" style="margin-bottom: 100px !important;">
+                            <span class="mr-1">
+                                <i class="fas fa-video"></i>
+                            </span>
+                            720p
+                        </button>
+                    </a>
+
+
+                    <span class="close-btn" onclick="rotateAndHidePopup(2)">
+                        <i class="fa fa-times-circle" style="font-size: 30px; color: rgb(92, 64, 51);"></i>
+                    </span>
+
+
+
+                </div>
+
+            </div>
+
+        </div>
+
+
+
+
+
+
+
+        <!------------📹 Third Video 📹--------------->
+
+
+        <div data-aos="fade-up" data-aos-delay="200" class="card video-card bg-primary border-light shadow-soft">
+            <a href="https://youtu.be/upDLs1sn7g4" target="_blank">
+                <img class="thumbnail" src="../assets/images/Whats js.jpg" class="card-img-top rounded-top">
+
+                <div class="time">05:11</div>
+            </a>
+            <div class="card-body" style="margin-top: -10%; margin-left:-4%">
+
+                <h3 class="h5 card-title mt-3">What is JavaScript?</h3>
+                <span class="h6 icon-tertiary small">
+                    <i class="fas fa-user-circle mr-2"></i> <span class="channel-name">Programming with Mosh</span>
+                </span>
+
+                <button class="btn btn-primary neumorphic shadow-soft border border-light"
+                    style="display: block; margin: 10% auto 0;" onclick="showPopup(3)">
+                    <span class="mr-1">
+                        <i class="fas fa-download"></i>
+                    </span>
+                    Download Video
+                </button>
+            </div>
+        </div>
+
+
+
+
+
+
+        <!-------------⚙️ Select Quality For Video 3 ⚙️---------------->
+
+        <div class="popup-card" id="popupCard3">
+
+            <div data-aos="fade-up" data-aos-delay="200" class="card video-card bg-primary "
+                style="border: rgba(246, 245, 243, 0.957) 3px solid;">
+
+                <div class="card-body" style="margin-top: -10%; margin-left:-4%; display:flex; flex-direction:column;
+                                align-items:center;">
+
+                    <h3 class="h5 card-title mt-3" style="margin-top:40px !important;
+                                    margin-bottom: 40px; opacity:0.5;text-align:center;">Select Video Quality</h3>
+
+
+                    <a href="https://drive.google.com/uc?export=download&id=1S2c56WyA69dkknurDXtuNaidbEdDiH0Z">
+                        <button class="btn btn-primary neumorphic shadow-soft border border-light">
+
+                            <span class="mr-1">
+                                <i class="fas fa-video"></i>
+                            </span>
+                            1080p
+
+
+                        </button>
+
+                    </a>
+
+
+                    <a href="https://drive.google.com/uc?export=download&id=1uoKPWM-8wSzypdnwMTuW4VVlJryog_HX">
+                        <button class="btn btn-primary neumorphic shadow-soft border border-light"
+                            onclick="downloadVideo('720p')" style="margin-bottom: 100px !important;">
+                            <span class="mr-1">
+                                <i class="fas fa-video"></i>
+                            </span>
+                            720p
+                        </button>
+                    </a>
+
+
+
+                    <span class="close-btn" onclick="rotateAndHidePopup(3)">
+                        <i class="fa fa-times-circle" style="font-size: 30px; color: rgb(92, 64, 51);"></i>
+                    </span>
+
+
+
+                </div>
+
+            </div>
+
+        </div>
+
+
+
+
+
+
+        <!------------📽️ Fourth Video 📽️--------------->
+
+
+        <div data-aos="fade-up" data-aos-delay="200" class="card video-card bg-primary border-light shadow-soft">
+            <a href="https://youtu.be/W6NZfCO5SIk" target="_blank">
+                <img class="thumbnail" src="../assets/images/js in 1hr.jpg" class="card-img-top rounded-top">
+
+                <div class="time">48:16</div>
+            </a>
+            <div class="card-body" style="margin-top: -10%; margin-left:-4%">
+
+                <h3 class="h5 card-title mt-3">JavaScript Tutorial for Beginners: Learn JavaScript in 1 Hour</h3>
+                <span class="h6 icon-tertiary small">
+                    <i class="fas fa-user-circle mr-2"></i> <span class="channel-name">Programming with Mosh</span>
+                </span>
+
+                <button class="btn btn-primary neumorphic shadow-soft border border-light"
+                    style="display: block; margin: 10% auto 0;" onclick="showPopup(4)">
+                    <span class="mr-1">
+                        <i class="fas fa-download"></i>
+                    </span>
+                    Download Video
+                </button>
+            </div>
+        </div>
+
+
+
+
+
+
+        <!-------------⚙️ Select Quality For Video 4 ⚙️---------------->
+
+
+        <div class="popup-card" id="popupCard4">
+
+            <div data-aos="fade-up" data-aos-delay="200" class="card video-card bg-primary "
+                style="border: rgba(246, 245, 243, 0.957) 3px solid;">
+
+                <div class="card-body" style="margin-top: -10%; margin-left:-4%; display:flex; flex-direction:column;
+                        align-items:center;">
+
+                    <h3 class="h5 card-title mt-3" style="margin-top:40px !important;
+                            margin-bottom: 40px; opacity:0.5;text-align:center;">Select Video Quality</h3>
+
+
+
+                    <a href="https://drive.google.com/uc?id=11JnU6pd17y4hZRlO9onFDKH74vQu2_PC&export=download">
+                        <button class="btn btn-primary neumorphic shadow-soft border border-light"
+                            onclick="downloadVideo('1080p')">
+
+                            <span class="mr-1">
+                                <i class="fas fa-video"></i>
+                            </span>
+                            1080p
+
+
+                        </button>
+
+                    </a>
+
+
+                    <a href="https://drive.google.com/uc?id=1iK7uJSHArwl4_UUxwTB5qJx7zxilCCMc&export=download"
+                        target="_blank">
+                        <button class="btn btn-primary neumorphic shadow-soft border border-light"
+                            onclick="downloadVideo('720p')" style="margin-bottom: 100px !important;">
+                            <span class="mr-1">
+                                <i class="fas fa-video"></i>
+                            </span>
+                            720p
+                        </button>
+                    </a>
+
+
+
+                    <span class="close-btn" onclick="rotateAndHidePopup(4)">
+                        <i class="fa fa-times-circle" style="font-size: 30px; color: rgb(92, 64, 51);"></i>
+                    </span>
+
+
+
+                </div>
+
+            </div>
+
+        </div>
+
+
+
+
+
+
+
+
+
+        <!------------🎞️ Fifth Video 🎞️--------------->
+
+
+
+        <div data-aos="fade-up" data-aos-delay="200" class="card video-card bg-primary border-light shadow-soft">
+            <a href="https://youtu.be/SBmSRK3feww" target="_blank">
+                <img class="thumbnail" src="../assets/images/hq720.webp" class="card-img-top rounded-top">
+                <div class="time">11:57:21</div>
+            </a>
+            <div class="card-body" style="margin-top: -10%; margin-left:-4%">
+
+                <h3 class="h5 card-title mt-3">JavaScript Full Course (2023) - Beginner to Pro - Part 1</h3>
+                <span class="h6 icon-tertiary small">
+                    <i class="fas fa-user-circle mr-2"></i> <span class="channel-name">SuperSimpleDev</span>
+                </span>
+
+                <button class="btn btn-primary neumorphic shadow-soft border border-light"
+                    style="display: block; margin: 10% auto 0;" onclick="showPopup(5)">
+                    <span class="mr-1">
+                        <i class="fas fa-download"></i> <!-- Replace this line with the download icon class -->
+                    </span>
+                    Download Video
+                </button>
+            </div>
+        </div>
+
+
+
+
+
+
+        <!-------------⚙️ Select Quality For Video 5 ⚙️---------------->
+
+
+
+        <div class="popup-card" id="popupCard5">
+
+            <div data-aos="fade-up" data-aos-delay="200" class="card video-card bg-primary "
+                style="border: rgba(246, 245, 243, 0.957) 3px solid;">
+
+                <div class="card-body" style="margin-top: -10%; margin-left:-4%; display:flex; flex-direction:column;
+                        align-items:center;">
+
+                    <h3 class="h5 card-title mt-3" style="margin-top:40px !important;
+                            margin-bottom: 40px; opacity:0.5;text-align:center;">Select Video Quality</h3>
+
+
+
+                    <a href="https://drive.google.com/uc?export=download&id=1xo_M6Bmf2PhX_tE_S72v9ESlGY4RmSMu
+">
+                        <button class="btn btn-primary neumorphic shadow-soft border border-light">
+
+                            <span class="mr-1">
+                                <i class="fas fa-video"></i>
+                            </span>
+                            1080p
+
+
+                        </button></a>
+
+
+
+                    <a href="https://drive.google.com/uc?export=download&id=11uscl-_F-E4h8o4TXIHnSGf2gcjY1pZQ
+">
+                        <button class="btn btn-primary neumorphic shadow-soft border border-light"
+                            onclick="downloadVideo('720p')" style="margin-bottom: 100px !important;">
+                            <span class="mr-1">
+                                <i class="fas fa-video"></i>
+                            </span>
+                            720p
+                        </button></a>
+
+
+                    <span class="close-btn" onclick="rotateAndHidePopup(5)">
+                        <i class="fa fa-times-circle" style="font-size: 30px; color: rgb(92, 64, 51);"></i>
+                    </span>
+
+
+
+                </div>
+
+            </div>
+
+        </div>
+
+
+
+
+
+
+        <!------------📼 Sixth Video 📼--------------->
+
+
+        <div data-aos="fade-up" data-aos-delay="200" class="card video-card bg-primary border-light shadow-soft">
+            <a href="https://youtu.be/PFmuCDHHpwk" target="_blank">
+                <img class="thumbnail" src="../assets/images/js tutorial oop.jpg" class="card-img-top rounded-top">
+                <div class="time">1:02:48</div>
+            </a>
+            <div class="card-body" style="margin-top: -10%; margin-left:-4%">
+
+                <h3 class="h5 card-title mt-3">
+                    Object-oriented Programming in JavaScript: Made Super Simple | Mosh</h3>
+                <span class="h6 icon-tertiary small">
+                    <i class="fas fa-user-circle mr-2"></i> <span class="channel-name">Programming with Mosh</span>
+                </span>
+
+                <button class="btn btn-primary neumorphic shadow-soft border border-light"
+                    style="display: block; margin: 10% auto 0;" onclick="showPopup(6)">
+                    <span class="mr-1">
+                        <i class="fas fa-download"></i> <!-- Replace this line with the download icon class -->
+                    </span>
+                    Download Video
+                </button>
+            </div>
+        </div>
+
+
+
+
+        <!-------------⚙️ Select Quality For Video 6 ⚙️---------------->
+
+
+        <div class="popup-card" id="popupCard6">
+
+            <div data-aos="fade-up" data-aos-delay="200" class="card video-card bg-primary "
+                style="border: rgba(246, 245, 243, 0.957) 3px solid;">
+
+                <div class="card-body" style="margin-top: -10%; margin-left:-4%; display:flex; flex-direction:column;
+                        align-items:center;">
+
+                    <h3 class="h5 card-title mt-3" style="margin-top:40px !important;
+                            margin-bottom: 40px; opacity:0.5;text-align:center;">Select Video Quality</h3>
+
+
+                    <a href="https://drive.google.com/uc?export=download&id=1xErZP1-KcWJSKJsdPT_gx6F5TasHLqZe
+">
+                        <button class="btn btn-primary neumorphic shadow-soft border border-light"
+                            onclick="downloadVideo('1080p')">
+
+                            <span class="mr-1">
+                                <i class="fas fa-video"></i>
+                            </span>
+                            1080p
+
+
+                        </button>
+                    </a>
+
+
+
+                    <a href="https://drive.google.com/uc?export=download&id=1M5h1qIngsDphlvF6g1XFrj7MnSud4ceA
+">
+                        <button class="btn btn-primary neumorphic shadow-soft border border-light"
+                            onclick="downloadVideo('720p')" style="margin-bottom: 100px !important;">
+                            <span class="mr-1">
+                                <i class="fas fa-video"></i>
+                            </span>
+                            720p
+                        </button>
+                    </a>
+
+
+                    <span class="close-btn" onclick="rotateAndHidePopup(6)">
+                        <i class="fa fa-times-circle" style="font-size: 30px; color: rgb(92, 64, 51);"></i>
+                    </span>
+
+
+
+                </div>
+
+            </div>
+
+        </div>
+
+
+
+
+        <!------------📺 Seventh Video 📺--------------->
+
+
+
+        <div data-aos="fade-up" data-aos-delay="200" class="card video-card bg-primary border-light shadow-soft">
+            <a href="https://youtu.be/TmcEmsyYKXE" target="_blank">
+                <img class="thumbnail" src="../assets/images/hq2720.webp" class="card-img-top rounded-top">
+
+                <div class="time">1:28:22</div>
+            </a>
+            <div class="card-body" style="margin-top: -10%; margin-left:-4%">
+
+                <h3 class="h5 card-title mt-3">
+                    JavaScript Full Course (2023) - Beginner to Pro - Part 2 Lesson 13</h3>
+                <span class="h6 icon-tertiary small">
+                    <i class="fas fa-user-circle mr-2"></i> <span class="channel-name">SuperSimpleDev</span>
+                </span>
+
+                <button class="btn btn-primary neumorphic shadow-soft border border-light"
+                    style="display: block; margin: 10% auto 0;" onclick="showPopup(7)">
+                    <span class="mr-1">
+                        <i class="fas fa-download"></i> <!-- Replace this line with the download icon class -->
+                    </span>
+                    Download Video
+                </button>
+            </div>
+        </div>
+
+
+
+
+        <!-------------⚙️ Select Quality For Video 7 ⚙️---------------->
+
+
+
+        <div class="popup-card" id="popupCard7">
+
+            <div data-aos="fade-up" data-aos-delay="200" class="card video-card bg-primary "
+                style="border: rgba(246, 245, 243, 0.957) 3px solid;">
+
+                <div class="card-body" style="margin-top: -10%; margin-left:-4%; display:flex; flex-direction:column;
+                        align-items:center;">
+
+                    <h3 class="h5 card-title mt-3" style="margin-top:40px !important;
+                            margin-bottom: 40px; opacity:0.5;text-align:center;">Select Video Quality</h3>
+
+
+                    <a href="https://drive.google.com/uc?export=download&id=1lCPhBLmtYAF1xg2iEw4KZxCJozU2tFVJ
+">
+                        <button class="btn btn-primary neumorphic shadow-soft border border-light"
+                            onclick="downloadVideo('1080p')">
+
+                            <span class="mr-1">
+                                <i class="fas fa-video"></i>
+                            </span>
+                            1080p
+
+
+                        </button>
+
+                    </a>
+
+
+                    <a href="https://drive.google.com/uc?export=download&id=11dxlZkCOWpfPH-J6zmpHR2o5VBLSzTgU
+">
+                        <button class="btn btn-primary neumorphic shadow-soft border border-light"
+                            onclick="downloadVideo('720p')" style="margin-bottom: 100px !important;">
+                            <span class="mr-1">
+                                <i class="fas fa-video"></i>
+                            </span>
+                            720p
+                        </button>
+                    </a>
+
+
+
+                    <span class="close-btn" onclick="rotateAndHidePopup(7)">
+                        <i class="fa fa-times-circle" style="font-size: 30px; color: rgb(92, 64, 51);"></i>
+                    </span>
+
+
+
+                </div>
+
+            </div>
+
+        </div>
+
+
+
+
+
+        <!------------📹 Eighth Video 📹--------------->
+
+
+
+
+        <div data-aos="fade-up" data-aos-delay="200" class="card video-card bg-primary border-light shadow-soft">
+            <a href="https://youtu.be/eIrMbAQSU34" target="_blank">
+                <img class="thumbnail" src="../assets/images/hq720.jpg">
+                <div class="time">2:30:47</div>
+            </a>
+
+            <div class="card-body" style="margin-top: -10%; margin-left:-4%">
+
+                <h3 class="h5 card-title mt-3">
+                    Java Tutorials for Beginners</h3>
+                <span class="h6 icon-tertiary small">
+                    <i class="fas fa-user-circle mr-2"></i> <span class="channel-name">Programming with Mosh</span>
+                </span>
+
+                <button class="btn btn-primary neumorphic shadow-soft border border-light"
+                    style="display: block; margin: 10% auto 0;" onclick="showPopup(8)">
+                    <span class="mr-1">
+                        <i class="fas fa-download"></i> <!-- Replace this line with the download icon class -->
+                    </span>
+                    Download Video
+                </button>
+            </div>
+        </div>
+
+
+
+        <!-------------⚙️ Select Quality For Video 8 ⚙️---------------->
+
+
+        <div class="popup-card" id="popupCard8">
+
+            <div data-aos="fade-up" data-aos-delay="200" class="card video-card bg-primary "
+                style="border: rgba(246, 245, 243, 0.957) 3px solid;">
+
+                <div class="card-body" style="margin-top: -10%; margin-left:-4%; display:flex; flex-direction:column;
+                        align-items:center;">
+
+                    <h3 class="h5 card-title mt-3" style="margin-top:40px !important;
+                            margin-bottom: 40px; opacity:0.5;text-align:center;">Select Video Quality</h3>
+
+
+                    <a href="https://drive.google.com/uc?export=download&id=1ku1_d9I7ZUDd2NSbBmRjDqnBE5acI1oe
+">
+                        <button class="btn btn-primary neumorphic shadow-soft border border-light"
+                            onclick="downloadVideo('1080p')">
+
+                            <span class="mr-1">
+                                <i class="fas fa-video"></i>
+                            </span>
+                            1080p
+
+
+                        </button>
+                    </a>
+
+
+                    <a href="https://drive.google.com/uc?export=download&id=18F1UMSjIxtYN_tl_BYTbN8ebKRu1AhuR
+">
+                        <button class="btn btn-primary neumorphic shadow-soft border border-light"
+                            onclick="downloadVideo('720p')" style="margin-bottom: 100px !important;">
+                            <span class="mr-1">
+                                <i class="fas fa-video"></i>
+                            </span>
+                            720p
+                        </button>
+                    </a>
+
+
+
+                    <span class="close-btn" onclick="rotateAndHidePopup(8)">
+                        <i class="fa fa-times-circle" style="font-size: 30px; color: rgb(92, 64, 51);"></i>
+                    </span>
+
+
+
+                </div>
+
+            </div>
+
+        </div>
+
+
+
+
+
+        <!------------📽️ Ninth Video 📽️--------------->
+
+
+
+
+        <div data-aos="fade-up" data-aos-delay="200" class="card video-card bg-primary border-light shadow-soft">
+            <a href="https://youtu.be/gfmRrPjnEw4" target="_blank">
+                <img class="thumbnail" src="../assets/images/assembly720.webp" class="card-img-top rounded-top">
+                <div class="time">2:29:31</div>
+            </a>
+            <div class="card-body" style="margin-top: -10%; margin-left:-4%">
+
+                <h3 class="h5 card-title mt-3">
+
+                    Assembly Language Programming with ARM – Full Tutorial for Beginners</h3>
+                <span class="h6 icon-tertiary small">
+                    <i class="fas fa-user-circle mr-2"></i> <span class="channel-name">freeCodeCamp.org</span>
+                </span>
+
+
+
+                <button class="btn btn-primary neumorphic shadow-soft border border-light"
+                    style="display: block; margin: 10% auto 0;" onclick="showPopup(9)">
+                    <span class="mr-1">
+                        <i class="fas fa-download"></i> <!-- Replace this line with the download icon class -->
+                    </span>
+                    Download Video
+                </button>
+            </div>
+        </div>
+
+
+
+
+
+        <!-------------⚙️ Select Quality For Video 9 ⚙️---------------->
+
+
+        <div class="popup-card" id="popupCard9">
+
+            <div data-aos="fade-up" data-aos-delay="200" class="card video-card bg-primary "
+                style="border: rgba(246, 245, 243, 0.957) 3px solid;">
+
+                <div class="card-body" style="margin-top: -10%; margin-left:-4%; display:flex; flex-direction:column;
+                        align-items:center;">
+
+                    <h3 class="h5 card-title mt-3" style="margin-top:40px !important;
+                            margin-bottom: 40px; opacity:0.5;text-align:center;">Select Video Quality</h3>
+
+
+
+                    <a href="https://drive.google.com/uc?export=download&id=1wtj_C4pNaWOWke8-wZpiNib_GllslE4s
+">
+                        <button class="btn btn-primary neumorphic shadow-soft border border-light"
+                            onclick="downloadVideo('1080p')">
+
+                            <span class="mr-1">
+                                <i class="fas fa-video"></i>
+                            </span>
+                            1080p
+
+
+                        </button>
+                    </a>
+
+
+
+                    <a href="https://drive.google.com/uc?export=download&id=1W8gN2Cox7buh0qJPDanQVVRtK8wnb3VA
+">
+                        <button class="btn btn-primary neumorphic shadow-soft border border-light"
+                            onclick="downloadVideo('720p')" style="margin-bottom: 100px !important;">
+                            <span class="mr-1">
+                                <i class="fas fa-video"></i>
+                            </span>
+                            720p
+                        </button>
+                    </a>
+
+
+
+
+                    <span class="close-btn" onclick="rotateAndHidePopup(9)">
+                        <i class="fa fa-times-circle" style="font-size: 30px; color: rgb(92, 64, 51);"></i>
+                    </span>
+
+
+
+                </div>
+
+            </div>
+
+        </div>
+
+
+
+
+    </div>
+
+
+
+
+
+    <!-------------🎬 Videos End Here 🎬---------------->
+
+
+
+
+
+
+
+
+
+
+
+    <!------------📚 More Tutorials 📚--------------->
+
+
+    <div data-aos="fade-up" data-aos-delay="200" style="display: flex; justify-content: center;">
+
+        <a href="http://youtube.com">
+            <button class="btn btn-primary neumorphic shadow-soft border border-light">
+                <span class="mr-1" style="font-weight: 500!important;">
+                    <i class="fab fa-youtube"></i>
+                    More Tutorials
+                </span>
+            </button>
+        </a>
+
+    </div>
+
+
+
+
+
+
+
+
+
+
+
+
+    <!-------------🗒️ Notes Download Pop Up Card 🗒️---------------->
+
+
+
+    <div class="popup-card" id="popupCard11">
+
+        <div data-aos="fade-up" data-aos-delay="200" class="card video-card bg-primary "
+            style="border: rgba(246, 245, 243, 0.957) 3px solid;">
+
+            <div class="card-body" style="margin-top: -10%; margin-left:-4%; display:flex; flex-direction:column;
+                                align-items:center;">
+
+                <h3 class="h5 card-title mt-3" style="margin-top:20px !important;
+                                    margin-bottom: 15px; opacity:0.5;text-align:center;">Please Wait!</h3>
+
+
+
+
+
+                <div class="blob">
+                    <div class="box">
+
+                    </div>
+                </div>
+
+
+
+
+
+
+
+                <p data-aos="fade-up" data-aos-delay="200" class="notes-intro" style="text-align: center; margin-bottom: 60px !important;
+                            margin-top:30px !important; color: #735c3d; font-weight:500;opacity:0.8;">
+                    Your download should start any moment now... If it hasn't started yet, please wait for a few
+                    seconds.
+                </p>
+
+
+
+
+
+
+
+
+                <span data-aos="fade-up" data-aos-delay="200" class="close-btn" onclick="rotateAndHidePopup(11)
+                            " style="bottom: 6% ;">
+                    <i class="fa fa-times-circle" style="font-size: 30px; color: rgb(92, 64, 51);
+                                "></i>
+                </span>
+
+
+
+            </div>
+
+        </div>
+
+    </div>
+
+
+
+
+
+    <!---------⏸️ Break ⏸️------------------>
+
+
+    <div style="border-top: 0.5px solid #a1a09f; margin-top: 0px; opacity: 0.2;"></div>
+
+    <!---------⏸️ Break ⏸️------------------>
+
+
+    <!-----------------🚀 Progress Starts Here 🚀------------------>
+
+
+    <div data-aos="fade-up" data-aos-delay="200" class="container-1">
+        <h2 class="title-1"
+            style="font-size: 1.5rem; margin-top: -20%!important; margin-bottom:0px; font-weight:bold; font-family: 'Signika', sans-serif;font-weight:bold; color: rgb(95, 83, 68);">
+            Progress Update</h2>
+        <p class=" paragraph-1" style="font-size: 15px;max-width:500px">If you're at this stage, it means you have
+            successfully completed 3 semesters out
+            of a
+            total of 8
+            semesters. Congratulations on reaching the 4th semester of your academic journey! You've made
+            significant
+            progress and
+            are halfway through your studies. Keep up the great work and continue to excel in your courses. </p>
+
+
+
+        <div class="progress">
+            <div class="progress__fill"></div>
+        </div>
+    </div>
+
+
+
+    <style>
+        .progress {
+            max-width: 400px;
+            width: 100%;
+            height: 24px;
+            grid-column-start: 1;
+            grid-column-end: 5;
+            grid-row-start: 7;
+            grid-row-end: 7;
+            position: relative;
+            margin-top: 16px;
+            border-radius: 12px;
+            box-shadow: 6px 6px 12px #c2c2c2c8, -6px -6px 12px #ffffff98 !important;
+            background-color: #ebecf0;
+        }
+
+        .progress__fill {
+            width: 50%;
+            height: 100%;
+            position: absolute;
+            border-radius: inherit;
+            background-image: linear-gradient(to right, #cf9972, #fff8dc);
+        }
+
+        .progress__fill:before {
+            font-weight: bold;
+            font-size: 16px;
+            line-height: 18px;
+            color: #6c7587;
+            content: "50%";
+            padding: 11px 15px;
+            margin-top: -16px;
+            position: absolute;
+            top: 0;
+            right: 0;
+            transform: translate(50%, -100%);
+            border-radius: 8px;
+            box-shadow: 8px 8px 12px -2px rgba(72, 79, 96, 0.4), -6px -6px 12px -1px white;
+            background-color: #ebecf0;
+        }
+
+        .progress__fill:after {
+            content: "";
+            width: 0;
+            height: 0;
+            position: absolute;
+            right: 0;
+            bottom: 24px;
+            transform: translate(50%, -100%);
+            border-top: 9px solid #ebecf0;
+            border-left: 8px solid transparent;
+            border-right: 8px solid transparent;
+        }
+    </style>
+
+
+    <!-------------🏁 Progress Ends Here 🏁----------------->
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <!------------------------   ⏸️ Break ⏸️ -------------------------->
+
+
+    <div style="border-top: 0.5px solid #a1a09f; margin-top: -20px; opacity: 0.2;"></div>
+
+
+    <!------------------------   ⏸️ Break ⏸️ -------------------------->
+
+
+
+
+
+
+
+
+
+
+
+
+    <!-------------========= 😁😁 Footer Starts Here 😁😁 =======----------------------->
+
+
+    <footer data-aos="fade-up" data-aos-delay="300" class="foot">
+
+        <!------------------------ 📜 Credits 📜 ------------------------>
+
+
+        <div class="foot-links" style="display: flex; flex-wrap: wrap; padding: 10px; ">
+            <div class="col-md-4 text-center">
+                <h4 style="font-weight: bold; text-align: start;
+              margin-bottom: 20px; ">Credits</h4>
+
+
+
+
+
+                <div class="credit-links " style="margin-bottom: 30px;">
+                    <p><a href="https://www.vecteezy.com" class="credits">- Vecteezy</a></p>
+                    <p><a href="https://www.vecteezy.com" class="credits">- Brandify</a></p>
+                    <p><a href="https://www.kabarak.ac.ke" class="credits">- Kabarak University</a></p>
+                    <p><a href="https://www.pngtree.com" class="credits">- pngTree</a></p>
+                    <p style="opacity: 1 !important;color: rgb(118, 116, 116) !important;"><a class="credits">-
+                            Others</a></p>
+                </div>
+
+
+
+            </div>
+
+
+            <!------------------------ 📞 Contacts 📞 ------------------------>
+
+
+
+
+            <div class="col-md-4 text-center con">
+                <h4 style="font-weight: bold;
+              text-align: start; margin-bottom: 20px; ">Contacts</h4>
+
+
+                <div class="contact-links" style="margin-bottom: 30px;">
+
+                    <p><a href="https://t.me/Kabarak_University_bot" class="credits" target="_blank">- Telegram
+                            Bot</a>
+                    </p>
+                    <p><a href="https://www.bing.com/ck/a?!&&p=e8fc103d80d5b15eJmltdHM9MTY4NDg4NjQwMCZpZ3VpZD0yYmJlMTA5YS1jZTJjLTY5MTMtMDFkMi0wMzgyY2ZhZTY4NWQmaW5zaWQ9NTE3OQ&ptn=3&hsh=3&fclid=2bbe109a-ce2c-6913-01d2-0382cfae685d&psq=kabarak+university+twitter&u=a1aHR0cHM6Ly90d2l0dGVyLmNvbS9LYWJhcmFrVW5pdg&ntb=1"
+                            class="credits" target="_blank">- Twitter</a></p>
+
+                    <p><a href="https://wa.me//254773602480" class="credits" target="_blank">- Whatsapp</a></p>
+                    <p><a href="https://t.me//Anonymous_V73X_MVP" class="credits" target="_blank">- Telegram</a></p>
+                </div>
+
+
+            </div>
+
+            <!------------------------ 🔗 Links 🔗 ------------------------>
+
+
+
+            <div class="col-md-4 text-center">
+                <h4 style="font-weight: bold; text-align: start; margin-bottom: 20px; ">Links</h4>
+
+
+                <div class="linkz">
+                    <p><a href="https://ithub.surge.sh" class="lin">- Home</a></p>
+                    <p><a href="https://ithub.surge.sh#semesters" class="lin">- Semesters</a></p>
+                    <p><a href="https://ithub.surge.sh#contact" class="lin">- Contact Us</a></p>
+                    <p><a href="https://moodle.kabarak.ac.ke/login/index.php" class="lin">- Moodle</a></p>
+                    <p><a href="https://www.kabarak.ac.ke" class="lin">- Kabarak University</a></p>
+                    <p><a href="https://chat.openai.com" class="lin">- ChatGPT</a></p>
+                    <p><a href="https://www.youtube.com" class="lin">- YouTube</a></p>
+                </div>
+
+
+            </div>
+
+
+        </div>
+
+
+        <!------------------------ ©️ Copyright ©️ ------------------------>
+
+
+
+        <div style="display: flex; justify-content:center; text-align:center;margin-top: 90px;  ">
+            <p class="mb-0" style="opacity: 0.4; font-weight:bold !important; font-size:small"> © 2023 IT Course Hub.
+                All rights reserved.</p>
+        </div>
+
+
+        <!------------------------ 😁😁 Sir Alex 😁😁 -------------------------->
+
+
+        <div style="margin: 10px 0; margin-top:-10px!important; display: flex; justify-content: center; font-size:10px">
+            <p style="font-weight: bold; opacity:0.8;
+                  font-size:13px;">Developed by: <a href="https://wa.me//254773602480"
+                    style="font-weight: bold; font-size:12px; color: rgb(150, 90, 5);">
+                    Sir Anonymous-V73X</a></p>
+        </div>
+
+
+    </footer>
+
+
+
+
+
+    <!---------========= 😁😁😁Footer Ends Here😁😁😁 ==========-------->
+
+
+
+
+
+
+
+
+
+
+    <div class="popup-card" id="popupCard12">
+
+        <div data-aos="fade-up" data-aos-delay="200" class="card video-card bg-primary "
+            style="border: rgba(246, 245, 243, 0.957) 3px solid;">
+
+            <div class="card-body" style="margin-top: -10%; margin-left:-4%; display:flex; flex-direction:column;
+                                    align-items:center;">
+
+                <h3 class="h5 card-title mt-3" style="margin-top:20px !important;
+                                        margin-bottom: 15px; opacity:0.5;text-align:center;">Scroll Down!</h3>
+
+
+
+
+
+                <div class="blob">
+                    <div class="box">
+
+                    </div>
+                </div>
+
+
+
+
+
+
+
+                <p data-aos="fade-up" data-aos-delay="200" class="notes-intro" style="text-align: center; margin-bottom: 60px !important;
+                                margin-top:30px !important; color: #735c3d; font-weight:500;opacity:0.8;">
+                    Please scroll down to download this semester's resources
+                </p>
+
+
+
+
+
+
+
+
+                <span data-aos="fade-up" data-aos-delay="200" class="close-btn" onclick="rotateAndHidePopup(12)
+                                " style="bottom: 6% ;">
+                    <i class="fa fa-times-circle" style="font-size: 30px; color: rgb(92, 64, 51);
+                                    "></i>
+                </span>
+
+
+
+            </div>
+
+        </div>
+
+    </div>
+
+
+
+
+
+
+
+
+
+    <!-- ======== 😎😎 Script actually starts here 😎😎 ======== -->
+
+    <script src="../assets/js/app.js"></script>
+    <script src="../assets/js/semesters.js"></script>
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script>
+        AOS.init({
+            duration: 600,
+        });
+    </script>
+
+</body>
+
+<!-- ======== Script Ends 🗣️🗣️🪦🪦 ======== -->
+
+</html>

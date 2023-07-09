@@ -1,0 +1,683 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Communisafe</title>
+  <link href="https://cdn.jsdelivr.net/npm/remixicon@2.5.0/fonts/remixicon.css" rel="stylesheet" />
+  <link rel="stylesheet" href="../assets/css/page-style.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
+    integrity="sha512-...your-integrity-hash...=" crossorigin="anonymous" />
+  <link rel="icon" href="../assets/images/favicon.png" type="image/x-icon" />
+
+  <style>
+    body {
+
+      height: 100%;
+
+    }
+
+    .menu-link:hover .fas {
+      color: #f5ede6;
+      transform: translateX(-50%);
+      transition: transform 500ms ease-in-out;
+    }
+
+    img {
+      border-radius: 19% 81% 19% 81% / 63% 19% 81% 37%;
+      width: 100%;
+    }
+
+    @media(min-width: 768px) {
+      .col-lg-6 {
+        margin-top: -70px !important;
+      }
+    }
+
+    @media(max-width: 768px) {
+      .img {
+        display: none !important;
+      }
+
+      .image {
+        display: none;
+      }
+
+      .comp1 {
+        margin-top: 140px !important;
+      }
+
+      .h2 {
+        text-align: center !important;
+      }
+
+      .comp2 {
+        margin-bottom: -90px !important;
+      }
+
+      .comp3 {
+        margin-bottom: -90px !important;
+      }
+
+      .hA {
+        text-align: center !important;
+        margin-bottom: 20px !important;
+      }
+
+      .comp4 {
+        margin-bottom: -90px !important;
+
+      }
+
+      .pA {
+        text-align: center !important;
+      }
+
+      .pB {
+        padding-left: 20px;
+        padding-right: 8px
+      }
+    }
+
+    @media(min-width: 768px) and (max-width:1000px) {
+      .img {
+        display: none !important;
+      }
+
+      .image {
+        display: none;
+      }
+    }
+
+
+
+    nav {
+      position: fixed;
+      top: 0;
+      left: 0;
+      right: 0;
+      z-index: 99;
+      background-color: #f5ede6;
+      padding-right: 12px;
+      height: 88px;
+      transition: box-shadow 0.5s ease, height 0.5s ease;
+    }
+
+
+
+
+
+
+
+
+
+    .loader {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      -webkit-transform: translate(-50%, -50%);
+      transform: translate(-50%, -50%);
+      width: 50px;
+      height: 10px;
+      background: #e56707;
+      border-radius: 5px;
+      -webkit-animation: load 1.8s ease-in-out infinite;
+      animation: load 1.8s ease-in-out infinite;
+    }
+
+    .loader:before,
+    .loader:after {
+      position: absolute;
+      display: block;
+      content: "";
+      -webkit-animation: load 1.8s ease-in-out infinite;
+      animation: load 1.8s ease-in-out infinite;
+      height: 10px;
+      border-radius: 5px;
+    }
+
+    .loader:before {
+      top: -20px;
+      left: 10px;
+      width: 40px;
+      background: #c87405;
+    }
+
+    .loader:after {
+      bottom: -20px;
+      width: 35px;
+      background: #F5AB35;
+    }
+
+    @-webkit-keyframes load {
+      0% {
+        -webkit-transform: translateX(40px);
+        transform: translateX(40px);
+      }
+
+      50% {
+        -webkit-transform: translateX(-30px);
+        transform: translateX(-30px);
+      }
+
+      100% {
+        -webkit-transform: translateX(40px);
+        transform: translateX(40px);
+      }
+    }
+
+    @keyframes load {
+      0% {
+        -webkit-transform: translateX(40px);
+        transform: translateX(40px);
+      }
+
+      50% {
+        -webkit-transform: translateX(-30px);
+        transform: translateX(-30px);
+      }
+
+      100% {
+        -webkit-transform: translateX(40px);
+        transform: translateX(40px);
+      }
+    }
+
+
+
+    .get {
+      margin-top: 350px !important;
+
+    }
+  </style>
+
+  <link rel="stylesheet" href="../assets/css/bootstrap.css" />
+  <link rel="stylesheet" href="../assets/css/style.css" />
+
+</head>
+
+
+
+
+<body>
+  <nav>
+    <div class="container">
+
+      <h2 class="sem2" style="font-size: 18px;">Communisafe</h2>
+
+      <div class="menu">
+       <a class="menu-link" onclick="goBack()" style="color: #412f22; cursor:pointer;"><i style="font-size: 14px;"
+          class="fas fa-arrow-left"></i> Go Back</a>
+      
+      <script>
+        function goBack() {
+          window.history.back();
+        }
+      </script>
+
+      </div>
+
+      <button class="hamburger" onclick="toggleHamburger()">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+
+    </div>
+
+  </nav>
+  <script>// JavaScript to add/remove the 'shadow' class and reduce navbar height based on scroll position
+    window.addEventListener("scroll", function () {
+      var nav = document.querySelector("nav");
+      var scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+      var initialHeight = 88; // Initial height of the navbar in pixels
+      var scrollThreshold = 5; // Number of pixels to scroll before reducing the height
+
+      if (scrollTop > scrollThreshold) {
+        nav.classList.add("shadow");
+        nav.style.height = initialHeight - 20 + "px"; // Reduce the height by 20 pixels
+      } else {
+        nav.classList.remove("shadow");
+        nav.style.height = initialHeight + "px"; // Reset the height to the initial value
+      }
+    });</script>
+
+
+
+
+
+
+  <h1 class="comp2" data-aos="fade-down" data-aos-delay="100"
+    style="font-size: 1.5rem; margin-top: 100px; margin-bottom:0px;   font-family: 'Signika', sans-serif;font-weight:bold; color: rgb(106, 74, 34); text-align:center; text-decoration:underline!important; cursor:pointer; padding-left:10px!important; padding-right:10px!important;">
+  CommuniSafe: Empowering Community Safety Through a Mobile App</h1>
+
+
+
+
+  <!----------------------- First Container ----------------------------->
+
+
+  <div class="section-padding divider">
+
+    <div class="container">
+
+      <!--------------------- Image Section ---------------------->
+
+      <div class="row gy-4 align-items-center comp3">
+        <div class="col-lg-5">
+          <img class="image"
+            style="margin-top: -50px; border-radius:79% 21% 83% 17% / 15% 66% 34% 85% ; width:450px; margin-left:-10px!important;"
+            data-aos="fade-down" data-aos-delay="200" src="../assets/images/undraw_Security_on_re_e491.png" class="img-fluid"
+            alt="" />
+        </div>
+
+        <div class="col-lg-6" style="
+                display: flex;
+                flex-direction: column;
+                
+              ">
+          <h2 data-aos="fade-up" data-aos-delay="100" style="font-size: 1.4rem; margin-top: 0px; margin-bottom:5px;   font-family: 'Signika', sans-serif;font-weight:bold; color: rgb(106, 74, 34); text-align:center!important;
+             ">
+            Summary</h2>
+
+          <p class="pA" data-aos="fade-up" data-aos-delay="200"
+            style="text-align: center; margin-top: 10px; font-size:16px; font-weight:500;">
+            CommuniSafe is a mobile app designed to empower community safety by providing a platform for users to report and address
+            safety concerns. The app aims to create a safer environment by enabling community members to report incidents,
+            suspicious activities, or safety hazards in real-time. It also provides features for emergency notifications, safety
+            tips, and community engagement, fostering a collaborative approach to enhancing safety within the community.
+          </p>
+
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+  <!----------------------- First Container Ends Here ----------------------------->
+
+
+
+
+
+
+
+
+
+
+  <!----------------------- Second Container ----------------------------->
+
+
+
+  <div class="container" style="margin-top: 40px; margin-bottom:60px;">
+
+    <div class="row gy-4 align-items-center">
+      <div class="col-lg-5 comp4">
+
+        <!----------------------- Title ----------------------------->
+
+        <h2 class="hA" data-aos="fade-up" data-aos-delay="100" style="font-size: 1.4rem; margin-top: 0px; margin-bottom:5px;   font-family: 'Signika', sans-serif;font-weight:bold; color: rgb(106, 74, 34); text-align:left;
+                       ">
+          Getting Started</h2>
+
+
+
+        <!----------------------- Main Content ----------------------------->
+
+
+      <p class="pB" data-aos="fade-up" data-aos-delay="200"
+        style="text-align: left; margin-top: 10px; font-size:16px; font-weight:500!important;">
+        <b>Items Needed:</b>
+        <br><br>
+        &#9632; Mobile app development platform (iOS or Android)
+        <br><br>
+        &#9632; Software development tools
+        <br><br>
+        &#9632; Server infrastructure for hosting the app's backend
+        <br><br>
+        &#9632; Database management system
+        <br><br>
+        &#9632; Integration with emergency services or local authorities
+        <br><br>
+        &#9632; User interface design elements
+        <br><br>
+        &#9632; Networking infrastructure for real-time reporting
+        <br><br>
+        &#9632; Marketing and promotional materials
+      </p>
+
+
+
+
+
+      </div>
+
+
+
+      <!--------------------- Image Section ---------------------->
+
+      <div class="col-lg-6" style="
+                  display: flex;
+                  flex-direction: column;
+                  margin-top:50px!important;
+                  
+                ">
+
+
+        <img class="image" style="margin-top: -20px; width:550px; margin-left:-10px;" data-aos="fade-down"
+          data-aos-delay="200" src="../assets/images/undraw_Mobile_encryption_re_yw3o.png" class="img-fluid" alt="" />
+
+
+      </div>
+    </div>
+  </div>
+
+
+  <!----------------------- Second Container Ends Here ----------------------------->
+
+
+
+
+
+
+  <!----------------------- Divider Starts Here ----------------------------->
+
+
+
+  <div style="margin-top: -250px; margin-bottom:-250px" class="section-padding divider"></div>
+
+
+
+  <!----------------------- Divider Ends Here ----------------------------->
+
+
+
+
+  <!----------------------- Third Container ----------------------------->
+
+
+
+  <div class="section-padding " style=" padding-bottom:40px!important;">
+
+    <div class="container" style="height: 100%;">
+
+      <div class="row gy-4 align-items-center">
+
+        <!--------------------- Image Section ---------------------->
+
+        <div class="col-lg-5">
+          <img class="image" style="width:500px; margin-left:-80px;" data-aos="fade-down" data-aos-delay="200"
+            src="../assets/images/undraw_Unlock_re_a558.png" class="img-fluid" alt="" />
+        </div>
+
+        <div class="col-lg-6 comp4" style="
+                  display: flex;
+                  flex-direction: column;
+                  
+                ">
+
+
+
+          <!----------------------- Title ----------------------------->
+
+          <h2 class="comp1 hA" data-aos="fade-up" data-aos-delay="100" style="font-size: 1.4rem; margin-top: 280px; margin-bottom:0px;   font-family: 'Signika', sans-serif;font-weight:bold; color: rgb(106, 74, 34); text-align:left;
+               ">
+            Comprehensive Steps to Do It</h2>
+
+
+          <!----------------------- Main Content ----------------------------->
+
+
+          <p class="pB" data-aos="fade-up" data-aos-delay="200"
+            style="text-align: left; margin-top: 10px; font-size:16px; font-weight:500; max-height:2650px; margin-bottom:0px;">
+          
+            
+            <b>Step 1: Planning and Research</b>
+            <br><br>
+            &#9679; Define the objectives and scope of the CommuniSafe app.
+            <br><br>
+            &#9679; Conduct research on local safety concerns and community needs.
+            <br><br>
+            &#9679; Determine the app's features, including incident reporting, emergency notifications, safety tips, and
+            community engagement.
+            <br><br>
+            <b>Step 2: App Design and Development</b>
+            <br><br>
+            &#9679; Design the user interface and user experience (UI/UX) of the CommuniSafe app.
+            <br><br>
+            &#9679; Develop the front-end and back-end components using the chosen mobile app development platform.
+            <br><br>
+            &#9679; Implement features such as incident reporting forms, real-time location tagging, emergency notifications, and
+            safety resources.
+            <br><br>
+            &#9679; Ensure a user-friendly interface that encourages easy reporting and engagement.
+            <br><br>
+            <b>Step 3: Incident Reporting and Management</b>
+            <br><br>
+            &#9679; Create a reporting system that allows users to submit safety concerns, incidents, or suspicious activities.
+            <br><br>
+            &#9679; Develop a backend infrastructure to store and manage reported incidents securely.
+            <br><br>
+            &#9679; Implement a review and verification process to ensure the validity and relevance of reported incidents.
+            <br><br>
+            &#9679; Enable users to track the status of their reported incidents and receive updates on actions taken.
+            <br><br>
+            <b>Step 4: Emergency Notifications and Alerts</b>
+            <br><br>
+            &#9679; Integrate with emergency services or local authorities to enable direct communication in case of emergencies.
+            <br><br>
+            &#9679; Develop a notification system that sends alerts to users based on their location or subscribed areas.
+            <br><br>
+            &#9679; Provide safety guidelines and instructions during emergencies.
+            <br><br>
+            <b>Step 5: Safety Resources and Tips</b>
+            <br><br>
+            &#9679; Include a comprehensive library of safety resources, including articles, videos, and infographics.
+            <br><br>
+            &#9679; Offer safety tips and guidelines for various scenarios, such as personal safety, home security, and online
+            safety.
+            <br><br>
+            &#9679; Ensure the content is regularly updated and relevant to address evolving safety concerns.
+            <br><br>
+            <b>Step 6: Community Engagement and Collaboration</b>
+            <br><br>
+            &#9679; Implement features to encourage community engagement, such as discussion forums, community events, or safety
+            workshops.
+            <br><br>
+            &#9679; Facilitate communication and collaboration between community members, local authorities, and relevant
+            stakeholders.
+            <br><br>
+            &#9679; Promote a sense of shared responsibility and encourage proactive involvement in community safety.
+            <br><br>
+          </p>
+
+
+
+
+
+        </div>
+      </div>
+    </div>
+
+  </div>
+
+  <!----------------------- Third Container Ends here ----------------------------->
+
+
+
+
+
+
+
+
+
+  <div class="container" style="margin-top: 60px;">
+
+    <div class="row gy-4 align-items-center">
+      <div class="col-lg-5">
+
+
+        <!----------------------- Title ----------------------------->
+
+        <h2 class="hA" data-aos="fade-up" data-aos-delay="100" style="font-size: 1.4rem; margin-top: 0px; margin-bottom:0px;   font-family: 'Signika', sans-serif;font-weight:bold; color: rgb(106, 74, 34); text-align:left;
+                         ">
+          How the Project Will Be Helpful <p></p>
+        </h2>
+
+
+
+
+
+        <!----------------------- Main Content ----------------------------->
+
+
+        <p class="pB" data-aos="fade-up" data-aos-delay="200"
+          style="text-align: left; margin-top: 10px; font-size:16px; font-weight:500;">
+
+
+          <b>CommuniSafe offers several benefits:</b>
+          <br><br>
+          &#9679; Enhanced safety awareness: The app increases safety awareness among community members by providing real-time
+          incident reporting and safety resources.
+          <br><br>
+          &#9679; Quick response and action: The app enables swift reporting of safety concerns, allowing for faster response and
+          resolution by local authorities or emergency services.
+          <br><br>
+          &#9679; Collaborative community safety: CommuniSafe fosters a sense of community collaboration by facilitating
+          communication and engagement among community members, resulting in a collective effort to improve safety.
+          <br><br>
+          &#9679; Empowering individuals: Users can actively contribute to community safety by reporting incidents, sharing safety
+          tips, and participating in safety-related initiatives.
+          <br><br>
+          &#9679; Improved emergency preparedness: The app provides emergency notifications, safety guidelines, and access to
+          relevant resources, equipping users with information to stay prepared during emergencies.
+          <br><br>
+
+
+
+
+
+          <!----------------------- Title ----------------------------->
+
+        <h2 class="hA" data-aos="fade-up" data-aos-delay="100" style="font-size: 1.4rem; margin-top: 0px; margin-bottom:0px;   font-family: 'Signika', sans-serif;font-weight:bold; color: rgb(106, 74, 34); text-align:left;
+                         ">
+          Conclusion</h2>
+
+        <br>
+        <!----------------------- Main Content ----------------------------->
+
+        <p class="pA" style="text-align: left; margin-top: 0px; font-size:16px; font-weight:500;">
+          CommuniSafe, the mobile app dedicated to empowering community safety, provides a platform for real-time incident
+          reporting, safety resources, and community engagement. By enabling users to report safety concerns, receive emergency
+          notifications, access safety tips, and collaborate with the community and local authorities, CommuniSafe contributes to
+          creating a safer environment. The app empowers individuals to actively participate in community safety efforts, fosters
+          a sense of shared responsibility, and enhances emergency preparedness.
+        </p>
+
+        </p>
+
+
+
+
+
+      </div>
+
+      <!--------------------- Image Section ---------------------->
+
+
+      <div class="col-lg-6" style="
+                    display: flex;
+                    flex-direction: column;
+                    margin-top:50px!important;
+                    
+                  ">
+
+
+        <img class="image" style="margin-top: -100px;" data-aos="fade-down" data-aos-delay="200"
+          src="../assets/images/undraw_Warning_re_eoyh.png" class="img-fluid" alt="" />
+
+
+      </div>
+
+    </div>
+
+  </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  <div class="wrapper-loader">
+
+
+
+
+
+
+
+    <div class='loader'></div>
+
+
+    <p class="get" id="typing-dots">Getting Things Ready</p>
+
+    <script>
+
+      const dotsElement = document.getElementById('typing-dots');
+      const dots = '...';
+      let dotCount = 0;
+
+      function animateTypingDots() {
+        dotsElement.textContent = 'Getting Things Ready' + dots.substring(0, dotCount);
+        dotCount = (dotCount + 1) % (dots.length + 1);
+        setTimeout(animateTypingDots, 300);
+      }
+
+      animateTypingDots();
+
+    </script>
+
+
+
+
+
+
+
+
+  </div>
+
+
+
+</body>
+
+
+
+
+
+
+
+
+
+
+<script src="../assets/js/app.js"></script>
+<script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+<script>
+  AOS.init({
+    duration: 700,
+  });
+</script>
+</body>
+
+</html>

@@ -1,0 +1,804 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Brainstorms</title>
+  <link href="https://cdn.jsdelivr.net/npm/remixicon@2.5.0/fonts/remixicon.css" rel="stylesheet" />
+  <link rel="stylesheet" href="../assets/css/page-style.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
+    integrity="sha512-...your-integrity-hash...=" crossorigin="anonymous" />
+  <link rel="icon" href="../assets/images/favicon.png" type="image/x-icon" />
+  <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+
+
+
+
+  <style>
+    .loader {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      -webkit-transform: translate(-50%, -50%);
+      transform: translate(-50%, -50%);
+      width: 50px;
+      height: 10px;
+      background: #e56707;
+      border-radius: 5px;
+      -webkit-animation: load 1.8s ease-in-out infinite;
+      animation: load 1.8s ease-in-out infinite;
+    }
+
+    .loader:before,
+    .loader:after {
+      position: absolute;
+      display: block;
+      content: "";
+      -webkit-animation: load 1.8s ease-in-out infinite;
+      animation: load 1.8s ease-in-out infinite;
+      height: 10px;
+      border-radius: 5px;
+    }
+
+    .loader:before {
+      top: -20px;
+      left: 10px;
+      width: 40px;
+      background: #c87405;
+    }
+
+    .loader:after {
+      bottom: -20px;
+      width: 35px;
+      background: #F5AB35;
+    }
+
+    @-webkit-keyframes load {
+      0% {
+        -webkit-transform: translateX(40px);
+        transform: translateX(40px);
+      }
+
+      50% {
+        -webkit-transform: translateX(-30px);
+        transform: translateX(-30px);
+      }
+
+      100% {
+        -webkit-transform: translateX(40px);
+        transform: translateX(40px);
+      }
+    }
+
+    @keyframes load {
+      0% {
+        -webkit-transform: translateX(40px);
+        transform: translateX(40px);
+      }
+
+      50% {
+        -webkit-transform: translateX(-30px);
+        transform: translateX(-30px);
+      }
+
+      100% {
+        -webkit-transform: translateX(40px);
+        transform: translateX(40px);
+      }
+    }
+
+
+
+    .get {
+      margin-top: 350px !important;
+
+    }
+
+    .menu-link:hover .fas {
+      color: #f5ede6;
+      transform: translateX(-50%);
+      transition: transform 500ms ease-in-out;
+    }
+
+
+
+    h1 {
+      text-align: center;
+    }
+
+    .uli {
+      --col-gap: 1.2rem;
+      --row-gap: 1.6rem;
+      --line-w: 0.25rem;
+      display: grid;
+      grid-template-columns: var(--line-w) 1fr;
+      grid-auto-columns: max-content;
+      column-gap: var(--col-gap);
+      list-style: none;
+      width: min(60rem, 90%);
+      margin-inline: auto;
+    }
+
+    /* line */
+    .uli::before {
+      content: "";
+      grid-column: 1;
+      grid-row: 1 / span 100;
+      background: rgb(225, 225, 225);
+      border-radius: calc(var(--line-w) / 2);
+
+
+    }
+
+    /* columns*/
+
+    /* row gaps */
+    .uli li:not(:last-child) {
+      margin-bottom: var(--row-gap);
+    }
+
+    /* card */
+    .uli li {
+      grid-column: 2;
+      --inlineP: 1.5rem;
+      margin-inline: var(--inlineP);
+      grid-row: span 2;
+      display: grid;
+      grid-template-rows: min-content min-content min-content;
+    }
+
+    /* date */
+    .uli li .date {
+      --dateH: 3rem;
+      height: var(--dateH);
+      margin-inline: calc(var(--inlineP) * -1);
+
+      text-align: center;
+      background-color: var(--accent-color);
+
+      color: white;
+      font-size: 1.25rem;
+      font-weight: 700;
+
+      display: grid;
+      place-content: center;
+      position: relative;
+
+      border-radius: calc(var(--dateH) / 2) 0 0 calc(var(--dateH) / 2);
+    }
+
+    /* date flap */
+    .uli li .date::before {
+      content: "";
+      width: var(--inlineP);
+      aspect-ratio: 1;
+      background: var(--accent-color);
+      background-image: linear-gradient(rgba(0, 0, 0, 0.2) 100%, transparent);
+      position: absolute;
+      top: 100%;
+
+      clip-path: polygon(0 0, 100% 0, 0 100%);
+      right: 0;
+    }
+
+    /* circle */
+    .uli li .date::after {
+      content: "";
+      position: absolute;
+      width: 1.5rem;
+      aspect-ratio: 1;
+      background: var(--bgColor);
+      border: 0.3rem solid var(--accent-color);
+      border-radius: 50%;
+      top: 50%;
+
+      transform: translate(50%, -50%);
+      right: calc(100% + var(--col-gap) + var(--line-w) / 2);
+    }
+
+    /* title descr */
+    .uli li .title,
+    .uli li .descr {
+      background: var(--bgColor);
+      position: relative;
+      padding-inline: 1rem;
+    }
+
+    .uli li .title {
+      overflow: hidden;
+      padding-block-start: 1.5rem;
+      padding-block-end: 1rem;
+      font-weight: 600;
+      color: #76562b;
+    }
+
+    .uli li .descr {
+      padding-block-end: 0.7rem;
+      font-weight: 500;
+      font-size: 14px;
+      color: #382409;
+
+    }
+
+    /* shadows */
+    .uli li .title::before,
+    .uli li .descr::before {
+      content: "";
+      position: absolute;
+      width: 90%;
+      height: 0.3rem;
+      background: rgba(139, 69, 19, 0.2);
+      left: 50%;
+      border-radius: 50%;
+      filter: blur(4px);
+      transform: translate(-50%, 50%);
+    }
+
+    .uli li .title::before {
+      bottom: calc(100% + 0.125rem);
+    }
+
+    .uli li .descr::before {
+      z-index: -1;
+      bottom: 0.25rem;
+    }
+
+    @media (min-width: 40rem) {
+      .uli {
+        grid-template-columns: 1fr var(--line-w) 1fr;
+      }
+
+      .uli::before {
+        grid-column: 2;
+      }
+
+      .uli li:nth-child(odd) {
+        grid-column: 1;
+      }
+
+      .uli li:nth-child(even) {
+        grid-column: 3;
+      }
+
+      /* start second card */
+      .uli li:nth-child(2) {
+        grid-row: 2/4;
+      }
+
+      .uli li:nth-child(odd) .date::before {
+        clip-path: polygon(0 0, 100% 0, 100% 100%);
+        left: 0;
+      }
+
+      .uli li:nth-child(odd) .date::after {
+        transform: translate(-50%, -50%);
+        left: calc(100% + var(--col-gap) + var(--line-w) / 2);
+      }
+
+      .uli li:nth-child(odd) .date {
+        border-radius: 0 calc(var(--dateH) / 2) calc(var(--dateH) / 2) 0;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+
+  <nav class="navbar">
+
+    <div class="container">
+
+      <h2 class="sem2" style="font-size: 18px;">More Ideas</h2>
+
+      <div class="menu">
+
+        <a class="menu-link" onclick="goBack()" style="color: #412f22; cursor:pointer;"><i style="font-size: 14px;"
+            class="fas fa-arrow-left"></i> Go Back</a>
+
+        <script>
+          function goBack() {
+            window.history.back();
+          }
+        </script>
+
+      
+
+      </div>
+
+      <button class="hamburger" onclick="toggleHamburger()">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+
+    </div>
+
+  </nav>
+
+
+
+  <div id="timetablePopup" style=" margin-bottom:100px; margin-top:100px;">
+    <div class="timeline">
+      <h1 data-aos="fade-down" data-aos-delay="100"
+        style="font-size: 1.4rem; margin-top: 0px; margin-bottom:40px;   font-family: 'Signika', sans-serif;font-weight:bold; color: rgb(106, 74, 34); ">
+        Project Ideas</h1>
+      <ul class="uli">
+
+
+
+
+      <li style="--accent-color:#8B4513" data-aos="fade-up" data-aos-delay="100">
+        <div class="date">Sustainable Campus</div>
+        <div class="title"><b style="font-weight: bold; color: #452302b3;">Complexity: </b> Moderate</div>
+        <div class="descr" style="margin-bottom: -8px;">
+          <b style="font-weight: bold; color: #452302b3;">Description:</b>
+          Develop a platform to promote sustainable practices and eco-friendly initiatives on the university campus.
+        </div>
+      </li>
+      
+      <li style="--accent-color:#CD853F" data-aos="fade-up" data-aos-delay="100">
+        <div class="date">Language Exchange</div>
+        <div class="title"><b style="font-weight: bold; color: #452302b3;">Complexity: </b> Easy</div>
+        <div class="descr" style="margin-bottom: -8px;">
+          <b style="font-weight: bold; color: #452302b3;">Description:</b>
+          Build a Language Exchange platform for students to learn and practice different languages through partnerships.
+        </div>
+      </li>
+      
+      <li style="--accent-color:#D2691E" data-aos="fade-up" data-aos-delay="100">
+        <div class="date">Study Group</div>
+        <div class="title"><b style="font-weight: bold; color: #452302b3;">Complexity: </b> Easy</div>
+        <div class="descr" style="margin-bottom: -8px;">
+          <b style="font-weight: bold; color: #452302b3;">Description:</b>
+          Develop an online platform for students to form virtual study groups and collaborate on academic projects.
+        </div>
+      </li>
+      
+      <li style="--accent-color:#A0522D" data-aos="fade-up" data-aos-delay="100">
+        <div class="date">Campus Safety</div>
+        <div class="title"><b style="font-weight: bold; color: #452302b3;">Complexity: </b> Moderate</div>
+        <div class="descr" style="margin-bottom: -8px;">
+          <b style="font-weight: bold; color: #452302b3;">Description:</b>
+          Create a Campus Safety app to provide real-time safety alerts, emergency contacts, and safety resources.
+        </div>
+      </li>
+      
+      <li style="--accent-color:#8B6B23" data-aos="fade-up" data-aos-delay="100">
+        <div class="date">Impact Network</div>
+        <div class="title"><b style="font-weight: bold; color: #452302b3;">Complexity: </b> Moderate</div>
+        <div class="descr" style="margin-bottom: -8px;">
+          <b style="font-weight: bold; color: #452302b3;">Description:</b>
+          Develop a social networking platform to connect students interested in social impact projects and collaborations.
+        </div>
+      </li>
+      
+      <li style="--accent-color:#A9A9A9" data-aos="fade-up" data-aos-delay="100">
+        <div class="date">Career Portal</div>
+        <div class="title"><b style="font-weight: bold; color: #452302b3;">Complexity: </b> High</div>
+        <div class="descr" style="margin-bottom: -8px;">
+          <b style="font-weight: bold; color: #452302b3;">Description:</b>
+          Build a comprehensive Career Portal to
+          provide students with internship opportunities, career guidance, and resources.
+        </div>
+      </li>
+
+
+
+
+
+        <li style="--accent-color:#778899" data-aos="fade-up" data-aos-delay="100">
+          <div class="date">e-Agriculture Platform</div>
+          <div class="title"><b style="font-weight: bold; color: #452302b3;">Complexity: </b> Moderate</div>
+          <div class="descr" style="margin-bottom: -8px;">
+            <b style="font-weight: bold; color: #452302b3;">Description:</b>
+            Develop an online platform that connects farmers with buyers, provides agricultural information, and facilitates
+            access to farming resources in Kenya.
+          </div>
+        </li>
+        
+        <li style="--accent-color:#BDB76B" data-aos="fade-up" data-aos-delay="100">
+          <div class="date">Healthcare System</div>
+          <div class="title"><b style="font-weight: bold; color: #452302b3;">Complexity: </b> High</div>
+          <div class="descr" style="margin-bottom: -8px;">
+            <b style="font-weight: bold; color: #452302b3;">Description:</b>
+            Create a comprehensive healthcare management system to streamline patient records, appointments, and medical
+            inventory for healthcare facilities in Kenya.
+          </div>
+        </li>
+        
+        <li style="--accent-color:#808000" data-aos="fade-up" data-aos-delay="100">
+          <div class="date">Online Tutoring Platform</div>
+          <div class="title"><b style="font-weight: bold; color: #452302b3;">Complexity: </b> Moderate</div>
+          <div class="descr" style="margin-bottom: -8px;">
+            <b style="font-weight: bold; color: #452302b3;">Description:</b>
+            Develop an online platform that connects students with qualified tutors, offering a wide range of subjects and
+            personalized learning experiences in Kenya.
+          </div>
+        </li>
+        
+        <li style="--accent-color: #452302b3" data-aos="fade-up" data-aos-delay="100">
+          <div class="date">E-Waste Management System</div>
+          <div class="title"><b style="font-weight: bold; color: #452302b3;">Complexity: </b> High</div>
+          <div class="descr" style="margin-bottom: -8px;">
+            <b style="font-weight: bold; color: #452302b3;">Description:</b>
+            Implement a system to manage the proper disposal and recycling of electronic waste in Kenya, promoting environmental
+            sustainability and responsible e-waste management practices.
+          </div>
+        </li>
+        
+        <li style="--accent-color: #452302b3" data-aos="fade-up" data-aos-delay="100">
+          <div class="date">E-Wallet Solution</div>
+          <div class="title"><b style="font-weight: bold; color: #452302b3;">Complexity: </b> High</div>
+          <div class="descr" style="margin-bottom: -8px;">
+            <b style="font-weight: bold; color: #452302b3;">Description:</b>
+            Develop an electronic wallet solution that enables secure and convenient digital transactions, promoting financial
+            inclusion and reducing reliance on cash in Kenya.
+          </div>
+        </li>
+        
+        <li style="--accent-color:#DEB887" data-aos="fade-up" data-aos-delay="100">
+          <div class="date">Waste Recycling App</div>
+          <div class="title"><b style="font-weight: bold; color: #452302b3;">Complexity: </b> Easy</div>
+          <div class="descr" style="margin-bottom: -8px;">
+            <b style="font-weight: bold; color: #452302b3;">Description:</b>
+            Build a mobile app that connects individuals and organizations with waste recycling facilities, promoting recycling
+            efforts and waste reduction in Kenya.
+          </div>
+        </li>
+        
+        <li style="--accent-color: #45232b" data-aos="fade-up" data-aos-delay="100">
+          <div class="date">Tourism Experience Platform</div>
+          <div class="title"><b style="font-weight: bold; color: #452302b3;">Complexity: </b> Moderate</div>
+          <div class="descr" style="margin-bottom: -8px;">
+            <b style="font-weight: bold; color: #452302b3;">Description:</b>
+            Create an online platform that showcases diverse tourism experiences, attractions, and local guides, promoting
+            tourism in Kenya and supporting local communities.
+          </div>
+        </li>
+        
+        <li style="--accent-color:#E46682" data-aos="fade-up" data-aos-delay="100">
+          <div class="date">Digital Job Matching</div>
+          <div class="title"><b style="font-weight: bold; color: #452302b3;">Complexity: </b> Moderate</div>
+          <div class="descr" style="margin-bottom: -8px;">
+            <b style="font-weight: bold; color: #452302b3;">Description:</b>
+            Develop an online platform that connects job seekers with suitable employment opportunities and provides tools for
+            employers to find qualified candidates in Kenya.
+          </div>
+        </li>
+        
+        <li style="--accent-color:#44CAD2" data-aos="fade-up" data-aos-delay="100">
+          <div class="date">Kenyan Cultural Heritage</div>
+          <div class="title"><b style="font-weight: bold; color: #452302b3;">Complexity: </b> Easy</div>
+          <div class="descr" style="margin-bottom: -8px;">
+            <b style="font-weight: bold; color: #452302b3;">Description:</b>
+            Develop an online platform or mobile app that showcases Kenya's rich cultural heritage, traditions, and historical
+            sites to promote cultural awareness and tourism.
+          </div>
+        </li>
+
+
+
+
+
+
+
+
+
+
+        <li style="--accent-color:#DAA520" data-aos="fade-up" data-aos-delay="100">
+          <div class="date">Recipe Management App</div>
+          <div class="title"><b style="font-weight: bold; color: #452302b3;">Complexity: </b> Easy</div>
+          <div class="descr" style="margin-bottom: -8px;">
+            <b style="font-weight: bold; color: #452302b3;">Description:</b>
+            Create a mobile app that allows users to store and organize their recipes, plan meals, and generate shopping
+            lists.
+          </div>
+        </li>
+
+        <li style="--accent-color:#45232b" data-aos="fade-up" data-aos-delay="100">
+          <div class="date">Blogging Platform</div>
+          <div class="title"><b style="font-weight: bold; color: #452302b3;">Complexity: </b> Easy</div>
+          <div class="descr" style="margin-bottom: -8px;">
+            <b style="font-weight: bold; color: #452302b3;">Description:</b>
+            Create a web-based platform for users to publish and manage their blogs, including features like content
+            creation,
+            commenting, and user profiles.
+          </div>
+        </li>
+
+        <li style="--accent-color:#CF133b" data-aos="fade-up" data-aos-delay="100">
+          <div class="date">Language App</div>
+          <div class="title"><b style="font-weight: bold; color: #452302b3;">Complexity: </b> Easy</div>
+          <div class="descr" style="margin-bottom: -8px;">
+            <b style="font-weight: bold; color: #452302b3;">Description:</b>
+            Develop a mobile app that offers language lessons, vocabulary practice, and interactive exercises to help
+            users
+            learn a new language.
+          </div>
+        </li>
+
+        <!-- Add the remaining items here -->
+        <li style="--accent-color:#FFA07A" data-aos="fade-up" data-aos-delay="100">
+          <div class="date">Travel Planner</div>
+          <div class="title"><b style="font-weight: bold; color: #452302b3;">Complexity: </b> Medium</div>
+          <div class="descr" style="margin-bottom: -8px;">
+            <b style="font-weight: bold; color: #452302b3;">Description:</b>
+            Develop a web or mobile app that assists users in planning their travel itineraries, including destination
+            recommendations, booking options, and trip organization.
+          </div>
+        </li>
+
+        <li style="--accent-color:#FF8C00" data-aos="fade-up" data-aos-delay="100">
+          <div class="date"> Finance Tracker</div>
+          <div class="title"><b style="font-weight: bold; color: #452302b3;">Complexity: </b> Medium</div>
+          <div class="descr" style="margin-bottom: -8px;">
+            <b style="font-weight: bold; color: #452302b3;">Description:</b>
+            Build a tool that helps users manage their personal finances, including budgeting, expense tracking, and
+            financial
+            goal setting.
+          </div>
+        </li>
+
+        <li style="--accent-color:#8B4513" data-aos="fade-up" data-aos-delay="100">
+          <div class="date">Blogging Platform</div>
+          <div class="title"><b style="font-weight: bold; color: #452302b3;">Complexity: </b> Easy</div>
+          <div class="descr" style="margin-bottom: -8px;">
+            <b style="font-weight: bold; color: #452302b3;">Description:</b>
+            Create a web-based platform for users to publish and manage their blogs, including features like content
+            creation,
+            commenting, and user profiles.
+          </div>
+        </li>
+
+        <li style="--accent-color:#AA4C39" data-aos="fade-up" data-aos-delay="100">
+          <div class="date">E-commerce Store</div>
+          <div class="title"><b style="font-weight: bold; color: #452302b3;">Complexity: </b> Medium</div>
+          <div class="descr" style="margin-bottom: -8px;">
+            <b style="font-weight: bold; color: #452302b3;">Description:</b>
+            Build a web-based platform for selling products online, including features like product listings, shopping
+            cart,
+            payment integration, and order management.
+          </div>
+        </li>
+
+        <li style="--accent-color:#008080" data-aos="fade-up" data-aos-delay="100">
+          <div class="date">Fitness Tracker</div>
+          <div class="title"><b style="font-weight: bold; color: #452302b3;">Complexity: </b> Medium</div>
+          <div class="descr" style="margin-bottom: -8px;">
+            <b style="font-weight: bold; color: #452302b3;">Description:</b>
+            Develop a mobile app that allows users to track their fitness activities, set goals, and monitor their
+            progress.
+          </div>
+        </li>
+
+        <li style="--accent-color:#008080" data-aos="fade-up" data-aos-delay="100">
+          <div class="date">Online Handmade Products</div>
+          <div class="title"><b style="font-weight: bold; color: #452302b3;">Complexity: </b> Medium</div>
+          <div class="descr" style="margin-bottom: -8px;">
+            <b style="font-weight: bold; color: #452302b3;">Description:</b>
+            Create a web platform where artisans can sell their handmade products, including features like product
+            listings,
+            reviews, and secure transactions.
+          </div>
+        </li>
+
+        <li style="--accent-color:#8B4513" data-aos="fade-up" data-aos-delay="100">
+          <div class="date">Virtual Classroom </div>
+          <div class="title"><b style="font-weight: bold; color: #452302b3;">Complexity: </b> Medium</div>
+          <div class="descr" style="margin-bottom: -8px;">
+            <b style="font-weight: bold; color: #452302b3;">Description:</b>
+            Create a web-based platform that enables virtual classrooms, including features like video conferencing,
+            interactive whiteboards, and file sharing for remote learning.
+          </div>
+        </li>
+
+        <li style="--accent-color:#AA4C39" data-aos="fade-up" data-aos-delay="100">
+          <div class="date">Music Streaming</div>
+          <div class="title"><b style="font-weight: bold; color: #452302b3;">Complexity: </b> Medium</div>
+          <div class="descr" style="margin-bottom: -8px;">
+            <b style="font-weight: bold; color: #452302b3;">Description:</b>
+            Develop a mobile app or web platform that allows users to stream music, create playlists, discover new
+            artists,
+            and personalize their music experience.
+          </div>
+        </li>
+
+        <li style="--accent-color:#008080" data-aos="fade-up" data-aos-delay="100">
+          <div class="date">Event Ticketing App</div>
+          <div class="title"><b style="font-weight: bold; color: #452302b3;">Complexity: </b> Medium</div>
+          <div class="descr" style="margin-bottom: -8px;">
+            <b style="font-weight: bold; color: #452302b3;">Description:</b>
+            Build a web-based platform for selling and managing event tickets, including features like event listings,
+            seat
+            selection, and ticket scanning.
+          </div>
+        </li>
+
+        <li style="--accent-color:#8B4513" data-aos="fade-up" data-aos-delay="100">
+          <div class="date">Food Delivery App</div>
+          <div class="title"><b style="font-weight: bold; color: #452302b3;">Complexity: </b> Medium</div>
+          <div class="descr" style="margin-bottom: -8px;">
+            <b style="font-weight: bold; color: #452302b3;">Description:</b>
+            Develop a mobile app that allows users to order food from restaurants, track deliveries, and make online
+            payments.
+          </div>
+        </li>
+
+        <li style="--accent-color:#AA4C39" data-aos="fade-up" data-aos-delay="100">
+          <div class="date">Social Networking App</div>
+          <div class="title"><b style="font-weight: bold; color: #452302b3;">Complexity: </b> Medium</div>
+          <div class="descr" style="margin-bottom: -8px;">
+            <b style="font-weight: bold; color: #452302b3;">Description:</b>
+            Create a web or mobile platform for social networking, including features like user profiles, friending,
+            messaging, and content sharing.
+          </div>
+        </li>
+
+        <li style="--accent-color:#008080" data-aos="fade-up" data-aos-delay="100">
+          <div class="date">Travel Planning App</div>
+          <div class="title"><b style="font-weight: bold; color: #452302b3;">Complexity: </b> Medium</div>
+          <div class="descr" style="margin-bottom: -8px;">
+            <b style="font-weight: bold; color: #452302b3;">Description:</b>
+            Develop a mobile app that helps users plan their trips, including features like destination recommendations,
+            itinerary creation, and booking integration.
+          </div>
+        </li>
+
+        <li style="--accent-color:#AA4C39" data-aos="fade-up" data-aos-delay="100">
+          <div class="date">Management Tool</div>
+          <div class="title"><b style="font-weight: bold; color: #452302b3;">Complexity: </b> Medium</div>
+          <div class="descr" style="margin-bottom: -8px;">
+            <b style="font-weight: bold; color: #452302b3;">Description:</b>
+            Build a web-based tool for managing projects, including task assignment, progress tracking, collaboration
+            features,
+            and project analytics.
+          </div>
+        </li>
+        <li style="--accent-color:#008080" data-aos="fade-up" data-aos-delay="100">
+          <div class="date">Online Resume Builder</div>
+          <div class="title"><b style="font-weight: bold; color: #452302b3;">Complexity: </b> Easy</div>
+          <div class="descr" style="margin-bottom: -8px;">
+            <b style="font-weight: bold; color: #452302b3;">Description:</b>
+            Create a web platform that allows users to create and customize professional resumes, with templates,
+            formatting
+            options, and export capabilities.
+          </div>
+        </li>
+        <li style="--accent-color:#8B4513" data-aos="fade-up" data-aos-delay="100">
+          <div class="date"> Portfolio Tracker</div>
+          <div class="title"><b style="font-weight: bold; color: #452302b3;">Complexity: </b> Medium</div>
+          <div class="descr" style="margin-bottom: -8px;">
+            <b style="font-weight: bold; color: #452302b3;">Description:</b>
+            Develop a tool for users to track and manage their stock portfolios, including real-time stock prices,
+            portfolio
+            performance, and investment insights.
+          </div>
+        </li>
+
+        <li style="--accent-color:#AA4C39" data-aos="fade-up" data-aos-delay="100">
+          <div class="date">Carpooling App</div>
+          <div class="title"><b style="font-weight: bold; color: #452302b3;">Complexity: </b> Easy</div>
+          <div class="descr" style="margin-bottom: -8px;">
+            <b style="font-weight: bold; color: #452302b3;">Description:</b>
+            Build a mobile app that connects users who want to share rides, facilitating carpooling arrangements and
+            reducing
+            traffic congestion.
+          </div>
+        </li>
+
+        <li style="--accent-color:#008080" data-aos="fade-up" data-aos-delay="100">
+          <div class="date">Online Voting </div>
+          <div class="title"><b style="font-weight: bold; color: #452302b3;">Complexity: </b> Medium</div>
+          <div class="descr" style="margin-bottom: -8px;">
+            <b style="font-weight: bold; color: #452302b3;">Description:</b>
+            Create a secure web-based platform for conducting online voting and elections, ensuring transparency and
+            accuracy of
+            results.
+          </div>
+        </li>
+        <li style="--accent-color:#8B4513" data-aos="fade-up" data-aos-delay="100">
+          <div class="date"> CRM System</div>
+          <div class="title"><b style="font-weight: bold; color: #452302b3;">Complexity: </b> High</div>
+          <div class="descr" style="margin-bottom: -8px;">
+            <b style="font-weight: bold; color: #452302b3;">Description:</b>
+            Develop a web-based CRM system to help businesses manage customer interactions, track sales leads, and
+            analyze
+            customer data.
+          </div>
+        </li>
+
+        <li style="--accent-color:#AA4C39" data-aos="fade-up" data-aos-delay="100">
+          <div class="date">Job Search Portal</div>
+          <div class="title"><b style="font-weight: bold; color: #452302b3;">Complexity: </b> Medium</div>
+          <div class="descr" style="margin-bottom: -8px;">
+            <b style="font-weight: bold; color: #452302b3;">Description:</b>
+            Build a web platform that aggregates job listings from various sources, allowing users to search, apply, and
+            track
+            job applications.
+          </div>
+        </li>
+        <li style="--accent-color:#008080" data-aos="fade-up" data-aos-delay="100">
+          <div class="date">Inventory System</div>
+          <div class="title"><b style="font-weight: bold; color: #452302b3;">Complexity: </b> Medium</div>
+          <div class="descr" style="margin-bottom: -8px;">
+            <b style="font-weight: bold; color: #452302b3;">Description:</b>
+            Create a tool for businesses to manage their inventory, including stock tracking, reorder management, and
+            sales
+            analytics.
+          </div>
+        </li>
+
+        <li style="--accent-color:#8B4513" data-aos="fade-up" data-aos-delay="100">
+          <div class="date"> Donation Platform</div>
+          <div class="title"><b style="font-weight: bold; color: #452302b3;">Complexity: </b> Medium</div>
+          <div class="descr" style="margin-bottom: -8px;">
+            <b style="font-weight: bold; color: #452302b3;">Description:</b>
+            Develop a web or mobile app that connects donors with charitable organizations, facilitating online
+            donations and
+            fundraising activities.
+          </div>
+        </li>
+
+      </ul>
+
+    </div>
+  </div>
+
+
+
+
+  <div class="wrapper-loader">
+
+
+
+
+
+
+
+    <div class='loader'></div>
+
+
+    <p class="get" id="typing-dots">Getting Things Ready</p>
+
+    <script>
+
+      const dotsElement = document.getElementById('typing-dots');
+      const dots = '...';
+      let dotCount = 0;
+
+      function animateTypingDots() {
+        dotsElement.textContent = 'Getting Things Ready' + dots.substring(0, dotCount);
+        dotCount = (dotCount + 1) % (dots.length + 1);
+        setTimeout(animateTypingDots, 300);
+      }
+
+      animateTypingDots();
+
+    </script>
+
+
+
+
+
+
+
+
+  </div>
+
+
+
+
+  <script src="../assets/js/app.js"></script>
+  <script src="../assets/js/semesters.js"></script>
+  <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+  <script>
+    AOS.init({
+      duration: 700,
+    });
+  </script>
+</body>
+
+</html>

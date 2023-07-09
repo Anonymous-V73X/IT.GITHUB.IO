@@ -1,0 +1,217 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <!-- Required meta tags -->
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <!-- CSS -->
+  <link rel="stylesheet" href="style.css">
+
+  <link rel="stylesheet" href="../../assets/css/style.css">
+
+  <title>Java Quiz</title>
+
+
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
+    integrity="sha512-...your-integrity-hash...=" crossorigin="anonymous" />
+  <link rel="icon" href="../../assets/images/favicon.png" type="image/x-icon" />
+
+
+
+
+
+  <style>
+    .loader {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      -webkit-transform: translate(-50%, -50%);
+      transform: translate(-50%, -50%);
+      width: 50px;
+      height: 10px;
+      background: #e56707;
+      border-radius: 5px;
+      -webkit-animation: load 1.8s ease-in-out infinite;
+      animation: load 1.8s ease-in-out infinite;
+      z-index: 10000;
+    }
+
+    .loader:before,
+    .loader:after {
+      position: absolute;
+      display: block;
+      content: "";
+      -webkit-animation: load 1.8s ease-in-out infinite;
+      animation: load 1.8s ease-in-out infinite;
+      height: 10px;
+      border-radius: 5px;
+    }
+
+    .loader:before {
+      top: -20px;
+      left: 10px;
+      width: 40px;
+      background: #c87405;
+    }
+
+    .loader:after {
+      bottom: -20px;
+      width: 35px;
+      background: #F5AB35;
+    }
+
+    @-webkit-keyframes load {
+      0% {
+        -webkit-transform: translateX(40px);
+        transform: translateX(40px);
+      }
+
+      50% {
+        -webkit-transform: translateX(-30px);
+        transform: translateX(-30px);
+      }
+
+      100% {
+        -webkit-transform: translateX(40px);
+        transform: translateX(40px);
+      }
+    }
+
+    @keyframes load {
+      0% {
+        -webkit-transform: translateX(40px);
+        transform: translateX(40px);
+      }
+
+      50% {
+        -webkit-transform: translateX(-30px);
+        transform: translateX(-30px);
+      }
+
+      100% {
+        -webkit-transform: translateX(40px);
+        transform: translateX(40px);
+      }
+    }
+
+
+
+    .get {
+      margin-top: 350px !important;
+      text-align: center;
+
+    }
+  </style>
+
+
+
+
+</head>
+
+<body>
+
+
+  <div class="wrapper-loader" style="z-index: 1000;">
+
+
+
+
+
+
+
+    <div class='loader'></div>
+
+
+    <p class="get" id="typing-dots">Getting Things Ready</p>
+
+    <script>
+
+      const dotsElement = document.getElementById('typing-dots');
+      const dots = '...';
+      let dotCount = 0;
+
+      function animateTypingDots() {
+        dotsElement.textContent = 'Getting Things Ready' + dots.substring(0, dotCount);
+        dotCount = (dotCount + 1) % (dots.length + 1);
+        setTimeout(animateTypingDots, 300);
+      }
+
+      animateTypingDots();
+
+    </script>
+
+
+
+
+
+
+
+
+  </div>
+
+
+
+
+
+
+  <div class="start-screen">
+    <button id="start-button">
+      <i class="fas fa-play" style="margin-right: 5px;"></i> Start
+    </button>
+
+  </div>
+
+
+  <div id="display-container">
+
+    <div class="header">
+
+      <div class="number-of-count">
+        <span class="number-of-question"></span>
+      </div>
+
+      <div class="timer-div">
+        <i class="fas fa-stopwatch" style="font-size: 20px;"></i>
+        <span class="time-left">30s</span>
+      </div>
+
+
+    </div>
+
+    <div id="container">
+
+      <!-- questions and options will be displayed here -->
+
+    </div>
+
+    <button id="next-button">Next</button>
+
+  </div>
+
+  <div style="display: flex; justify-content:center; align-content:center; ">
+    <div class="hide score-container ">
+      <div id="result-heading">Your Result</div>
+      
+      
+      <div class="circle">
+        <div class="percentage"></div>
+      </div>
+
+      <div id="appraise-heading"></div>
+      
+
+      <div id="user-score"></div>
+      <button id="restart">Restart</button>
+    </div>
+  </div>
+
+
+  <script src="../../assets/js/app.js"></script>
+
+  <script src="script.js"></script>
+
+</body>
+
+</html>

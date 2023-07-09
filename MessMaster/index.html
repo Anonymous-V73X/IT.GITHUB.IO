@@ -1,0 +1,712 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>MessMaster</title>
+  <link href="https://cdn.jsdelivr.net/npm/remixicon@2.5.0/fonts/remixicon.css" rel="stylesheet" />
+  <link rel="stylesheet" href="../assets/css/page-style.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
+    integrity="sha512-...your-integrity-hash...=" crossorigin="anonymous" />
+  <link rel="icon" href="../assets/images/favicon.png" type="image/x-icon" />
+
+  <style>
+    body {
+
+      height: 100%;
+
+    }
+
+    .menu-link:hover .fas {
+      color: #f5ede6;
+      transform: translateX(-50%);
+      transition: transform 500ms ease-in-out;
+    }
+
+    img {
+      border-radius: 19% 81% 19% 81% / 63% 19% 81% 37%;
+      width: 100%;
+    }
+
+    @media(min-width: 768px) {
+      .col-lg-6 {
+        margin-top: -70px !important;
+      }
+    }
+
+    @media(max-width: 768px) {
+      .img {
+        display: none !important;
+      }
+
+      .image {
+        display: none;
+      }
+
+      .comp1 {
+        margin-top: 140px !important;
+      }
+
+      .h2 {
+        text-align: center !important;
+      }
+
+      .comp2 {
+        margin-bottom: -90px !important;
+      }
+
+      .comp3 {
+        margin-bottom: -90px !important;
+      }
+
+      .hA {
+        text-align: center !important;
+        margin-bottom: 20px !important;
+      }
+
+      .comp4 {
+        margin-bottom: -90px !important;
+
+      }
+
+      .pA {
+        text-align: center !important;
+      }
+
+      .pB {
+        padding-left: 20px;
+        padding-right: 8px
+      }
+    }
+
+    @media(min-width: 768px) and (max-width:1000px) {
+      .img {
+        display: none !important;
+      }
+
+      .image {
+        display: none;
+      }
+    }
+
+
+
+     nav {
+      position: fixed;
+      top: 0;
+      left: 0;
+      right: 0;
+      z-index: 99;
+      background-color: #f5ede6;
+      padding-right: 12px;
+      height: 88px;
+      transition: box-shadow 0.5s ease, height 0.5s ease;
+    }
+
+
+
+
+
+
+
+
+    .loader {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      -webkit-transform: translate(-50%, -50%);
+      transform: translate(-50%, -50%);
+      width: 50px;
+      height: 10px;
+      background: #e56707;
+      border-radius: 5px;
+      -webkit-animation: load 1.8s ease-in-out infinite;
+      animation: load 1.8s ease-in-out infinite;
+    }
+
+    .loader:before,
+    .loader:after {
+      position: absolute;
+      display: block;
+      content: "";
+      -webkit-animation: load 1.8s ease-in-out infinite;
+      animation: load 1.8s ease-in-out infinite;
+      height: 10px;
+      border-radius: 5px;
+    }
+
+    .loader:before {
+      top: -20px;
+      left: 10px;
+      width: 40px;
+      background: #c87405;
+    }
+
+    .loader:after {
+      bottom: -20px;
+      width: 35px;
+      background: #F5AB35;
+    }
+
+    @-webkit-keyframes load {
+      0% {
+        -webkit-transform: translateX(40px);
+        transform: translateX(40px);
+      }
+
+      50% {
+        -webkit-transform: translateX(-30px);
+        transform: translateX(-30px);
+      }
+
+      100% {
+        -webkit-transform: translateX(40px);
+        transform: translateX(40px);
+      }
+    }
+
+    @keyframes load {
+      0% {
+        -webkit-transform: translateX(40px);
+        transform: translateX(40px);
+      }
+
+      50% {
+        -webkit-transform: translateX(-30px);
+        transform: translateX(-30px);
+      }
+
+      100% {
+        -webkit-transform: translateX(40px);
+        transform: translateX(40px);
+      }
+    }
+
+
+
+    .get {
+      margin-top: 350px !important;
+
+    }
+  </style>
+
+  <link rel="stylesheet" href="../assets/css/bootstrap.css" />
+  <link rel="stylesheet" href="../assets/css/style.css" />
+
+</head>
+
+
+
+
+<body>
+  <nav>
+    <div class="container">
+
+      <h2 class="sem2" style="font-size: 18px;">MessMaster</h2>
+
+      <div class="menu">
+        <a class="menu-link" onclick="goBack()" style="color: #412f22; cursor:pointer;"><i style="font-size: 14px;"
+            class="fas fa-arrow-left"></i> Go Back</a>
+        
+        <script>
+          function goBack() {
+            window.history.back();
+          }
+        </script>
+
+      </div>
+
+      <button class="hamburger" onclick="toggleHamburger()">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+
+    </div>
+
+  </nav>
+  <script>// JavaScript to add/remove the 'shadow' class and reduce navbar height based on scroll position
+    window.addEventListener("scroll", function () {
+      var nav = document.querySelector("nav");
+      var scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+      var initialHeight = 88; // Initial height of the navbar in pixels
+      var scrollThreshold = 5; // Number of pixels to scroll before reducing the height
+
+      if (scrollTop > scrollThreshold) {
+        nav.classList.add("shadow");
+        nav.style.height = initialHeight - 20 + "px"; // Reduce the height by 20 pixels
+      } else {
+        nav.classList.remove("shadow");
+        nav.style.height = initialHeight + "px"; // Reset the height to the initial value
+      }
+    });</script>
+
+
+
+
+
+
+  <h1 class="comp2" data-aos="fade-down" data-aos-delay="100"
+    style="font-size: 1.5rem; margin-top: 100px; margin-bottom:0px;   font-family: 'Signika', sans-serif;font-weight:bold; color: rgb(106, 74, 34); text-align:center; text-decoration:underline!important; cursor:pointer; padding-left:10px!important; padding-right:10px!important;">
+    MessMaster: Streamlining Food Orders at Kabarak University</h1>
+
+
+
+
+  <!----------------------- First Container ----------------------------->
+
+
+  <div class="section-padding divider">
+
+    <div class="container">
+
+      <!--------------------- Image Section ---------------------->
+
+      <div class="row gy-4 align-items-center comp3">
+        <div class="col-lg-5">
+          <img class="image"
+            style="margin-top: -50px; border-radius:79% 21% 83% 17% / 15% 66% 34% 85% ; width:450px; margin-left:-10px!important;"
+            data-aos="fade-down" data-aos-delay="200" src="../assets/images/undraw_online_groceries_a02y.png"
+            class="img-fluid" alt="" />
+        </div>
+
+        <div class="col-lg-6" style="
+                display: flex;
+                flex-direction: column;
+                
+              ">
+          <h2 data-aos="fade-up" data-aos-delay="100" style="font-size: 1.4rem; margin-top: 0px; margin-bottom:5px;   font-family: 'Signika', sans-serif;font-weight:bold; color: rgb(106, 74, 34); text-align:center!important;
+             ">
+            Summary</h2>
+
+          <p class="pA" data-aos="fade-up" data-aos-delay="200"
+            style="text-align: center; margin-top: 10px; font-size:16px; font-weight:500;">
+            MessMaster aims to streamline the food ordering process at Kabarak University by developing a mobile app.
+            The app will
+            allow students and staff to conveniently place their food orders using their smartphones. After placing an
+            order, users
+            can proceed to the counter for payment, and upon completion of payment, they will receive a physical
+            receipt. This app
+            eliminates the need for limited computers for placing food orders and provides a more efficient and
+            user-friendly system
+            for the university's dining facility.
+          </p>
+
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+  <!----------------------- First Container Ends Here ----------------------------->
+
+
+
+
+
+
+
+
+
+
+  <!----------------------- Second Container ----------------------------->
+
+
+
+  <div class="container" style="margin-top: 40px; margin-bottom:60px;">
+
+    <div class="row gy-4 align-items-center">
+      <div class="col-lg-5 comp4">
+
+        <!----------------------- Title ----------------------------->
+
+        <h2 class="hA" data-aos="fade-up" data-aos-delay="100" style="font-size: 1.4rem; margin-top: 0px; margin-bottom:5px;   font-family: 'Signika', sans-serif;font-weight:bold; color: rgb(106, 74, 34); text-align:left;
+                       ">
+          Getting Started</h2>
+
+
+
+        <!----------------------- Main Content ----------------------------->
+
+
+        <p class="pB" data-aos="fade-up" data-aos-delay="200"
+          style="text-align: left; margin-top: 10px; font-size:16px; font-weight:500!important;">
+          <b>Items Needed:</b>
+          <br>
+          <br>
+          &#9632; App development platform (such as iOS or Android)
+          <br>
+          <br>
+          &#9632; Software development tools
+          <br>
+          <br>
+          &#9632; Database management system
+          <br>
+          <br>
+          &#9632; Networking infrastructure (Wi-Fi or mobile data)
+          <br>
+          <br>
+          &#9632; Point of Sale (POS) system for generating physical receipts
+          <br>
+          <br>
+          &#9632; Payment gateway integration for secure transactions
+          <br>
+          <br>
+          &#9632; User interface design elements
+          <br>
+          <br>
+          &#9632; Testing devices (smartphones, tablets)
+        </p>
+
+
+
+      </div>
+
+
+
+      <!--------------------- Image Section ---------------------->
+
+      <div class="col-lg-6" style="
+                  display: flex;
+                  flex-direction: column;
+                  margin-top:50px!important;
+                  
+                ">
+
+
+        <img class="image" style="margin-top: -20px; width:550px; margin-left:-10px;" data-aos="fade-down"
+          data-aos-delay="200" src="../assets/images/undraw_Receipt_re_fre3.png" class="img-fluid" alt="" />
+
+
+      </div>
+    </div>
+  </div>
+
+
+  <!----------------------- Second Container Ends Here ----------------------------->
+
+
+
+
+
+
+  <!----------------------- Divider Starts Here ----------------------------->
+
+
+
+  <div style="margin-top: -250px; margin-bottom:-250px" class="section-padding divider"></div>
+
+
+
+  <!----------------------- Divider Ends Here ----------------------------->
+
+
+
+
+  <!----------------------- Third Container ----------------------------->
+
+
+
+  <div class="section-padding " style=" padding-bottom:40px!important;">
+
+    <div class="container" style="height: 100%;">
+
+      <div class="row gy-4 align-items-center">
+
+        <!--------------------- Image Section ---------------------->
+
+        <div class="col-lg-5">
+          <img class="image" style="width:500px; margin-left:-80px;" data-aos="fade-down" data-aos-delay="200"
+            src="../assets/images/undraw_Check_boxes_re_v40f.png" class="img-fluid" alt="" />
+        </div>
+
+        <div class="col-lg-6 comp4" style="
+                  display: flex;
+                  flex-direction: column;
+                  
+                ">
+
+
+
+          <!----------------------- Title ----------------------------->
+
+          <h2 class="comp1 hA" data-aos="fade-up" data-aos-delay="100" style="font-size: 1.4rem; margin-top: 280px; margin-bottom:0px;   font-family: 'Signika', sans-serif;font-weight:bold; color: rgb(106, 74, 34); text-align:left;
+               ">
+            Comprehensive Steps to Do It</h2>
+
+
+          <!----------------------- Main Content ----------------------------->
+
+
+          <p class="pB" data-aos="fade-up" data-aos-delay="200"
+            style="text-align: left; margin-top: 10px; font-size:16px; font-weight:500; max-height:2500px; margin-bottom:0px;">
+            <b>Comprehensive Steps to Do It:</b>
+            <br>
+            <br>
+            <b>Step 1: Project Planning and Requirements Gathering</b>
+            <br>
+            <br>
+            Define project goals and objectives.
+            <br>
+            <br>
+            Identify specific requirements for the mobile app.
+            <br>
+            <br>
+            Determine the budget, timeline, and available resources.
+            <br>
+            <br>
+            <b>Step 2: App Design and Development</b>
+            <br>
+            <br>
+            Design the user interface and user experience (UI/UX) of the mobile app.
+            <br>
+            <br>
+            Develop the app using the chosen platform (iOS, Android, or cross-platform).
+            <br>
+            <br>
+            Implement features such as menu browsing, item selection, order customization, and payment options.
+            <br>
+            <br>
+            Integrate with the existing POS system for receipt generation.
+            <br>
+            <br>
+            <b>Step 3: Backend Development</b>
+            <br>
+            <br>
+            Set up a database management system to store menu items, prices, and user information.
+            <br>
+            <br>
+            Develop server-side APIs for communication between the app and the database.
+            <br>
+            <br>
+            Implement security measures to protect user data and transactions.
+            <br>
+            <br>
+            <b>Step 4: Payment Gateway Integration</b>
+            <br>
+            <br>
+            Choose a secure payment gateway provider.
+            <br>
+            <br>
+            Integrate the payment gateway into the app for seamless transactions.
+            <br>
+            <br>
+            Implement encryption and other security measures to protect sensitive payment information.
+            <br>
+            <br>
+            <b>Step 5: Testing and Quality Assurance</b>
+            <br>
+            <br>
+            Perform thorough testing of the app across different devices and operating systems.
+            <br>
+            <br>
+            Conduct user acceptance testing to ensure the app meets user expectations.
+            <br>
+            <br>
+            Fix any bugs or issues identified during testing.
+            <br>
+            <br>
+            <b>Step 6: Deployment and Training</b>
+            <br>
+            <br>
+            Deploy the MessMaster app to the app stores (Apple App Store, Google Play Store).
+            <br>
+            <br>
+            Promote the app to the Kabarak University community.
+            <br>
+            <br>
+            Conduct training sessions for users and staff on how to use the app effectively.
+            <br>
+            <br>
+          </p>
+
+
+
+        </div>
+      </div>
+    </div>
+
+  </div>
+
+  <!----------------------- Third Container Ends here ----------------------------->
+
+
+
+
+
+
+
+
+
+  <div class="container" style="margin-top: 60px;">
+
+    <div class="row gy-4 align-items-center">
+      <div class="col-lg-5">
+
+
+        <!----------------------- Title ----------------------------->
+
+        <h2 class="hA" data-aos="fade-up" data-aos-delay="100" style="font-size: 1.4rem; margin-top: 0px; margin-bottom:0px;   font-family: 'Signika', sans-serif;font-weight:bold; color: rgb(106, 74, 34); text-align:left;
+                         ">
+          How the Project Will Be Helpful <p></p>
+        </h2>
+
+
+
+
+
+        <!----------------------- Main Content ----------------------------->
+
+
+        <p class="pB" data-aos="fade-up" data-aos-delay="200"
+          style="text-align: left; margin-top: 10px; font-size:16px; font-weight:500;">
+
+
+          <B>The MessMaster app will bring several benefits:</B>
+          <br>
+          <br>
+          &#9679; Convenience: Users can place their food orders anytime, anywhere using their smartphones, eliminating the need
+          for dedicated computers.
+          <br>
+          <br>
+          &#9679; Time savings: The streamlined process reduces waiting time at the food counter, enhancing efficiency for both
+          users and staff.
+          <br>
+          <br>
+          &#9679; Order accuracy: The app allows users to customize their orders directly, reducing the chances of
+          miscommunication or mistakes.
+          <br>
+          <br>
+          &#9679; Transaction security: Integration with a trusted payment gateway ensures secure transactions and protects user
+          payment information.
+          <br>
+          <br>
+          &#9679; Data insights: The app can collect data on user preferences, popular menu items, and order patterns, enabling
+          the university to make informed decisions for menu planning and service improvements.
+          <br>
+          <br>
+
+
+
+          <!----------------------- Title ----------------------------->
+
+        <h2 class="hA" data-aos="fade-up" data-aos-delay="100" style="font-size: 1.4rem; margin-top: 0px; margin-bottom:0px;   font-family: 'Signika', sans-serif;font-weight:bold; color: rgb(106, 74, 34); text-align:left;
+                         ">
+          Conclusion</h2>
+
+        <br>
+        <!----------------------- Main Content ----------------------------->
+
+        <p class="pA" style="text-align: left; margin-top: 0px; font-size:16px; font-weight:500;">
+          MessMaster's development of a mobile app for food orders at Kabarak University will revolutionize the dining experience
+          by providing a convenient and efficient platform. By allowing users to place orders through their smartphones and
+          receive physical receipts after payment, the app simplifies the process and saves time. The project's benefits include
+          convenience, time savings, order accuracy, transaction security, and data insights. Overall, MessMaster will enhance the
+          food ordering experience at Kabarak University while improving operational efficiency for the dining facility.</p>
+        </p>
+
+
+
+
+
+      </div>
+
+      <!--------------------- Image Section ---------------------->
+
+
+      <div class="col-lg-6" style="
+                    display: flex;
+                    flex-direction: column;
+                    margin-top:50px!important;
+                    
+                  ">
+
+
+        <img class="image" style="margin-top: -100px;" data-aos="fade-down" data-aos-delay="200"
+          src="../assets/images/undraw_Eating_together_re_ux62.png" class="img-fluid" alt="" />
+
+
+      </div>
+
+    </div>
+
+  </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  <div class="wrapper-loader">
+
+
+
+
+
+
+
+    <div class='loader'></div>
+
+
+    <p class="get" id="typing-dots">Getting Things Ready</p>
+
+    <script>
+
+      const dotsElement = document.getElementById('typing-dots');
+      const dots = '...';
+      let dotCount = 0;
+
+      function animateTypingDots() {
+        dotsElement.textContent = 'Getting Things Ready' + dots.substring(0, dotCount);
+        dotCount = (dotCount + 1) % (dots.length + 1);
+        setTimeout(animateTypingDots, 300);
+      }
+
+      animateTypingDots();
+
+    </script>
+
+
+
+
+
+
+
+
+  </div>
+
+
+
+</body>
+
+
+
+
+
+
+
+
+
+
+<script src="../assets/js/app.js"></script>
+<script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+<script>
+  AOS.init({
+    duration: 700,
+  });
+</script>
+</body>
+
+</html>
